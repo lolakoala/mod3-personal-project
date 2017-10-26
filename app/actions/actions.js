@@ -1,3 +1,6 @@
+import firebase from '../firebase.js';
+
+
 // actions to ...
 // create user
 // log in
@@ -10,13 +13,21 @@
 // alter bill
 
 
-export const loginSuccess = user => {
+export const loginSuccess = (user, usersHouse = {}) => {
   let currentUser = Object.assign({}, {
     id: user.uid,
     name: user.displayName
   });
   return {
     type: 'LOGIN_SUCCESS',
-    currentUser
+    currentUser,
+    usersHouse
+  };
+};
+
+export const createHouse = house => {
+  return {
+    type: 'CREATE_HOUSE',
+    house
   };
 };

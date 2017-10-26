@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import currentUser from './currentUser';
 // import userStatus from './userStatus';
-// import usersHouse from './usersHouse';
+import usersHouse from './usersHouse';
 // import houseUsers from './houseUsers';
 // import bills from './bills';
 // import chores from './chores';
@@ -11,9 +11,9 @@ import currentUser from './currentUser';
 // import houseError from './houseError';
 
 const rootReducer = combineReducers({
-  currentUser
+  currentUser,
   // userStatus,
-  // usersHouse,
+  usersHouse
   // houseUsers,
   // bills,
   // chores,
