@@ -1,20 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import RoutesContainer from './containers/RoutesContainer';
+import Routes from './components/Routes';
 import Devtools from './containers/Devtools';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import store from './reducers/configureStore.js';
-require('./main.scss');
+// import store from './reducers/configureStore.js';
+// require('./main.scss');
 
 ReactDOM.render(
-  <Provider store={store}>
+  // <Provider store={store}>
     <BrowserRouter>
       <div>
-        <RoutesContainer />
+        <Routes />
         <Devtools />
       </div>
-    </BrowserRouter>
-  </Provider>,
+    </BrowserRouter>,
+  // </Provider>,
   document.getElementById('main')
 );
