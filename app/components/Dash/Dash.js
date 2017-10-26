@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-// import firebase, { auth, provider } from '../../../firebase.js';
+import firebase, { auth, provider } from '../../firebase.js';
 
 class Dash extends Component {
   constructor() {
@@ -19,6 +19,8 @@ class Dash extends Component {
     auth.signInWithPopup(provider)
       .then((result) => {
         const user = result.user;
+        console.log(result.user);
+        this.props.loginSuccess(user);
         this.setState({
           user
         });
@@ -42,6 +44,6 @@ class Dash extends Component {
 
 export default Dash;
 
-Dash.propTypes = {
-
-};
+// Dash.propTypes = {
+//
+// };

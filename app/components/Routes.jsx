@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 //Login will be for login and signup
 // import LogInContainer from './containers/LogInContainer.js';
 // import Nav from './Nav/Nav.js';
-import Dash from './Dash/Dash.js';
+import DashContainer from '../containers/DashContainer.js';
 //Header appears at top of every page and displays user and house when applicable
 // import HeaderContainer from './containers/HeaderContainer.js';
 // //UserList will be reusable for any list of things specific to one use i.e. "my chores"
@@ -25,7 +25,7 @@ export default class Routes extends Component {
     return (
       <div className="routes">
         {/* {[Nav, HeaderContainer].map(component => <Route key={component} path="/" component={ component }/>)} */}
-        <Route exact path="/" component={ Dash }/>
+        <Route exact path="/" component={ DashContainer }/>
         {/* {["/login", "/signup"].map(route => <Route key={route} path={route} component={ LogInContainer }/>)}
         {["/bulletins", "/bills", "/chores"].map(route => <Route key={route} path={route} component={ HouseListContainer }/>)}
         {[`/bills/${name}`, `/chores/${name}`].map(route => <Route key={route} path={route} component={ UserListContainer }/>)}
@@ -34,7 +34,7 @@ export default class Routes extends Component {
         {/* <Route path="/bulletins:id" component={ ItemContainer }/>
         <Route path="/bills/:id" component={ ItemContainer }/>
         <Route path="/chores/:id" component={ ItemContainer }/> */}
-        
+
       </div>
     );
   }
