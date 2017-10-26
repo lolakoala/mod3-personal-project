@@ -1,7 +1,7 @@
 ![Dash](wireframes/dash-wf.JPG)
 ![Login](wireframes/login-wf.JPG)
 ![All Bills](/wireframes/all-bills-wf.JPG)
-![All Bulletins](/wireframes/all-bulletin-wf.JPG)
+![All Bulletins](wireframes/all-bulletinS-wf.JPG)
 ![All Chores](/wireframes/all-chores-wf.JPG)
 ![Add Bill](/wireframes/add-bill-wf.JPG)
 ![Add Chore](/wireframes/add-chore-wf.JPG)
