@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 // import Nav from './Nav/Nav.js';
 import DashContainer from '../containers/DashContainer.js';
 //Header appears at top of every page and displays user and house when applicable
-// import HeaderContainer from './containers/HeaderContainer.js';
+import HeaderContainer from '../containers/HeaderContainer.js';
 // //UserList will be reusable for any list of things specific to one use i.e. "my chores"
 // import UserListContainer from './containers/UserListContainer.js';
 // //HouseList will be reusable for archive lists- bulletins, bills, chores
@@ -20,11 +20,11 @@ import DashContainer from '../containers/DashContainer.js';
 export default class Routes extends Component {
 
   render() {
-    //grab user name for routing specific to user
+    //grab user name/id for routing specific to user
     // const { name } = this.props.currentUser ;
     return (
       <div className="routes">
-        {/* {[Nav, HeaderContainer].map(component => <Route key={component} path="/" component={ component }/>)} */}
+        {[HeaderContainer].map(component => <Route key={component} path="/" component={ component }/>)}
         <Route exact path="/" component={ DashContainer }/>
         {/* {["/login", "/signup"].map(route => <Route key={route} path={route} component={ LogInContainer }/>)}
         {["/bulletins", "/bills", "/chores"].map(route => <Route key={route} path={route} component={ HouseListContainer }/>)}

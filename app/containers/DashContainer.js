@@ -1,6 +1,6 @@
 import Dash from '../components/Dash/Dash.js';
 import { connect } from 'react-redux';
-import { loginSuccess, createHouse } from '../actions/actions';
+import { loginSuccess, createHouse, getHouse } from '../actions/actions';
 
 const mapStateToProps =  store => ({
   currentUser: store.currentUser,
@@ -16,6 +16,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   createHouse: house => {
     dispatch(createHouse(house));
+  },
+  getHouse: (user, usersHouse) => {
+    dispatch(getHouse(user, usersHouse));
   }
 });
 export default connect(mapStateToProps, mapDispatchToProps)(Dash);

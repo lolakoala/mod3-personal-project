@@ -6,6 +6,13 @@ const usersHouse = (state = {}, action) => {
   case 'CREATE_HOUSE':
     housesRef.push(action.house);
     return action.house;
+  case 'GET_HOUSE':
+    firebase.database().ref("houses/" + action.usersHouse.houseKey).set({
+      houseName: action.usersHouse.houseName,
+      houseCode: action.usersHouse.houseCode,
+      users: [...action.usersHouse.users, action.user.id]
+    });
+    return action.usersHouse;
   case 'LOGIN_SUCCESS':
     return action.usersHouse;
   default:

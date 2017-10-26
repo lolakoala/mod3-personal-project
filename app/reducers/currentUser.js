@@ -10,6 +10,10 @@ const currentUser = (state = {}, action) => {
     user = Object.assign(state, { house: action.house.houseName });
     usersRef.push(user);
     return user;
+  case 'GET_HOUSE':
+    user = Object.assign(state, { house: action.usersHouse.houseName });
+    usersRef.push(user);
+    return user;
   default:
     return state;
   }

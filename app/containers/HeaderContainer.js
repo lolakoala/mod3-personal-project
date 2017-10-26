@@ -1,12 +1,14 @@
-import Header from '../components/Header.jsx';
-import { connect, bindActionCreators } from 'react-redux';
-import * as actions from '../actions';
+import Header from '../components/Header/Header.js';
+import { connect } from 'react-redux';
+import * as actions from '../actions/actions.js';
 
 const mapStateToProps =  store => ({
-  user: store.currentUser,
-  house: store.usersHouse
+  currentUser: store.currentUser,
+  usersHouse: store.usersHouse
 });
 
-const mapDispatchToProps = dispatch => bindActionCreators(actions, dispatch);
+const mapDispatchToProps = dispatch => {
+  return null;
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);

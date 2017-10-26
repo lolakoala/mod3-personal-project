@@ -31,3 +31,11 @@ export const createHouse = house => {
     house
   };
 };
+
+export const getHouse = (user, usersHouse) => {
+  return {
+    type: 'GET_HOUSE',
+    user,
+    usersHouse
+  };
+};

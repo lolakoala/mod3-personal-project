@@ -20,6 +20,7 @@ class Dash extends Component {
       let newState = [];
       for (let house in houses) {
         newState.push({
+          houseKey: house,
           houseName: houses[house].houseName,
           houseCode: houses[house].houseCode,
           users: houses[house].users
@@ -55,9 +56,26 @@ class Dash extends Component {
         users: [this.props.currentUser.id] }));
   }
 
+  getHouse = () => {
+    const usersHouse = this.state.allHouses.find(house => {
+      return house.houseCode === this.state.houseCode;
+    });
+    this.props.getHouse(this.props.currentUser, usersHouse);
+    //set usersHouse in store
+    //add house to currentUser in store
+    //overwrite data in firebase
+  }
+
   renderDash () {
     const dash = <p>Dash</p>;
     const invokeHouse = <div>
+      <input type='text'
+        placeholder="House Code"
+        onChange={ (event) => this.handleChange(event, 'houseCode' ) }/>
+      <button
+        onClick={this.getHouse}>
+          Join a House
+      </button>
       <input type="text"
         placeholder="House Name"
         onChange={ (event) => this.handleChange(event, 'houseName' ) }/>
@@ -92,5 +110,7 @@ export default Dash;
 Dash.propTypes = {
   currentUser: PropTypes.object,
   loginSuccess: PropTypes.func,
-  createHouse: PropTypes.func
+  createHouse: PropTypes.func,
+  usersHouse: PropTypes.object,
+  getHouse: PropTypes.funch
 };
