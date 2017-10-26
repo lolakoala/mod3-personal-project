@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { loginSuccess } from '../actions/actions';
 
 const mapStateToProps =  store => ({
-  // user: store.currentUser
+  currentUser: store.currentUser
   // house: store.usersHouse,
   // bulletins: store.bulletins,
   // bills: store.bills,
