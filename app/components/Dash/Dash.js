@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import firebase, { auth, provider } from '../../../firebase.js';
+// import firebase, { auth, provider } from '../../../firebase.js';
 
 class Dash extends Component {
   constructor() {
