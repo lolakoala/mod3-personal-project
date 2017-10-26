@@ -14,6 +14,10 @@ const currentUser = (state = {}, action) => {
     user = Object.assign(state, { house: action.usersHouse.houseName });
     usersRef.push(user);
     return user;
+  case 'SIGNOUT':
+    return {};
+  case 'LEAVE HOUSE':
+    return Object.assign(action.currentUser, { house: {} });
   default:
     return state;
   }

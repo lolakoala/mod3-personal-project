@@ -39,3 +39,17 @@ export const getHouse = (user, usersHouse) => {
     usersHouse
   };
 };
+
+export const signOut = () => {
+  return {
+    type: 'SIGNOUT'
+  };
+};
+
+export const leaveHouse = (currentUser, usersHouse) => {
+  return {
+    type: 'LEAVE_HOUSE',
+    currentUser,
+    usersHouse
+  };
+};

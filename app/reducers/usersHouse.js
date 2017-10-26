@@ -15,6 +15,15 @@ const usersHouse = (state = {}, action) => {
     return action.usersHouse;
   case 'LOGIN_SUCCESS':
     return action.usersHouse;
+  case 'SIGNOUT':
+    return {};
+  case 'LEAVE_HOUSE':
+    firebase.database().ref("houses/" + action.usersHouse.houseKey).set({
+      houseName: action.usersHouse.houseName,
+      houseCode: action.usersHouse.houseCode,
+      users: action.usersHouse.users.filter(user => user!== action.currentUser.id)
+    });
+    return {};
   default:
     return state;
   }
