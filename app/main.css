@@ -1,7 +1,8 @@
-#main h1 {
-  background-color: blue;
-}
-
-#main {
-  text-align: center;
-}
+@import './components/AddItem/AddItem.scss';
+@import './components/Dash/Dash.scss';
+@import './components/Header/Header.scss';
+@import './components/HouseList/HouseList.scss';
+@import './components/Item/Item.scss';
+@import './components/LogIn/LogIn.scss';
+@import './components/Nav/Nav.scss';
+@import './components/UserList/UserList.scss';

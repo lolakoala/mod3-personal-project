@@ -1,6 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/app';
-import MovieIndex from './components/movieIndex';
+import RoutesContainer from './containers/RoutesContainer';
+import Devtools from './containers/Devtools';
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './reducers/configureStore.js';
+require('./main.scss');
 
-ReactDOM.render(<App/>, document.getElementById('main'))
+ReactDOM.render(
+  <Provider store={store}>
+    <BrowserRouter>
+      <div>
+        <RoutesContainer />
+        <Devtools />
+      </div>
+    </BrowserRouter>
+  </Provider>,
+  document.getElementById('main')
+);
