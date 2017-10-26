@@ -1,6 +1,6 @@
-import Dash from '../components/Dash.jsx';
+import Dash from '../components/Dash/Dash.js';
 import { connect, bindActionCreators } from 'react-redux';
-import * as actions from '../actions';
+import * as actions from '../actions/actions';
 
 const mapStateToProps =  store => ({
   user: store.currentUser,
