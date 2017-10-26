@@ -1,4 +1,4 @@
-![Dash](/wireframes/dash-wf.jpg)
+![Dash](wireframes/dash-wf.JPG)
 ![Login](/wireframes/login-wf.jpg)
 ![All Bills](/wireframes/all-bills-wf.jpg)
 ![All Bulletins](/wireframes/all-bulletin-wf.jpg)
