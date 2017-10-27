@@ -6,8 +6,8 @@ import PropTypes from 'prop-types';
 // import LogInContainer from './containers/LogInContainer.js';
 // import Nav from './Nav/Nav.js';
 import DashContainer from '../containers/DashContainer.js';
-//Header appears at top of every page and displays user and house when applicable
-import HeaderContainer from '../containers/HeaderContainer.js';
+//HeaderNav appears at top of every page and displays user and house when applicable
+import HeaderNavContainer from '../containers/HeaderNavContainer.js';
 // //UserList will be reusable for any list of things specific to one use i.e. "my chores"
 // import UserListContainer from './containers/UserListContainer.js';
 // //HouseList will be reusable for archive lists- bulletins, bills, chores
@@ -24,11 +24,11 @@ export default class Routes extends Component {
     // const { name } = this.props.currentUser ;
     return (
       <div className="routes">
-        {[HeaderContainer].map(component => <Route key={component} path="/" component={ component }/>)}
+        <Route path="/" component={ HeaderNavContainer }/>
         <Route exact path="/" component={ DashContainer }/>
         {/* {["/login", "/signup"].map(route => <Route key={route} path={route} component={ LogInContainer }/>)}
-        {["/bulletins", "/bills", "/chores"].map(route => <Route key={route} path={route} component={ HouseListContainer }/>)}
-        {[`/bills/${name}`, `/chores/${name}`].map(route => <Route key={route} path={route} component={ UserListContainer }/>)}
+        {["/bulletins", "/bills", "/chores"].map(route => <Route key={route} exact path={route} component={ HouseListContainer }/>)}
+        {[`/bills/user`, `/chores/user`].map(route => <Route key={route} path={route} component={ UserListContainer }/>)}
         {["/bulletins/add", "/bills/add", "/chores/add"].map(route => <Route key={route} path={route} component={ AddItemContainer }/>)}
         {/* look up dynamic routing from unicorn/puppy demo code */}
         {/* <Route path="/bulletins:id" component={ ItemContainer }/>

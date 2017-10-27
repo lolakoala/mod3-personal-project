@@ -1,4 +1,4 @@
-import Header from '../components/Header/Header.js';
+import HeaderNav from '../components/HeaderNav/HeaderNav.js';
 import { connect } from 'react-redux';
 import { signOut, leaveHouse } from '../actions/actions.js';
 
@@ -16,4 +16,4 @@ const mapDispatchToProps = dispatch => ({
   }
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default connect(mapStateToProps, mapDispatchToProps)(HeaderNav);
