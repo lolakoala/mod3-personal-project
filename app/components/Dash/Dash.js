@@ -16,16 +16,8 @@ class Dash extends Component {
   componentDidMount () {
     const housesRef = firebase.database().ref('houses');
     housesRef.on('value', snapshot => {
-      let houses = snapshot.val();
-      let newState = [];
-      for (let house in houses) {
-        newState.push({
-          houseKey: house,
-          houseName: houses[house].houseName,
-          houseCode: houses[house].houseCode,
-          users: houses[house].users
-        });
-      }
+      const houses = Object.entries(snapshot.val());
+      const newState = houses.map(([key, value]) => Object.assign({ houseKey: key }, value));
       this.setState({ allHouses: newState });
     });
   }
