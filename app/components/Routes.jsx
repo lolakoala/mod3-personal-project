@@ -11,7 +11,7 @@ import HeaderNavContainer from '../containers/HeaderNavContainer.js';
 // //UserList will be reusable for any list of things specific to one use i.e. "my chores"
 // import UserListContainer from './containers/UserListContainer.js';
 // //HouseList will be reusable for archive lists- bulletins, bills, chores
-// import HouseListContainer from './containers/HouseListContainer.js';
+import HouseListContainer from '../containers/HouseListContainer.js';
 // //AddItem will be reusable for bulletins, bills, chores
 import AddItemContainer from '../containers/AddItemContainer.js';
 // import AddItem from './AddItem/AddItem.js';
@@ -28,6 +28,7 @@ export default class Routes extends Component {
         <Route path="/" component={ HeaderNavContainer }/>
         <Route exact path="/" component={ DashContainer }/>
         <Route path="/addbill" component={ AddItemContainer }/>
+        <Route exact path='/bills' component={ HouseListContainer }/>
         {/* {["/login", "/signup"].map(route => <Route key={route} path={route} component={ LogInContainer }/>)}
         {["/bulletins", "/bills", "/chores"].map(route => <Route key={route} exact path={route} component={ HouseListContainer }/>)}
         {[`/bills/user`, `/chores/user`].map(route => <Route key={route} path={route} component={ UserListContainer }/>)}

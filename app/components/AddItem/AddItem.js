@@ -7,6 +7,7 @@ class AddItem extends Component {
     super();
     this.state = {
       split: '',
+      equalSelect: [],
       title: '',
       duedate: '',
       total: '',
@@ -27,17 +28,33 @@ class AddItem extends Component {
   }
 
   addBill = () => {
-    //set allUserstotals in state - an array of objects with user and total keys
-    //create object that has title, duedate, total, allUserstotals, and details
-    //maybe just pass state?
-    //pass bill object to action
+    const { title, duedate, total, allUsersTotals, details } = this.state;
+    const bill = {
+      title,
+      duedate,
+      total,
+      allUsersTotals,
+      details,
+      postedBy: this.props.currentUser,
+      parsedDuedate: Date.parse(duedate),
+      datePosted: this.getTodaysDate()
+    };
+    this.props.addBill(bill, this.props.usersHouse);
     //user will need to be sent to either dash or houselist for bills
   }
 
-  getAllUsersTotals = () => {
-    //for custom total...
-    //for each input in the list
-    //make object with user and then total where total is percentage of total, percentage taken from input field
+  getTodaysDate = () => {
+    let today = new Date();
+    let dd = today.getDate();
+    let mm = today.getMonth() + 1;
+    let yyyy = today.getFullYear();
+    if (dd < 10) {
+      dd = '0' + dd;
+    }
+    if ( mm < 10) {
+      mm='0'+mm;
+    }
+    return `${dd}/${mm}/${yyyy}`;
   }
 
   updateCustomPSplit = (event, id) => {
@@ -45,7 +62,8 @@ class AddItem extends Component {
     const total = parseInt(this.state.total, 10) * (percentage / 100);
     const userTotalObj = {
       id,
-      total
+      total,
+      paid: false
     };
     const removeUser = this.state.allUsersTotals.filter(user => user.id !== id);
     const newState = [...removeUser, userTotalObj];
@@ -54,7 +72,7 @@ class AddItem extends Component {
 
   updateCustomDSplit = (event, id) => {
     const removeUser = this.state.allUsersTotals.filter(user => user.id !== id);
-    const newState = [...removeUser, { id: id, total: event.target.value }];
+    const newState = [...removeUser, { id: id, total: event.target.value, paid: false }];
     this.setState({ allUsersTotals: newState });
   }
 
@@ -63,22 +81,52 @@ class AddItem extends Component {
     const userTotal = this.state.total / users.length;
     const newState = users.map(user => ({
       id: user.id,
-      total: userTotal
+      total: userTotal,
+      paid: false
     }));
-    this.setState({ allUsersTotals: newState });
+    this.setState({ split: 'equalAll', allUsersTotals: newState });
   }
 
-  //Equal Split with All House Members
-  //Equal Split with Select House Members
-  //Custom Split by Percentage
-  //Custom Split by Dollar Amount
+  equalSelectSplit = (id) => {
+    const { equalSelect } = this.state;
+    let newState;
+    if (equalSelect.includes(id)) {
+      newState = equalSelect.filter(userId => userId !== id);
+    } else {
+      newState = [...equalSelect, id];
+    }
+    this.setState({ equalSelect: newState });
+  }
+
+  updateEqualSplit = () => {
+    const { equalSelect } = this.state;
+    const total = this.state.total / equalSelect.length;
+    const newState = equalSelect.map(id => ({ id, total, paid: false }));
+    this.setState({ split: 'calculated', allUsersTotals: newState });
+  }
+
+  renderWithButton = elements => {
+    return (<div>
+      {elements}
+      <button
+        onClick={this.state.split === 'equal' ? this.updateEqualSplit : () => this.updateSplit('calculated')}>
+        Calculate
+      </button>
+    </div>);
+  }
 
   render() {
     const { usersHouse } = this.props;
     const equalCalc = usersHouse.users.map(user => {
       return <div key={user.id}>
-        <input type="checkbox" id={user.id}/>
+        <input type="checkbox" id={user.id} onChange={() => { this.equalSelectSplit(user.id); }}/>
         <label htmlFor={user.id}>{user.name}</label>
+      </div>;
+    });
+    const equalAll = this.state.allUsersTotals.map(userBill => {
+      const userName = usersHouse.users.find(user => user.id === userBill.id).name;
+      return <div key={userBill.id}>
+        <p>{userName}</p><p>{userBill.total}</p>
       </div>;
     });
     const customPCalc = usersHouse.users.map(user => {
@@ -101,11 +149,13 @@ class AddItem extends Component {
         <button onClick={() => this.updateSplit('equal')}>Equal Split with Select House Members</button>
         <button onClick={() => this.updateSplit('customP')}>Custom Split by Percentage</button>
         <button onClick={() => this.updateSplit('customD')}>Custom Split by Dollar Amount</button>
-        {this.state.split === 'equal' ? equalCalc : null}
-        {this.state.split === 'customP' ? customPCalc : null}
+        {this.state.split === 'equalAll' ? equalAll : null}
+        {this.state.split === 'calculated' ? equalAll : null}
+        {this.state.split === 'equal' ? this.renderWithButton(equalCalc) : null}
+        {this.state.split === 'customP' ? this.renderWithButton(customPCalc) : null}
         {this.state.split === 'customD' ? customPCalc : null}
         <textarea type='text' placeholder='Details' onChange={(event) => this.handleChange(event, 'details')}/>
-        <button onClick={this.addbill}>Add Bill</button>
+        <button onClick={() => this.addBill()}>Add Bill</button>
         {/* when user is in local storage, this button will just refresh page <button>Clear Bill</button> */}
 
       </div>

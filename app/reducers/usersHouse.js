@@ -10,7 +10,9 @@ const usersHouse = (state = {}, action) => {
     const updatedHouse = {
       houseName: action.usersHouse.houseName,
       houseCode: action.usersHouse.houseCode,
-      users: [...action.usersHouse.users, action.user]
+      users: [...action.usersHouse.users, action.user],
+      bills: [...action.usersHouse.bills],
+      houseKey: action.usersHouse.houseKey
     };
     firebase.database().ref("houses/" + action.usersHouse.houseKey).set(updatedHouse);
     return updatedHouse;
@@ -22,9 +24,21 @@ const usersHouse = (state = {}, action) => {
     firebase.database().ref("houses/" + action.usersHouse.houseKey).set({
       houseName: action.usersHouse.houseName,
       houseCode: action.usersHouse.houseCode,
-      users: action.usersHouse.users.filter(user => user.id !== action.currentUser.id)
+      users: action.usersHouse.users.filter(user => user.id !== action.currentUser.id),
+      bills: [...action.usersHouse.bills],
+      houseKey: action.usersHouse.houseKey
     });
     return {};
+  case 'ADD_BILL':
+    const houseWithBill = {
+      houseName: action.usersHouse.houseName,
+      houseCode: action.usersHouse.houseCode,
+      users: action.usersHouse.users,
+      bills: [...action.usersHouse.bills.filter(bill => bill.title !== 'fake'), action.bill],
+      houseKey: action.usersHouse.houseKey
+    };
+    firebase.database().ref("houses/" + action.usersHouse.houseKey).set(houseWithBill);
+    return houseWithBill;
   default:
     return state;
   }

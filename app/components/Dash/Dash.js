@@ -48,13 +48,15 @@ class Dash extends Component {
     this.props.createHouse(Object.assign(
       { houseName: this.state.houseName,
         houseCode: this.state.houseCode,
-        users: [this.props.currentUser] }));
+        users: [this.props.currentUser],
+        bills: [{ title: 'fake' }]}));
   }
 
   getHouse = () => {
     const usersHouse = this.state.allHouses.find(house => {
       return house.houseCode === this.state.houseCode;
     });
+    console.log(usersHouse)
     this.props.getHouse(this.props.currentUser, usersHouse);
   }
 
