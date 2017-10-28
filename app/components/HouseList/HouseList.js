@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
+//none of the code in this component has been tested. You need to empty the current house
+//and start a new house to test this code
+
 class HouseList extends Component {
   constructor() {
     super();
