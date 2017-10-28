@@ -7,12 +7,13 @@ const usersHouse = (state = {}, action) => {
     housesRef.push(action.house);
     return action.house;
   case 'GET_HOUSE':
-    firebase.database().ref("houses/" + action.usersHouse.houseKey).set({
+    const updatedHouse = {
       houseName: action.usersHouse.houseName,
       houseCode: action.usersHouse.houseCode,
-      users: [...action.usersHouse.users, action.user.id]
-    });
-    return action.usersHouse;
+      users: [...action.usersHouse.users, action.user]
+    };
+    firebase.database().ref("houses/" + action.usersHouse.houseKey).set(updatedHouse);
+    return updatedHouse;
   case 'LOGIN_SUCCESS':
     return action.usersHouse;
   case 'SIGNOUT':
@@ -21,7 +22,7 @@ const usersHouse = (state = {}, action) => {
     firebase.database().ref("houses/" + action.usersHouse.houseKey).set({
       houseName: action.usersHouse.houseName,
       houseCode: action.usersHouse.houseCode,
-      users: action.usersHouse.users.filter(user => user!== action.currentUser.id)
+      users: action.usersHouse.users.filter(user => user.id !== action.currentUser.id)
     });
     return {};
   default:

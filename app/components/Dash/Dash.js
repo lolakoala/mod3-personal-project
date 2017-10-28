@@ -35,7 +35,10 @@ class Dash extends Component {
       .then((result) => {
         const user = result.user;
         const usersHouse = this.state.allHouses.find(house => {
-          return house.users.includes(user.uid);
+          if (house.users) {
+            const userIds = house.users.map(user => user.id);
+            return userIds.includes(user.uid);
+          }
         });
         this.props.loginSuccess(user, usersHouse);
       });
@@ -45,7 +48,7 @@ class Dash extends Component {
     this.props.createHouse(Object.assign(
       { houseName: this.state.houseName,
         houseCode: this.state.houseCode,
-        users: [this.props.currentUser.id] }));
+        users: [this.props.currentUser] }));
   }
 
   getHouse = () => {
@@ -53,13 +56,10 @@ class Dash extends Component {
       return house.houseCode === this.state.houseCode;
     });
     this.props.getHouse(this.props.currentUser, usersHouse);
-    //set usersHouse in store
-    //add house to currentUser in store
-    //overwrite data in firebase
   }
 
   renderDash () {
-    const dash = <p>Dash</p>;
+    const dash = <Link to='/addbill'>Add Bill</Link>;
     const invokeHouse = <div>
       <input type='text'
         placeholder="House Code"

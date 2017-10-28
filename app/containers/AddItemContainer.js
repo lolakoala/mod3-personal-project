@@ -1,12 +1,13 @@
-import AddItem from '../components/AddItem.jsx';
+import AddItem from '../components/AddItem/AddItem.js';
 import { connect, bindActionCreators } from 'react-redux';
-import * as actions from '../actions';
+import * as actions from '../actions/actions.js';
 
 const mapStateToProps =  store => ({
-  user: store.currentUser,
-  house: store.usersHouse
+  // user: store.currentUser,
+  usersHouse: store.usersHouse
 });
 
-const mapDispatchToProps = dispatch => bindActionCreators(actions, dispatch);
+const mapDispatchToProps = dispatch => ({
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddItem);
