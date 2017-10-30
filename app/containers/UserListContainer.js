@@ -1,15 +1,12 @@
-import UserList from '../components/UserList.jsx';
+import UserList from '../components/UserList/UserList.js';
 import { connect, bindActionCreators } from 'react-redux';
-import * as actions from '../actions';
+import * as actions from '../actions/actions.js';
 
 const mapStateToProps =  store => ({
-  user: store.currentUser,
-  house: store.usersHouse,
-  bulletins: store.bulletins,
-  bills: store.bills,
-  chores: store.chores
+  currentUser: store.currentUser,
+  usersHouse: store.usersHouse
 });
 
-const mapDispatchToProps = dispatch => bindActionCreators(actions, dispatch);
+const mapDispatchToProps = dispatch => ({});
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserList);

@@ -56,39 +56,69 @@ class Dash extends Component {
     const usersHouse = this.state.allHouses.find(house => {
       return house.houseCode === this.state.houseCode;
     });
-    console.log(usersHouse)
     this.props.getHouse(this.props.currentUser, usersHouse);
   }
 
-  renderDash () {
-    const dash = <Link to='/addbill'>Add Bill</Link>;
-    const invokeHouse = <div>
-      <input type='text'
-        placeholder="House Code"
-        onChange={ (event) => this.handleChange(event, 'houseCode' ) }/>
-      <button
-        onClick={this.getHouse}>
-          Join a House
-      </button>
-      <input type="text"
-        placeholder="House Name"
-        onChange={ (event) => this.handleChange(event, 'houseName' ) }/>
-      <input type="text"
-        placeholder="House Code"
-        onChange={ (event) => this.handleChange(event, 'houseCode' ) }/>
-      <button
-        onClick={this.createHouse}>
-          Add My House
-      </button>
-    </div>;
-    return this.props.usersHouse.houseName ? dash : invokeHouse;
+  invokeHouse = () => {
+    return (
+      <div>
+        <input type='text'
+          placeholder="House Code"
+          onChange={ (event) => this.handleChange(event, 'houseCode' ) }/>
+        <button
+          onClick={this.getHouse}>
+            Join a House
+        </button>
+        <input type="text"
+          placeholder="House Name"
+          onChange={ (event) => this.handleChange(event, 'houseName' ) }/>
+        <input type="text"
+          placeholder="House Code"
+          onChange={ (event) => this.handleChange(event, 'houseCode' ) }/>
+        <button
+          onClick={this.createHouse}>
+            Add My House
+        </button>
+      </div>
+    );
+  }
+
+  renderDash = () => {
+    const { usersHouse, currentUser } = this.props;
+    const mybills = usersHouse.bills.filter(bill => {
+      const usersOwe = bill.allUsersTotals.map(user => user.id);
+      return usersOwe.includes(currentUser.id);
+    });
+    const billsDue = mybills.filter(bill => {
+      return bill.allUsersTotals.find(user => user.id === currentUser.id).paid === false;
+    });
+    return (
+      <div>
+        <h2>Bills I Owe</h2>
+        <h4>Title</h4>
+        <h4>Due Date</h4>
+        <h4>My Total</h4>
+        {billsDue.map(bill => {
+          const myTotal = bill.allUsersTotals.find(user => user.id === currentUser.id).total;
+          return (<div key={bill.parsedDuedate}>
+            <Link to={`bills/${bill.id}`}>{bill.title}</Link>
+            <p>{bill.duedate}</p>
+            <p>{myTotal}</p>
+          </div>);
+        })}
+      </div>
+    );
+  }
+
+  getHouseOrDash = () => {
+    return this.props.usersHouse.houseName ? this.renderDash() : this.invokeHouse();
   }
 
   render() {
     return (
       <div>
         {this.props.currentUser.name ?
-          this.renderDash()
+          this.getHouseOrDash()
           :
           <button onClick={this.login}>Log In</button>
         }

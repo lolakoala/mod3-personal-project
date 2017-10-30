@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import Routes from './Routes';
+import RoutesContainer from '../containers/RoutesContainer.js';
+import Routes from './Routes.jsx';
 import Devtools from '../containers/Devtools';
 import { BrowserRouter } from 'react-router-dom';
 // import { Provider } from 'react-redux';

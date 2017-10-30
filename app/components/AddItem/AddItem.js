@@ -37,7 +37,8 @@ class AddItem extends Component {
       details,
       postedBy: this.props.currentUser,
       parsedDuedate: Date.parse(duedate),
-      datePosted: this.getTodaysDate()
+      datePosted: this.getTodaysDate(),
+      id: `b${Date.parse(duedate) + Date.now()}`
     };
     this.props.addBill(bill, this.props.usersHouse);
     //user will need to be sent to either dash or houselist for bills
@@ -54,7 +55,7 @@ class AddItem extends Component {
     if ( mm < 10) {
       mm='0'+mm;
     }
-    return `${dd}/${mm}/${yyyy}`;
+    return `${mm}/${dd}/${yyyy}`;
   }
 
   updateCustomPSplit = (event, id) => {
@@ -115,7 +116,7 @@ class AddItem extends Component {
     </div>);
   }
 
-  render() {
+  renderAddBill() {
     const { usersHouse } = this.props;
     const equalCalc = usersHouse.users.map(user => {
       return <div key={user.id}>
@@ -160,6 +161,10 @@ class AddItem extends Component {
 
       </div>
     );
+  }
+
+  render() {
+    return this.props.usersHouse.users ? this.renderAddBill() : null;
   }
 }
 

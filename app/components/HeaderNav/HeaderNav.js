@@ -7,6 +7,8 @@ class HeaderNav extends Component {
     const { currentUser, usersHouse, signOut, leaveHouse } = this.props;
     const userStuff = <div className='user-stuff'>
       <p className='greeting'>{`Welcome to ${usersHouse.houseName},  ${currentUser.name}.`}</p>
+      <Link to="/houselist">Manage House</Link>
+      <Link to="/userlist">My Lists</Link>
       <button onClick={() => { leaveHouse(currentUser, usersHouse); }}>Leave House</button>
       <button onClick={signOut}>Sign Out</button>
     </div>;
@@ -17,16 +19,6 @@ class HeaderNav extends Component {
         </Link>
         <h3>A Communal Living Management App</h3>
         {usersHouse.houseName ? userStuff : null}
-        <div>
-          <Link to="/summary">House Summary</Link>
-          <Link to="/bulletins">House Bulletins</Link>
-          <Link to="/bills">House Bills</Link>
-          <Link to="/chores">House Chores</Link>
-          <Link to="/bills/user">My Bills</Link>
-          <Link to="/chores/user">My Chores</Link>
-          <div className='leave-house-div' onClick={() => { leaveHouse(currentUser, usersHouse); }}>Leave House</div>
-          <div className='signout-div' onClick={signOut}>Sign Out</div>
-        </div>
       </div>
     );
   }
