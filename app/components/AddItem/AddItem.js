@@ -6,6 +6,7 @@ class AddItem extends Component {
   constructor() {
     super();
     this.state = {
+      item: '',
       split: '',
       equalSelect: [],
       title: '',
@@ -27,6 +28,10 @@ class AddItem extends Component {
     this.setState({ split: val });
   }
 
+  updateItem = val => {
+    this.setState({ item: val });
+  }
+
   addBill = () => {
     const { title, duedate, total, allUsersTotals, details } = this.state;
     const bill = {
@@ -41,7 +46,7 @@ class AddItem extends Component {
       id: `b${Date.parse(duedate) + Date.now()}`
     };
     this.props.addBill(bill, this.props.usersHouse);
-    //user will need to be sent to either dash or houselist for bills
+    this.updateItem('');
   }
 
   getTodaysDate = () => {
@@ -106,6 +111,17 @@ class AddItem extends Component {
     this.setState({ split: 'calculated', allUsersTotals: newState });
   }
 
+  addBulletin = () => {
+    const bulletin = {
+      id: Date.now(),
+      title: this.state.title,
+      details: this.state.details,
+      hasRead: [this.props.currentUser.id]
+    };
+
+    this.props.addBulletin(bulletin, this.props.usersHouse);
+  }
+
   renderWithButton = elements => {
     return (<div>
       {elements}
@@ -156,15 +172,41 @@ class AddItem extends Component {
         {this.state.split === 'customP' ? this.renderWithButton(customPCalc) : null}
         {this.state.split === 'customD' ? customPCalc : null}
         <textarea type='text' placeholder='Details' onChange={(event) => this.handleChange(event, 'details')}/>
-        <button onClick={() => this.addBill()}>Add Bill</button>
-        {/* when user is in local storage, this button will just refresh page <button>Clear Bill</button> */}
+        <button onClick={() => this.addBill()}>Submit</button>
+        {/* button to clear all input fiels and state related to bills */}
 
       </div>
     );
   }
 
+  renderAddBulletin = () => {
+    return (
+      <div>
+        <input type='text' placeholder='Title' onChange={(event) => this.handleChange(event, 'title')}/>
+        <textarea type='text' placeholder='Details' onChange={(event) => this.handleChange(event, 'details')}/>
+        <button onClick={() => this.addBulletin()}>Submit</button>
+      </div>
+    );
+  }
+
+  renderButtons = () => {
+    return (
+      <div>
+        <button onClick={() => this.updateItem('bill')}>Add Bill</button>
+        <button onClick={() => this.updateItem('chore')}>Add Chore</button>
+        <button onClick={() => this.updateItem('bulletin')}>Add Bulletin</button>
+      </div>
+    );
+  }
+
   render() {
-    return this.props.usersHouse.users ? this.renderAddBill() : null;
+    return (
+      <div>
+        {this.props.usersHouse.users ? this.renderButtons() : null}
+        {this.state.item === 'bill' ? this.renderAddBill() : null}
+        {this.state.item === 'bulletin' ? this.renderAddBulletin() : null}
+      </div>
+    );
   }
 }
 

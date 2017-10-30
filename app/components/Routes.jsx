@@ -29,7 +29,7 @@ const Routes = ({ usersHouse }) => {
     <div className="routes">
       <Route path="/" component={ HeaderNavContainer }/>
       <Route exact path="/" component={ DashContainer }/>
-      <Route path="/addbill" component={ AddItemContainer }/>
+      <Route path="/additem" component={ AddItemContainer }/>
       <Route exact path='/houselist' component={ HouseListContainer }/>
 
       <Route path='/bills/:id' component={ ItemContainer }/>

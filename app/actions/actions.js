@@ -55,10 +55,17 @@ export const leaveHouse = (currentUser, usersHouse) => {
 };
 
 export const addBill = (bill, usersHouse) => {
-  console.log('in action')
   return {
     type: 'ADD_BILL',
     bill,
+    usersHouse
+  };
+};
+
+export const addBulletin = (bulletin, usersHouse) => {
+  return {
+    type: 'ADD_BULLETIN',
+    bulletin,
     usersHouse
   };
 };

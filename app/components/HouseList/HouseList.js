@@ -53,7 +53,7 @@ class HouseList extends Component {
           onClick={() => { this.setState({ currentView: 'summary'}); }}>
           View Summary
         </button>
-        <Link to='/addbill'>Add Bill</Link>
+        <Link to='/additem'>Add Bills, Chores, or Bulletins</Link>
         {this.state.currentView === 'bills' ? bills : null}
       </div>
     );
