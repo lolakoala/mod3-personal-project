@@ -15,7 +15,6 @@ class HouseList extends Component {
     const { bills } = this.props.usersHouse;
     return (
       <div>
-        <Link to='/addbill'>Add Bill</Link>
         <input type='text' placeholder='search'/>
         <h4>Title</h4>
         <h4>Due Date</h4>
@@ -23,9 +22,35 @@ class HouseList extends Component {
         <h4>All Paid</h4>
         {bills.map(bill => {
           return (<div key={bill.parsedDuedate}>
-            <Link to={`bills/${bill.id}`}>{`Bill: ${bill.title}`}</Link>
-            <p>{`Due: ${bill.duedate}`}</p>
-            <p>{`Total: ${bill.total}`}</p>
+            <Link to={`bills/${bill.id}`}>{bill.title}</Link>
+            <p>{bill.duedate}</p>
+            <p>{bill.total}</p>
+          </div>);
+        })}
+      </div>
+    );
+  }
+
+  renderBulletins = () => {
+    const { bulletins } = this.props.usersHouse;
+    const { addReaderToBulletin, currentUser, usersHouse } = this.props;
+    return (
+      <div>
+        <input type='text' placeholder='search'/>
+        <h4>Title</h4>
+        <h4>Date Posted</h4>
+        <h4>All Read</h4>
+        {bulletins.map(bulletin => {
+          let bulletinClass;
+          bulletin.hasRead.includes(currentUser.id) ? bulletinClass = 'read' : bulletinClass = 'not-read';
+          //set image based on if bulletin.hasRead.length === usersHouse.users.length
+          return (<div key={bulletin.id} className={bulletinClass}>
+            <Link
+              to={`bulletins/${bulletin.id}`}
+              onClick={() => addReaderToBulletin(bulletin.id, currentUser.id, usersHouse)}>
+              {bulletin.title}
+            </Link>
+            <p>{bulletin.datePosted}</p>
           </div>);
         })}
       </div>
@@ -34,6 +59,7 @@ class HouseList extends Component {
 
   render() {
     const bills = this.renderBills();
+    const bulletins = this.renderBulletins();
 
     return (
       <div>
@@ -55,6 +81,7 @@ class HouseList extends Component {
         </button>
         <Link to='/additem'>Add Bills, Chores, or Bulletins</Link>
         {this.state.currentView === 'bills' ? bills : null}
+        {this.state.currentView === 'bulletins' ? bulletins : null}
       </div>
     );
   }

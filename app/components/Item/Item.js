@@ -4,8 +4,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 class  Item extends Component {
-  render() {
-
+  renderBill() {
     const bill = this.props.usersHouse.bills.find(bill => bill.id === this.props.match.params.id);
     return (
       <div>
@@ -25,11 +24,44 @@ class  Item extends Component {
     );
   }
 
+  renderBulletin() {
+    const { usersHouse } = this.props;
+    const bulletin = usersHouse.bulletins.find(bulletin => {
+      return (parseInt(bulletin.id, 10) === parseInt(this.props.match.params.id, 10));
+    });
+    const needsToRead = usersHouse.users.filter(user => {
+      return !bulletin.hasRead.includes(user.id);
+    });
+    return (
+      <div>
+        <p>{bulletin.title}</p>
+        <p>{bulletin.details}</p>
+        <p>{`Posted by ${bulletin.postedBy.name} on ${bulletin.datePosted}`}</p>
+        <p>Needs to be read by ...</p>
+        {needsToRead.map(user => {
+          return <p key={user.id}>{user.name}</p>;
+        })}
+      </div>
+    );
+  }
+
+  render() {
+    let itemToRender;
+    if (this.props.match.params.id.charAt(0) === 'b') {
+      itemToRender = this.renderBill();
+    } else if (this.props.match.params.id.charAt(0) === 'c') {
+      itemToRender = this.renderChore();
+    } else {
+      itemToRender = this.renderBulletin();
+    }
+    return itemToRender;
+  }
+
 }
 
 export default Item;
 
 Item.propTypes = {
-  // bill: PropTypes.object,
-  usersHouse: PropTypes.object
+  usersHouse: PropTypes.object,
+  match: PropTypes.object
 };

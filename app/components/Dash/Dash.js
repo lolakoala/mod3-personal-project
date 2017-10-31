@@ -46,10 +46,13 @@ class Dash extends Component {
 
   createHouse = () => {
     this.props.createHouse(Object.assign(
-      { houseName: this.state.houseName,
+      {
+        houseName: this.state.houseName,
         houseCode: this.state.houseCode,
         users: [this.props.currentUser],
-        bills: [{ title: 'fake' }]}));
+        bills: [{ title: 'fake' }],
+        bulletins: [{ title: 'fake' }]
+      }));
   }
 
   getHouse = () => {
@@ -83,8 +86,8 @@ class Dash extends Component {
     );
   }
 
-  renderDash = () => {
-    const { usersHouse, currentUser } = this.props;
+  renderBills = () => {
+    const { usersHouse, currentUser, markBillPaid } = this.props;
     const mybills = usersHouse.bills.filter(bill => {
       const usersOwe = bill.allUsersTotals.map(user => user.id);
       return usersOwe.includes(currentUser.id);
@@ -92,20 +95,64 @@ class Dash extends Component {
     const billsDue = mybills.filter(bill => {
       return bill.allUsersTotals.find(user => user.id === currentUser.id).paid === false;
     });
+    if (billsDue.length) {
+      return (
+        <div>
+          <h2>Bills I Owe</h2>
+          <h4>Title</h4>
+          <h4>Due Date</h4>
+          <h4>My Total</h4>
+          <h4>Mark as Paid</h4>
+          {billsDue.map(bill => {
+            const myTotal = bill.allUsersTotals.find(user => user.id === currentUser.id).total;
+            return (<div key={bill.parsedDuedate}>
+              <Link to={`bills/${bill.id}`}>{bill.title}</Link>
+              <p>{bill.duedate}</p>
+              <p>{myTotal}</p>
+              <div onClick={() => markBillPaid(bill.id, currentUser.id, usersHouse)}></div>
+            </div>);
+          })}
+        </div>
+      );
+    } else {
+      return (
+        <div></div>
+      );
+    }
+  }
+
+  renderBulletins = () => {
+    const { usersHouse, currentUser } = this.props;
+    const iNeedToRead = usersHouse.bulletins.filter(bulletin => {
+      return !bulletin.hasRead.includes(currentUser.id);
+    });
+    if (iNeedToRead.length) {
+      return (
+        <div>
+          <h2>Bulletins I Need to Read</h2>
+          <h4>Title</h4>
+          <h4>Date Posted</h4>
+          {iNeedToRead.map(bulletin => {
+            return (<div key={bulletin.id}>
+              <Link
+                to={`bulletins/${bulletin.id}`}
+                onClick={() => this.props.addReaderToBulletin(bulletin.id, currentUser.id, usersHouse)}>
+                {bulletin.title}
+              </Link>
+              <p>{bulletin.datePosted}</p>
+            </div>);
+          })}
+        </div>
+      );
+    }
+  }
+
+  renderDash = () => {
+    const { bills, bulletins } = this.props.usersHouse;
     return (
       <div>
-        <h2>Bills I Owe</h2>
-        <h4>Title</h4>
-        <h4>Due Date</h4>
-        <h4>My Total</h4>
-        {billsDue.map(bill => {
-          const myTotal = bill.allUsersTotals.find(user => user.id === currentUser.id).total;
-          return (<div key={bill.parsedDuedate}>
-            <Link to={`bills/${bill.id}`}>{bill.title}</Link>
-            <p>{bill.duedate}</p>
-            <p>{myTotal}</p>
-          </div>);
-        })}
+        {(bills.length && bills[0].title !== 'fake') ? this.renderBills() : null }
+        {(bulletins.length && bulletins[0].title !== 'fake') ? this.renderBulletins(): null}
       </div>
     );
   }
@@ -136,5 +183,5 @@ Dash.propTypes = {
   loginSuccess: PropTypes.func,
   createHouse: PropTypes.func,
   usersHouse: PropTypes.object,
-  getHouse: PropTypes.funch
+  getHouse: PropTypes.func
 };

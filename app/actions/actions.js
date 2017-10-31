@@ -69,3 +69,21 @@ export const addBulletin = (bulletin, usersHouse) => {
     usersHouse
   };
 };
+
+export const addReaderToBulletin = (bulletinId, userId, usersHouse) => {
+  return {
+    type: 'ADD_READER',
+    bulletinId,
+    userId,
+    usersHouse
+  };
+};
+
+export const markBillPaid = (billId, userId, usersHouse) => {
+  return {
+    type: 'MARK_PAID',
+    billId,
+    userId,
+    usersHouse
+  };
+};

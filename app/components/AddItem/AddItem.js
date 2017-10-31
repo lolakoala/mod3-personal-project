@@ -116,10 +116,13 @@ class AddItem extends Component {
       id: Date.now(),
       title: this.state.title,
       details: this.state.details,
-      hasRead: [this.props.currentUser.id]
+      hasRead: [this.props.currentUser.id],
+      postedBy: this.props.currentUser,
+      datePosted: this.getTodaysDate()
     };
 
     this.props.addBulletin(bulletin, this.props.usersHouse);
+    this.updateItem('');
   }
 
   renderWithButton = elements => {
