@@ -9,8 +9,8 @@ class HeaderNav extends Component {
       <p className='greeting'>{`Welcome to ${usersHouse.houseName},  ${currentUser.name}.`}</p>
       <Link to="/houselist">Manage House</Link>
       <Link to="/userlist">My Lists</Link>
-      <button onClick={() => { leaveHouse(currentUser, usersHouse); }}>Leave House</button>
-      <button onClick={signOut}>Sign Out</button>
+      <Link to='/' onClick={() => { leaveHouse(currentUser, usersHouse); }}>Leave House</Link>
+      <Link to='/' onClick={signOut}>Sign Out</Link>
     </div>;
     return (
       <div>

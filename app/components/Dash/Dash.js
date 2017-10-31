@@ -109,7 +109,7 @@ class Dash extends Component {
               <Link to={`bills/${bill.id}`}>{bill.title}</Link>
               <p>{bill.duedate}</p>
               <p>{myTotal}</p>
-              <div onClick={() => markBillPaid(bill.id, currentUser.id, usersHouse)}></div>
+              <div onClick={() => markBillPaid(bill.id, currentUser.id, usersHouse)}>Mark as Paid</div>
             </div>);
           })}
         </div>

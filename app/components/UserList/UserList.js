@@ -11,7 +11,7 @@ class UserList extends Component {
   }
 
   renderBills = () => {
-    const { usersHouse, currentUser } = this.props;
+    const { usersHouse, currentUser, markBillPaid } = this.props;
     const mybills = usersHouse.bills.filter(bill => {
       const usersOwe = bill.allUsersTotals.map(user => user.id);
       return usersOwe.includes(currentUser.id);
@@ -21,13 +21,14 @@ class UserList extends Component {
         <h4>Title</h4>
         <h4>Due Date</h4>
         <h4>My Total</h4>
-        <h4>Paid</h4>
+        <h4>Mark as Paid</h4>
         {mybills.map(bill => {
-          const myTotal = bill.allUsersTotals.find(user => user.id === currentUser.id).total;
+          const user = bill.allUsersTotals.find(user => user.id === currentUser.id);
           return (<div key={bill.parsedDuedate}>
             <Link to={`bills/${bill.id}`}>{bill.title}</Link>
             <p>{bill.duedate}</p>
-            <p>{myTotal}</p>
+            <p>{user.total}</p>
+            <p onClick={() => markBillPaid(bill.id, currentUser.id, usersHouse)}>{user.paid ? 'Paid' : 'Mark as Paid'}</p>
           </div>);
         })}
       </div>

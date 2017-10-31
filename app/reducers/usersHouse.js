@@ -62,9 +62,24 @@ const usersHouse = (state = {}, action) => {
     const updateBulletins = action.usersHouse.bulletins.filter(bulletin => {
       return bulletin.id !== action.bulletinId;
     });
-    const updatedBulletin = Object.assign(action.usersHouse, { bulletins: [...updateBulletins, newBulletin] });
-    firebase.database().ref("houses/" + action.usersHouse.houseKey).set(updatedBulletin);
-    return updatedBulletin;
+    const updateWithBulletin = Object.assign(action.usersHouse, { bulletins: [...updateBulletins, newBulletin] });
+    firebase.database().ref("houses/" + action.usersHouse.houseKey).set(updateWithBulletin);
+    return updateWithBulletin;
+  case 'MARK_PAID':
+    const oldBill = action.usersHouse.bills.find(bill => bill.id === action.billId);
+    const user = oldBill.allUsersTotals.find(user => user.id === action.userId);
+    if (user.paid === true) {
+      return action.usersHouse;
+    }
+    const newUser = Object.assign(user, { paid: true });
+    const newAllUsersTotals = oldBill.allUsersTotals.filter(user => user.id !== action.userId);
+    const newBill = Object.assign(oldBill, { allUsersTotals: [...newAllUsersTotals, newUser] });
+    const updatedBills = action.usersHouse.bills.filter(bill => {
+      return bill.id !== action.billId;
+    });
+    const updateWithBill = Object.assign(action.usersHouse, { bills: [...updatedBills, newBill] });
+    firebase.database().ref("houses/" + action.usersHouse.houseKey).set(updateWithBill);
+    return updateWithBill;
   default:
     return state;
   }
