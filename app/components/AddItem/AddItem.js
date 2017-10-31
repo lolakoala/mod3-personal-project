@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import AddBill from '../AddBill/AddBill.js';
 import AddBulletin from '../AddBulletin/AddBulletin.js';
+import AddChore from '../AddChore/AddChore.js';
 
 class AddItem extends Component {
   constructor() {
@@ -40,7 +41,7 @@ class AddItem extends Component {
   }
 
   render() {
-    const { usersHouse, currentUser, addBill, addBulletin } = this.props;
+    const { usersHouse, currentUser, addBill, addBulletin, addChore } = this.props;
     return (
       <div>
         {usersHouse.users ? this.renderButtons() : null}
@@ -58,6 +59,13 @@ class AddItem extends Component {
             getTodaysDate={this.getTodaysDate}
             updateItem={this.updateItem}/>
           : null}
+        {this.state.item === 'chore' ? 
+          <AddChore usersHouse={usersHouse}
+            currentUser={currentUser}
+            addChore={addChore}
+            getTodaysDate={this.getTodaysDate}
+            updateItem={this.updateItem}/>
+          : null}
       </div>
     );
   }
@@ -69,5 +77,6 @@ AddItem.propTypes = {
   usersHouse: PropTypes.object,
   currentUser: PropTypes.object,
   addBulletin: PropTypes.func,
-  addBill: PropTypes.func
+  addBill: PropTypes.func,
+  addChore: PropTypes.func
 };

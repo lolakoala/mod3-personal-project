@@ -1,6 +1,6 @@
 import AddItem from '../components/AddItem/AddItem.js';
 import { connect } from 'react-redux';
-import { addBill, addBulletin } from '../actions/actions.js';
+import { addBill, addBulletin, addChore } from '../actions/actions.js';
 
 const mapStateToProps =  store => ({
   currentUser: store.currentUser,
@@ -13,6 +13,9 @@ const mapDispatchToProps = dispatch => ({
   },
   addBulletin: (bulletin, usersHouse) => {
     dispatch(addBulletin(bulletin, usersHouse));
+  },
+  addChore: (chore, usersHouse) => {
+    dispatch(addChore(chore, usersHouse));
   }
 });
 

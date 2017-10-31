@@ -26,7 +26,7 @@ class Dash extends Component {
   }
 
 
-  handleChange(event, type) {
+  handleChange = (event, type) => {
     const { value } = event.target;
     this.setState({
       [type]: value
@@ -48,14 +48,16 @@ class Dash extends Component {
   }
 
   createHouse = () => {
-    this.props.createHouse(Object.assign(
+    const newHouse = Object.assign(
       {
         houseName: this.state.houseName,
         houseCode: this.state.houseCode,
         users: [this.props.currentUser],
         bills: [{ title: 'fake' }],
-        bulletins: [{ title: 'fake' }]
-      }));
+        bulletins: [{ title: 'fake' }],
+        chores: [{ title: 'fake' }]
+      });
+    this.props.createHouse(newHouse);
   }
 
   getHouse = () => {
@@ -79,7 +81,8 @@ class Dash extends Component {
         {(bulletins.length && bulletins[0].title !== 'fake') ?
           <BulletinsList usersHouse={usersHouse}
             currentUser={currentUser}
-            addReaderToBulletin={addReaderToBulletin}/>
+            addReaderToBulletin={addReaderToBulletin}
+            placeRendered={match.url}/>
           : null}
       </div>
     );

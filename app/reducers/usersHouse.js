@@ -7,14 +7,7 @@ const usersHouse = (state = {}, action) => {
     housesRef.push(action.house);
     return action.house;
   case 'GET_HOUSE':
-    const updatedHouse = {
-      houseName: action.usersHouse.houseName,
-      houseCode: action.usersHouse.houseCode,
-      users: [...action.usersHouse.users, action.user],
-      bills: [...action.usersHouse.bills],
-      houseKey: action.usersHouse.houseKey,
-      bulletins: [...action.usersHouse.bulletins]
-    };
+    const updatedHouse = Object.assign(action.usersHouse, { users: [...action.usersHouse.users, action.user] });
     firebase.database().ref("houses/" + action.usersHouse.houseKey).set(updatedHouse);
     return updatedHouse;
   case 'LOGIN_SUCCESS':
@@ -22,37 +15,25 @@ const usersHouse = (state = {}, action) => {
   case 'SIGNOUT':
     return {};
   case 'LEAVE_HOUSE':
-    firebase.database().ref("houses/" + action.usersHouse.houseKey).set({
-      houseName: action.usersHouse.houseName,
-      houseCode: action.usersHouse.houseCode,
-      users: action.usersHouse.users.filter(user => user.id !== action.currentUser.id),
-      bills: [...action.usersHouse.bills],
-      houseKey: action.usersHouse.houseKey,
-      bulletins: [...action.usersHouse.bulletins]
-    });
+    const deleteUser = action.usersHouse.users.filter(user => user.id !== action.currentUser.id);
+    const houseWithoutUser = Object.assign(action.usersHouse, { users: deleteUser });
+    firebase.database().ref("houses/" + action.usersHouse.houseKey).set(houseWithoutUser);
     return {};
   case 'ADD_BILL':
-    const houseWithBill = {
-      houseName: action.usersHouse.houseName,
-      houseCode: action.usersHouse.houseCode,
-      users: action.usersHouse.users,
-      bills: [...action.usersHouse.bills.filter(bill => bill.title !== 'fake'), action.bill],
-      houseKey: action.usersHouse.houseKey,
-      bulletins: [...action.usersHouse.bulletins]
-    };
+    const takeOutFakeBills = action.usersHouse.bills.filter(bill => bill.title !== 'fake');
+    const houseWithBill = Object.assign(action.usersHouse, { bills: [...takeOutFakeBills, action.bill] });
     firebase.database().ref("houses/" + action.usersHouse.houseKey).set(houseWithBill);
     return houseWithBill;
   case 'ADD_BULLETIN':
-    const houseWithBulletin = {
-      houseName: action.usersHouse.houseName,
-      houseCode: action.usersHouse.houseCode,
-      users: action.usersHouse.users,
-      bills: [...action.usersHouse.bills],
-      houseKey: action.usersHouse.houseKey,
-      bulletins: [...action.usersHouse.bulletins.filter(bulletin => bulletin.title !== 'fake'), action.bulletin]
-    };
+    const takeOutFakeBulletins = action.usersHouse.bulletins.filter(bulletin => bulletin.title !== 'fake');
+    const houseWithBulletin = Object.assign(action.usersHouse, { bulletins: [...takeOutFakeBulletins, action.bulletin] });
     firebase.database().ref("houses/" + action.usersHouse.houseKey).set(houseWithBulletin);
     return houseWithBulletin;
+  case 'ADD_CHORE':
+    const takeOutFakeChore = action.usersHouse.chores.filter(chore => chore.title !== 'fake');
+    const houseWithChore = Object.assign(action.usersHouse, { chores: [...takeOutFakeChore, action.chore] });
+    firebase.database().ref("houses/" + action.usersHouse.houseKey).set(houseWithChore);
+    return houseWithChore;
   case 'ADD_READER':
     const oldBulletin = action.usersHouse.bulletins.find(bulletin => bulletin.id === action.bulletinId);
     if (oldBulletin.hasRead.includes(action.userId)) {

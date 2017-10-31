@@ -55,6 +55,14 @@ export const addBulletin = (bulletin, usersHouse) => {
   };
 };
 
+export const addChore = (chore, usersHouse) => {
+  return {
+    type: 'ADD_CHORE',
+    chore,
+    usersHouse
+  };
+};
+
 export const addReaderToBulletin = (bulletinId, userId, usersHouse) => {
   return {
     type: 'ADD_READER',

@@ -13,10 +13,10 @@ const JoinHouse = ({ handleChange, getHouse, createHouse }) => {
       </button>
       <input type="text"
         placeholder="House Name"
-        onChange={ (event) => this.handleChange(event, 'houseName' ) }/>
+        onChange={ (event) => handleChange(event, 'houseName' ) }/>
       <input type="text"
         placeholder="House Code"
-        onChange={ (event) => this.handleChange(event, 'houseCode' ) }/>
+        onChange={ (event) => handleChange(event, 'houseCode' ) }/>
       <button
         onClick={createHouse}>
           Add My House
