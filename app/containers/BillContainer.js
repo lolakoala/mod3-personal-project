@@ -1,5 +1,5 @@
-import Item from '../components/Item/Item.js';
-import { connect, bindActionCreators } from 'react-redux';
+import Bill from '../components/Bill/Bill.js';
+import { connect } from 'react-redux';
 import { markBillPaid } from '../actions/actions.js';
 
 const mapStateToProps =  store => ({
@@ -12,4 +12,4 @@ const mapDispatchToProps = dispatch => ({
   }
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Item);
+export default connect(mapStateToProps, mapDispatchToProps)(Bill);

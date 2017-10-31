@@ -5,8 +5,6 @@ import createBrowserHistory from '../../node_modules/history/createBrowserHistor
 import { routerMiddleware } from 'react-router-redux';
 import DevTools from '../containers/DevTools.js';
 
-//might not need thunk and middleware?
-
 const history = createBrowserHistory();
 const middleware = routerMiddleware(history);
 

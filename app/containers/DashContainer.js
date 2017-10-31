@@ -5,9 +5,6 @@ import { loginSuccess, createHouse, getHouse, addReaderToBulletin, markBillPaid 
 const mapStateToProps =  store => ({
   currentUser: store.currentUser,
   usersHouse: store.usersHouse
-  // bulletins: store.bulletins,
-  // bills: store.bills,
-  // chores: store.chores
 });
 
 const mapDispatchToProps = (dispatch) => ({

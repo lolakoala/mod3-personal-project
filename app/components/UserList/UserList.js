@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import BillsList from '../BillsList/BillsList.js';
 
 class UserList extends Component {
   constructor() {
@@ -10,33 +10,9 @@ class UserList extends Component {
     };
   }
 
-  renderBills = () => {
-    const { usersHouse, currentUser, markBillPaid } = this.props;
-    const mybills = usersHouse.bills.filter(bill => {
-      const usersOwe = bill.allUsersTotals.map(user => user.id);
-      return usersOwe.includes(currentUser.id);
-    });
-    return (
-      <div>
-        <h4>Title</h4>
-        <h4>Due Date</h4>
-        <h4>My Total</h4>
-        <h4>Mark as Paid</h4>
-        {mybills.map(bill => {
-          const user = bill.allUsersTotals.find(user => user.id === currentUser.id);
-          return (<div key={bill.parsedDuedate}>
-            <Link to={`bills/${bill.id}`}>{bill.title}</Link>
-            <p>{bill.duedate}</p>
-            <p>{user.total}</p>
-            <p onClick={() => markBillPaid(bill.id, currentUser.id, usersHouse)}>{user.paid ? 'Paid' : 'Mark as Paid'}</p>
-          </div>);
-        })}
-      </div>
-    );
-  }
-
   render() {
-    const bills = this.renderBills();
+    const { usersHouse, currentUser, markBillPaid, match } = this.props;
+    const placeRendered = match.url;
     return (
       <div>
         <h2>My Lists</h2>
@@ -48,7 +24,12 @@ class UserList extends Component {
           onClick={() => { this.setState({ currentView: 'chores'}); }}>
           View Chores
         </button>
-        {this.state.currentView === 'bills' ? bills : null}
+        {this.state.currentView === 'bills' ?
+          <BillsList usersHouse={usersHouse}
+            currentUser={currentUser}
+            placeRendered={placeRendered}
+            markBillPaid={markBillPaid}/>
+          : null}
       </div>
     );
   }
@@ -57,5 +38,8 @@ class UserList extends Component {
 export default UserList;
 
 UserList.propTypes = {
-
+  usersHouse: PropTypes.object,
+  currentUser: PropTypes.object,
+  markBillPaid: PropTypes.func,
+  match: PropTypes.object
 };

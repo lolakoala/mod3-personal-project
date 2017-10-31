@@ -1,18 +1,3 @@
-import firebase from '../firebase.js';
-
-
-// actions to ...
-// create user
-// log in
-// create house
-// join house
-// add bulletin
-// add chore
-// alter chore
-// add bill
-// alter bill
-
-
 export const loginSuccess = (user, usersHouse = {}) => {
   let currentUser = Object.assign({}, {
     id: user.uid,

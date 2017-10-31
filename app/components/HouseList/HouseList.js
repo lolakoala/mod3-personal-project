@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import BillsList from '../BillsList/BillsList.js';
 
 class HouseList extends Component {
   constructor() {
@@ -58,7 +59,9 @@ class HouseList extends Component {
   }
 
   render() {
-    const bills = this.renderBills();
+    const { currentUser, usersHouse, match } = this.props;
+
+    // const bills = this.renderBills();
     const bulletins = this.renderBulletins();
 
     return (
@@ -80,7 +83,12 @@ class HouseList extends Component {
           View Summary
         </button>
         <Link to='/additem'>Add Bills, Chores, or Bulletins</Link>
-        {this.state.currentView === 'bills' ? bills : null}
+        {this.state.currentView === 'bills' ?
+          <BillsList usersHouse={usersHouse}
+            currentUser={currentUser}
+            markBillPaid={() => {}}
+            placeRendered={match.url}/>
+          : null}
         {this.state.currentView === 'bulletins' ? bulletins : null}
       </div>
     );
@@ -91,5 +99,8 @@ class HouseList extends Component {
 export default HouseList;
 
 HouseList.propTypes = {
-  usersHouse: PropTypes.object
+  usersHouse: PropTypes.object,
+  currentUser: PropTypes.object,
+  addReaderToBulletin: PropTypes.func,
+  match: PropTypes.object
 };
