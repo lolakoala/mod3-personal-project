@@ -18,7 +18,7 @@ class HeaderNav extends Component {
           <h1>Tribe</h1>
         </Link>
         <h3>A Communal Living Management App</h3>
-        {usersHouse.users ? userStuff : null}
+        {usersHouse.houseName ? userStuff : null}
       </div>
     );
   }

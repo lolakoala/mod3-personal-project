@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import BillsList from '../BillsList/BillsList.js';
+import ChoresList from '../ChoresList/ChoresList.js';
 
 class UserList extends Component {
   constructor() {
@@ -29,6 +30,11 @@ class UserList extends Component {
             currentUser={currentUser}
             placeRendered={placeRendered}
             markBillPaid={markBillPaid}/>
+          : null}
+        {this.state.currentView === 'chores' ?
+          <ChoresList usersHouse={usersHouse}
+            currentUser={currentUser}
+            placeRendered={placeRendered}/>
           : null}
       </div>
     );

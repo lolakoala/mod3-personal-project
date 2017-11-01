@@ -4,10 +4,15 @@ import { Link } from 'react-router-dom';
 
 class ChoresList extends Component {
   getChoresToMap = () => {
-    const { usersHouse, placeRendered } = this.props;
+    const { usersHouse, placeRendered, currentUser } = this.props;
+    const userChores = usersHouse.chores.filter(chore => chore.assignedTo === currentUser.id);
+    const userChoresToDo = userChores.filter(chore => chore.done === false);
+    const userChoresDone = userChores.filter(chore => chore.done === true);
     let choresToMap;
     if (placeRendered === '/houselist') {
       choresToMap = usersHouse.chores;
+    } else if (placeRendered === '/userlist') {
+      choresToMap = [...userChoresToDo, ...userChoresDone];
     }
     return choresToMap;
   }
@@ -36,10 +41,9 @@ class ChoresList extends Component {
         <h4>{placeRendered === '/houselist' ? 'Assignee' : null}</h4>
         <h4>Done</h4>
         {choresToMap.map(chore => {
-          const assignedTo = usersHouse.users.find(user => user.id === chore.assignedTo).name;
+          const assignedTo = usersHouse.users.find(user => user.id === chore.assignedTo).name || 'none';
           return (<div key={chore.datePosted}>
-            {/* <Link to={`chores/${chore.id}`}>{chore.title}</Link> */}
-            <p>{chore.title}</p>
+            <Link to={`chores/${chore.id}`}>{chore.title}</Link>
             <p>{`Urgency: ${chore.urgency}`}</p>
             <p>{placeRendered === '/houselist' ? assignedTo : null}</p>
           </div>);

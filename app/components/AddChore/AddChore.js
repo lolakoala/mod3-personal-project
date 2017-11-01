@@ -67,7 +67,7 @@ class Chore extends Component {
         <input type='text' placeholder='Title' onChange={event => this.handleChange(event, 'title')}/>
         <textarea type='text' placeholder='Details' onChange={event => this.handleChange(event, 'details')}/>
         <input type='checkbox' id='selfassign' onChange={() => this.assignToSelf(currentUser.id)}/>
-        <label htmlFor='selfassign'>Assign to Self</label>
+        <label htmlFor='selfassign'>Claim for Self</label>
         <input type='checkbox' id='alreadyDone' onChange={() => this.toggleDone()}/>
         <label htmlFor='alreadyDone'>Already Done</label>
         {this.state.done === false ? this.renderUrgency() : null}
