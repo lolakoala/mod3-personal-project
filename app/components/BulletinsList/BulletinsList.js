@@ -12,6 +12,10 @@ class BulletinsList extends Component {
       return iNeedToRead;
     } else if (placeRendered === '/houselist') {
       return usersHouse.bulletins;
+    } else if (placeRendered === 'summary') {
+      const today = Date.now();
+      const weekBulletins = usersHouse.bulletins.filter(bulletin => today - bulletin.id <= 604800000);
+      return weekBulletins;
     }
   }
 
@@ -31,30 +35,36 @@ class BulletinsList extends Component {
       return unreadBulletinHeaders;
     } else if (placeRendered === '/houselist') {
       return allBulletinHeaders;
+    } else if (placeRendered === 'summary') {
+      return allBulletinHeaders;
     }
   }
 
   render() {
     const { usersHouse, currentUser, addReaderToBulletin } = this.props;
-    const bulletins = this.getBulletins();
-    if (bulletins.length) {
-      return (
-        <div>
-          {this.getHeaders()}
-          {bulletins.map(bulletin => {
-            let bulletinClass;
-            bulletin.hasRead.includes(currentUser.id) ? bulletinClass = 'read' : bulletinClass = 'not-read';
-            return (<div key={bulletin.id} className={bulletinClass}>
-              <Link
-                to={`bulletins/${bulletin.id}`}
-                onClick={() => addReaderToBulletin(bulletin.id, currentUser.id, usersHouse)}>
-                {bulletin.title}
-              </Link>
-              <p>{bulletin.datePosted}</p>
-            </div>);
-          })}
-        </div>
-      );
+    if (usersHouse.bulletins.length && usersHouse.bulletins[0].title !== 'fake') {
+      const bulletins = this.getBulletins();
+      if (bulletins.length) {
+        return (
+          <div>
+            {this.getHeaders()}
+            {bulletins.map(bulletin => {
+              let bulletinClass;
+              bulletin.hasRead.includes(currentUser.id) ? bulletinClass = 'read' : bulletinClass = 'not-read';
+              return (<div key={bulletin.id} className={bulletinClass}>
+                <Link
+                  to={`bulletins/${bulletin.id}`}
+                  onClick={() => addReaderToBulletin(bulletin.id, currentUser.id, usersHouse)}>
+                  {bulletin.title}
+                </Link>
+                <p>{bulletin.datePosted}</p>
+              </div>);
+            })}
+          </div>
+        );
+      } else {
+        return <div></div>;
+      }
     } else {
       return <div></div>;
     }

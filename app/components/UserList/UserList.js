@@ -12,7 +12,13 @@ class UserList extends Component {
   }
 
   render() {
-    const { usersHouse, currentUser, markBillPaid, match } = this.props;
+    const {
+      usersHouse,
+      currentUser,
+      markBillPaid,
+      match,
+      markChoreDone
+    } = this.props;
     const placeRendered = match.url;
     return (
       <div>
@@ -34,7 +40,9 @@ class UserList extends Component {
         {this.state.currentView === 'chores' ?
           <ChoresList usersHouse={usersHouse}
             currentUser={currentUser}
-            placeRendered={placeRendered}/>
+            placeRendered={placeRendered}
+            markChoreDone={markChoreDone}
+            claimChore={() => {}}/>
           : null}
       </div>
     );
@@ -47,5 +55,6 @@ UserList.propTypes = {
   usersHouse: PropTypes.object,
   currentUser: PropTypes.object,
   markBillPaid: PropTypes.func,
-  match: PropTypes.object
+  match: PropTypes.object,
+  markChoreDone: PropTypes.func
 };

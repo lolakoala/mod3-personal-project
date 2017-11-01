@@ -61,6 +61,21 @@ const usersHouse = (state = {}, action) => {
     const updateWithBill = Object.assign(action.usersHouse, { bills: [...updatedBills, newBill] });
     firebase.database().ref("houses/" + action.usersHouse.houseKey).set(updateWithBill);
     return updateWithBill;
+  case 'MARK_DONE':
+    const newChore = Object.assign(action.chore, { done: true });
+    const newChoreList = action.usersHouse.chores.filter(chore => chore.id !== action.chore.id);
+    const updateWithChore = Object.assign(action.usersHouse,  { chores: [...newChoreList, newChore] });
+    firebase.database().ref("houses/" + action.usersHouse.houseKey).set(updateWithChore);
+    return updateWithChore;
+  case 'CLAIM':
+    if (action.chore.assignedTo.length) {
+      return action.usersHouse;
+    }
+    const claimedChore = Object.assign(action.chore, { assignedTo: action.userId });
+    const claimedChoreList = action.usersHouse.chores.filter(chore => chore.id !== action.chore.id);
+    const updateWithClaimedChore = Object.assign(action.usersHouse, { chores: [...claimedChoreList, claimedChore]});
+    firebase.database().ref("houses/" + action.usersHouse.houseKey).set(updateWithClaimedChore);
+    return updateWithClaimedChore;
   default:
     return state;
   }

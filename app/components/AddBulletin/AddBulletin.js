@@ -6,15 +6,18 @@ class AddBulletin extends Component {
     super();
     this.state = {
       title: '',
-      details: ''
+      details: '',
+      submitDisabled: true
     };
   }
 
   handleChange(event, type) {
     const { value } = event.target;
-    this.setState({
-      [type]: value
-    });
+    if (type === 'title' && value.length) {
+      this.setState({ [type]: value, submitDisabled: false });
+    } else {
+      this.setState({ [type]: value });
+    }
   }
 
   addBulletin = () => {
@@ -31,12 +34,22 @@ class AddBulletin extends Component {
     this.props.updateItem('');
   }
 
+  reset = () => {
+    document.querySelector('.bulletin-input').value = "";
+    const newState = {
+      title: '',
+      details: ''
+    };
+    this.setState(newState);
+  }
+
   render() {
     return (
       <div>
-        <input type='text' placeholder='Title' onChange={(event) => this.handleChange(event, 'title')}/>
-        <textarea type='text' placeholder='Details' onChange={(event) => this.handleChange(event, 'details')}/>
-        <button onClick={() => this.addBulletin()}>Submit</button>
+        <input className='bulletin-input' type='text' placeholder='Title' onChange={(event) => this.handleChange(event, 'title')}/>
+        <textarea className='bulletin-input' type='text' placeholder='Details' onChange={(event) => this.handleChange(event, 'details')}/>
+        <button onClick={() => this.addBulletin()} disabled={this.state.submitDisabled}>Submit</button>
+        <button onClick={this.reset}>Reset</button>
       </div>
     );
   }

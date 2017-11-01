@@ -5,6 +5,7 @@ import firebase, { auth, provider } from '../../firebase.js';
 import JoinHouse from '../JoinHouse/JoinHouse.js';
 import BillsList from '../BillsList/BillsList.js';
 import BulletinsList from '../BulletinsList/BulletinsList.js';
+import ChoresList from '../ChoresList/ChoresList.js';
 
 class Dash extends Component {
   constructor() {
@@ -68,8 +69,15 @@ class Dash extends Component {
   }
 
   renderDash = () => {
-    const { usersHouse, currentUser, markBillPaid, addReaderToBulletin, match } = this.props;
-    const { bills, bulletins } = this.props.usersHouse;
+    const {
+      usersHouse,
+      currentUser,
+      markBillPaid,
+      addReaderToBulletin,
+      match,
+      markChoreDone
+    } = this.props;
+    const { bills, bulletins, chores } = this.props.usersHouse;
     return (
       <div>
         {(bills.length && bills[0].title !== 'fake') ?
@@ -83,6 +91,13 @@ class Dash extends Component {
             currentUser={currentUser}
             addReaderToBulletin={addReaderToBulletin}
             placeRendered={match.url}/>
+          : null}
+        {(chores.length && chores[0].title !== 'fake') ?
+          <ChoresList usersHouse={usersHouse}
+            currentUser={currentUser}
+            placeRendered={match.url}
+            markChoreDone={markChoreDone}
+            claimChore={() => {}}/>
           : null}
       </div>
     );
@@ -120,5 +135,6 @@ Dash.propTypes = {
   getHouse: PropTypes.func,
   markBillPaid: PropTypes.func,
   addReaderToBulletin: PropTypes.func,
-  match: PropTypes.object
+  match: PropTypes.object,
+  markChoreDone: PropTypes.func
 };

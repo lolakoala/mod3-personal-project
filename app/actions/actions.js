@@ -80,3 +80,20 @@ export const markBillPaid = (billId, userId, usersHouse) => {
     usersHouse
   };
 };
+
+export const markChoreDone = (chore, usersHouse) => {
+  return {
+    type: 'MARK_DONE',
+    chore,
+    usersHouse
+  };
+};
+
+export const claimChore = (userId, chore, usersHouse) => {
+  return {
+    type: 'CLAIM',
+    userId,
+    chore,
+    usersHouse
+  };
+};

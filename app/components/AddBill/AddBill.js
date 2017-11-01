@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-//check for percentages
-//check for total for each user to equal bill total
-//disable submit button unless percentages = 100 or $total = overall total
-
 class AddBill extends Component {
 
   constructor() {
@@ -17,7 +13,11 @@ class AddBill extends Component {
       duedate: '',
       total: '',
       allUsersTotals: [],
-      details: ''
+      details: '',
+      buttonDisabled: true,
+      error: '',
+      percentageLeft: 100,
+      dollarLeft: ''
     };
   }
 
@@ -29,7 +29,19 @@ class AddBill extends Component {
   }
 
   updateSplit = (val) => {
-    this.setState({ split: val });
+    if (this.state.total === '' || this.state.total <= 0) {
+      this.setState({ error: 'Please enter a bill total.' });
+      return;
+    }
+    val === 'calculated' ?
+      this.setState({ split: val, buttonDisabled: false })
+      : this.setState({
+        split: val,
+        buttonDisabled: true,
+        allUsersTotals: [],
+        percentageLeft: 100,
+        dollarLeft: this.state.total
+      });
   }
 
   updateCustomPSplit = (event, id) => {
@@ -42,16 +54,30 @@ class AddBill extends Component {
     };
     const removeUser = this.state.allUsersTotals.filter(user => user.id !== id);
     const newState = [...removeUser, userTotalObj];
-    this.setState({ allUsersTotals: newState });
+    const userTotals = newState.reduce((acc, user) => {
+      return acc += parseInt(user.total, 10);
+    }, 0);
+    const dollarLeft = parseInt(this.state.total, 10) - userTotals;
+    const percentageLeft = (dollarLeft / parseInt(this.state.total, 10)) * 100;
+    this.setState({ allUsersTotals: newState, percentageLeft: percentageLeft });
   }
 
   updateCustomDSplit = (event, id) => {
     const removeUser = this.state.allUsersTotals.filter(user => user.id !== id);
     const newState = [...removeUser, { id: id, total: event.target.value, paid: false }];
-    this.setState({ allUsersTotals: newState });
+    const usersTotals = newState.reduce((acc, user) => {
+      return acc += parseInt(user.total, 10);
+    }, 0);
+    const newDollarLeft = parseInt(this.state.total, 10) - parseInt(usersTotals, 10);
+    const updateSubmit = newDollarLeft <= 0 ? false : true;
+    this.setState({ allUsersTotals: newState, dollarLeft: newDollarLeft, buttonDisabled: updateSubmit });
   }
 
   splitEqually = () => {
+    if (this.state.total === 0) {
+      this.setState({ error: 'Please enter a bill total.' });
+      return;
+    }
     const { users } = this.props.usersHouse;
     const userTotal = this.state.total / users.length;
     const newState = users.map(user => ({
@@ -59,7 +85,7 @@ class AddBill extends Component {
       total: userTotal,
       paid: false
     }));
-    this.setState({ split: 'equalAll', allUsersTotals: newState });
+    this.setState({ split: 'equalAll', allUsersTotals: newState, buttonDisabled: false });
   }
 
   equalSelectSplit = (id) => {
@@ -77,7 +103,7 @@ class AddBill extends Component {
     const { equalSelect } = this.state;
     const total = this.state.total / equalSelect.length;
     const newState = equalSelect.map(id => ({ id, total, paid: false }));
-    this.setState({ split: 'calculated', allUsersTotals: newState });
+    this.setState({ split: 'calculated', allUsersTotals: newState, buttonDisabled: false });
   }
 
   addBill = () => {
@@ -97,11 +123,46 @@ class AddBill extends Component {
     this.props.updateItem('');
   }
 
+  toggleCalculateButton = () => {
+    if (this.state.split === 'equal' && this.state.equalSelect.length > 0) {
+      return false;
+    }
+    if (this.state.split === 'customP' && this.state.percentageLeft === 0 ) {
+      return false;
+    }
+    if (this.state.split === 'customD' && this.state.dollarLeft === 0) {
+      return false;
+    }
+    return true;
+  }
+
+  reset = () => {
+    document.querySelector('.bill-input').value = "";
+    const newState = {
+      item: '',
+      split: '',
+      equalSelect: [],
+      title: '',
+      duedate: '',
+      total: '',
+      allUsersTotals: [],
+      details: '',
+      buttonDisabled: true,
+      error: '',
+      percentageLeft: 100,
+      dollarLeft: ''
+    };
+    this.setState(newState);
+  }
+
+
+
   renderWithButton = elements => {
     return (<div>
       {elements}
       <button
-        onClick={this.state.split === 'equal' ? this.updateEqualSplit : () => this.updateSplit('calculated')}>
+        onClick={this.state.split === 'equal' ? this.updateEqualSplit : () => this.updateSplit('calculated')}
+        disabled={this.toggleCalculateButton()}>
         Calculate
       </button>
     </div>);
@@ -121,34 +182,38 @@ class AddBill extends Component {
         <p>{userName}</p><p>{userBill.total}</p>
       </div>;
     });
-    const customPCalc = usersHouse.users.map(user => {
-      const customPFunc = (event) => this.updateCustomPSplit(event, user.id);
-      const customDFunc = (event) => this.updateCustomDSplit(event, user.id);
-      return <div key={user.id}>
-        <input type="text"
-          id={user.id}
-          placeholder={this.state.split === 'customP' ? "percentage" : "dollar amount" }
-          onChange={this.state.split === 'customP' ? customPFunc : customDFunc}/>
-        <label htmlFor={user.id}>{user.name}</label>
-      </div>;
-    });
+    const customPCalc = <div>
+      <p>{this.state.split === 'customP' ? `${this.state.percentageLeft} percentage of bill left` : `$ ${this.state.dollarLeft} left of bill`}</p>
+      {usersHouse.users.map(user => {
+        const customPFunc = (event) => this.updateCustomPSplit(event, user.id);
+        const customDFunc = (event) => this.updateCustomDSplit(event, user.id);
+        return <div key={user.id}>
+          <input className='bill-input' type="text"
+            id={user.id}
+            placeholder={this.state.split === 'customP' ? "percentage" : "dollar amount" }
+            onChange={this.state.split === 'customP' ? customPFunc : customDFunc}/>
+          <label htmlFor={user.id}>{user.name}</label>
+        </div>;
+      })}
+    </div>;
     return (
       <div>
-        <input type='text' placeholder='Title' onChange={(event) => this.handleChange(event, 'title')}/>
-        <input type='text' placeholder='Due Date' onChange={(event) => this.handleChange(event, 'duedate')}/>
-        <input type='text' placeholder='Total' onChange={(event) => this.handleChange(event, 'total')}/>
+        <input className='bill-input' type='text' placeholder='Title' onChange={(event) => this.handleChange(event, 'title')}/>
+        <input className='bill-input' type='text' placeholder='Due Date' onChange={(event) => this.handleChange(event, 'duedate')}/>
+        <input className='bill-input' type='text' placeholder='Total' onChange={(event) => this.handleChange(event, 'total')}/>
         <button onClick={this.splitEqually}>Equal Split with All House Members</button>
         <button onClick={() => this.updateSplit('equal')}>Equal Split with Select House Members</button>
         <button onClick={() => this.updateSplit('customP')}>Custom Split by Percentage</button>
         <button onClick={() => this.updateSplit('customD')}>Custom Split by Dollar Amount</button>
+        <p>{this.state.error.length ? this.state.error : null}</p>
         {this.state.split === 'equalAll' ? equalAll : null}
         {this.state.split === 'calculated' ? equalAll : null}
         {this.state.split === 'equal' ? this.renderWithButton(equalCalc) : null}
         {this.state.split === 'customP' ? this.renderWithButton(customPCalc) : null}
         {this.state.split === 'customD' ? customPCalc : null}
         <textarea type='text' placeholder='Details' onChange={(event) => this.handleChange(event, 'details')}/>
-        <button onClick={() => this.addBill()}>Submit</button>
-        {/* button to clear all input fiels and state related to bills */}
+        <button onClick={() => this.addBill()} disabled={this.state.buttonDisabled}>Submit</button>
+        <button onClick={this.reset}>Reset</button>
       </div>
     );
   }

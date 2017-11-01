@@ -1,6 +1,6 @@
 import UserList from '../components/UserList/UserList.js';
 import { connect } from 'react-redux';
-import { addReaderToBulletin, markBillPaid } from '../actions/actions.js';
+import { addReaderToBulletin, markBillPaid, markChoreDone } from '../actions/actions.js';
 
 const mapStateToProps =  store => ({
   currentUser: store.currentUser,
@@ -13,6 +13,9 @@ const mapDispatchToProps = dispatch => ({
   },
   markBillPaid: (billId, userId, usersHouse) => {
     dispatch(markBillPaid(billId, userId, usersHouse));
+  },
+  markChoreDone: (chore, usersHouse) => {
+    dispatch(markChoreDone(chore, usersHouse));
   }
 });
 

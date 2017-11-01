@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import BillsList from '../BillsList/BillsList.js';
 import BulletinsList from '../BulletinsList/BulletinsList.js';
 import ChoresList from '../ChoresList/ChoresList.js';
+import Summary from '../Summary/Summary';
 
 class HouseList extends Component {
   constructor() {
@@ -15,7 +16,15 @@ class HouseList extends Component {
   }
 
   render() {
-    const { currentUser, usersHouse, match, addReaderToBulletin } = this.props;
+    const {
+      currentUser,
+      usersHouse,
+      match,
+      addReaderToBulletin,
+      markChoreDone,
+      claimChore,
+      markBillPaid
+    } = this.props;
 
     return (
       <div>
@@ -40,7 +49,7 @@ class HouseList extends Component {
         {this.state.currentView === 'bills' ?
           <BillsList usersHouse={usersHouse}
             currentUser={currentUser}
-            markBillPaid={() => {}}
+            markBillPaid={markBillPaid}
             placeRendered={match.url}/>
           : null}
         {this.state.currentView === 'bulletins' ?
@@ -52,7 +61,18 @@ class HouseList extends Component {
         {this.state.currentView === 'chores' ?
           <ChoresList usersHouse={usersHouse}
             currentUser={currentUser}
-            placeRendered={match.url}/>
+            placeRendered={match.url}
+            markChoreDone={markChoreDone}
+            claimChore={claimChore}/>
+          : null}
+        {this.state.currentView === 'summary' ?
+          <Summary usersHouse={usersHouse}
+            currentUser={currentUser}
+            markChoreDone={markChoreDone}
+            claimChore={claimChore}
+            addReaderToBulletin={addReaderToBulletin}
+            markBillPaid={() => {}}
+            placeRendered='summary'/>
           : null}
       </div>
     );
@@ -66,5 +86,8 @@ HouseList.propTypes = {
   usersHouse: PropTypes.object,
   currentUser: PropTypes.object,
   addReaderToBulletin: PropTypes.func,
-  match: PropTypes.object
+  match: PropTypes.object,
+  markChoreDone: PropTypes.func,
+  claimChore: PropTypes.func,
+  markBillPaid: PropTypes.func
 };

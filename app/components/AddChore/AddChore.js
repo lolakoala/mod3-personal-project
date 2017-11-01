@@ -9,15 +9,20 @@ class Chore extends Component {
       details: '',
       assignedTo: '',
       urgency: '',
-      done: false
+      done: false,
+      submitDisabled: true
     };
   }
 
   handleChange(event, type) {
     const { value } = event.target;
-    this.setState({
-      [type]: value
-    });
+    if ((type === 'title' && value.length) && this.state.urgency.length) {
+      this.setState({ [type]: value, submitDisabled: false });
+    } else if (type === 'urgency' && this.state.title.length) {
+      this.setState({ [type]: value, submitDisabled: false });
+    } else {
+      this.setState({ [type]: value });
+    }
   }
 
   assignToSelf = userId => {
@@ -60,18 +65,28 @@ class Chore extends Component {
     );
   }
 
+  reset = () => {
+    document.querySelector('.chore-input').value = "";
+    const newState = {
+      title: '',
+      details: ''
+    };
+    this.setState(newState);
+  }
+
   render() {
     const { currentUser } = this.props;
     return (
       <div>
-        <input type='text' placeholder='Title' onChange={event => this.handleChange(event, 'title')}/>
-        <textarea type='text' placeholder='Details' onChange={event => this.handleChange(event, 'details')}/>
+        <input className='chore-input' type='text' placeholder='Title' onChange={event => this.handleChange(event, 'title')}/>
+        <textarea className='chore-input' type='text' placeholder='Details' onChange={event => this.handleChange(event, 'details')}/>
         <input type='checkbox' id='selfassign' onChange={() => this.assignToSelf(currentUser.id)}/>
         <label htmlFor='selfassign'>Claim for Self</label>
         <input type='checkbox' id='alreadyDone' onChange={() => this.toggleDone()}/>
         <label htmlFor='alreadyDone'>Already Done</label>
         {this.state.done === false ? this.renderUrgency() : null}
-        <button onClick={() => this.addChore()}>Submit</button>
+        <button onClick={() => this.addChore()} disabled={this.state.submitDisabled}>Submit</button>
+        <button onClick={this.reset}>Reset</button>
       </div>
     );
   }

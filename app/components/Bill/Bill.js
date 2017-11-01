@@ -2,8 +2,13 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class Bill extends Component {
+  markBillPaid = (billId, userId, usersHouse) => {
+    this.props.markBillPaid(billId, userId, usersHouse);
+    this.forceUpdate();
+  }
+
   render() {
-    const { usersHouse, markBillPaid } = this.props;
+    const { usersHouse } = this.props;
     const bill = usersHouse.bills.find(bill => bill.id === this.props.match.params.id);
     return (
       <div>
@@ -17,7 +22,7 @@ class Bill extends Component {
           const name = usersHouse.users.find(houseMember => houseMember.id === user.id).name;
           return (<div key={`${bill.parsedDuedate}, ${user.id}`}>
             <p>{`${name}: ${user.total}`}</p>
-            <p onClick={() => markBillPaid(bill.id, user.id, usersHouse)}>{user.paid ? 'Paid' : 'Mark as Paid'}</p>
+            <p onClick={() => this.markBillPaid(bill.id, user.id, usersHouse)}>{user.paid ? 'Paid' : 'Mark as Paid'}</p>
           </div>);
         })}
       </div>
