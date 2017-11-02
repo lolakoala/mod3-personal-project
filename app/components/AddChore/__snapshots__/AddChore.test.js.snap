@@ -1,0 +1,821 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddChore component should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Chore
+    addChore={[Function]}
+    currentUser={
+      Object {
+        "house": "Dog9",
+        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+        "name": "Amanda Brenner",
+      }
+    }
+    getTodaysDate={[Function]}
+    updateItem={[Function]}
+    usersHouse={
+      Object {
+        "bills": Array [
+          Object {
+            "allUsersTotals": Array [
+              Object {
+                "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                "paid": false,
+                "total": 50,
+              },
+              Object {
+                "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                "paid": false,
+                "total": 50,
+              },
+            ],
+            "datePosted": "11/01/2017",
+            "details": "We used a lot of water.",
+            "duedate": "11/9/17",
+            "id": "b3019762705779",
+            "parsedDuedate": 1510210800000,
+            "postedBy": Object {
+              "house": "Dog9",
+              "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+              "name": "Amanda Brenner",
+            },
+            "title": "Water Bill",
+            "total": "100",
+          },
+        ],
+        "bulletins": Array [
+          Object {
+            "datePosted": "11/01/2017",
+            "details": "The dogs got out through a hole in the fence yesterday.",
+            "hasRead": Array [
+              "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+            ],
+            "id": 1509567098747,
+            "postedBy": Object {
+              "house": "Dog9",
+              "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+              "name": "Amanda Brenner",
+            },
+            "title": "Don't leave dogs out unattended.",
+          },
+        ],
+        "chores": Array [
+          Object {
+            "assignedTo": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+            "datePosted": "10/31/2017",
+            "details": "Empty the dishwasher.",
+            "done": false,
+            "id": "c1509485241076",
+            "postedBy": Object {
+              "house": "Dog9",
+              "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+              "name": "Amanda Brenner",
+            },
+            "title": "Dishes",
+            "urgency": "low",
+          },
+        ],
+        "houseCode": "woof9",
+        "houseKey": "-KxoIBWy5UYRscFYdWty",
+        "houseName": "Dog9",
+        "users": Array [
+          Object {
+            "house": "Dog9",
+            "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+            "name": "Amanda Brenner",
+          },
+          Object {
+            "house": "Dog9",
+            "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+            "name": "Lola Koala",
+          },
+        ],
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <input
+          className="chore-input"
+          onChange={[Function]}
+          placeholder="Title"
+          type="text"
+        />,
+        <textarea
+          className="chore-input"
+          onChange={[Function]}
+          placeholder="Details"
+          type="text"
+        />,
+        <input
+          id="selfassign"
+          onChange={[Function]}
+          type="checkbox"
+        />,
+        <label
+          htmlFor="selfassign"
+        >
+          Claim for Self
+        </label>,
+        <input
+          id="alreadyDone"
+          onChange={[Function]}
+          type="checkbox"
+        />,
+        <label
+          htmlFor="alreadyDone"
+        >
+          Already Done
+        </label>,
+        <div>
+          <p>
+            Select Urgency:
+          </p>
+          <input
+            className="high-urgency"
+            id="high-urgency"
+            name="urgency"
+            onChange={[Function]}
+            type="radio"
+            value="high"
+          />
+          <label
+            htmlFor="high-urgency"
+          >
+            High
+          </label>
+          <input
+            className="medium-urgency"
+            id="medium-urgency"
+            name="urgency"
+            onChange={[Function]}
+            type="radio"
+            value="medium"
+          />
+          <label
+            htmlFor="medium-urgency"
+          >
+            Medium
+          </label>
+          <input
+            className="low-urgency"
+            id="low-urgency"
+            name="urgency"
+            onChange={[Function]}
+            type="radio"
+            value="low"
+          />
+          <label
+            htmlFor="low-urgency"
+          >
+            Low
+          </label>
+        </div>,
+        <button
+          disabled={false}
+          onClick={[Function]}
+        >
+          Submit
+        </button>,
+        <button
+          onClick={[Function]}
+        >
+          Reset
+        </button>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "className": "chore-input",
+          "onChange": [Function],
+          "placeholder": "Title",
+          "type": "text",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "className": "chore-input",
+          "onChange": [Function],
+          "placeholder": "Details",
+          "type": "text",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "textarea",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "id": "selfassign",
+          "onChange": [Function],
+          "type": "checkbox",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Claim for Self",
+          "htmlFor": "selfassign",
+        },
+        "ref": null,
+        "rendered": "Claim for Self",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "id": "alreadyDone",
+          "onChange": [Function],
+          "type": "checkbox",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Already Done",
+          "htmlFor": "alreadyDone",
+        },
+        "ref": null,
+        "rendered": "Already Done",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p>
+              Select Urgency:
+            </p>,
+            <input
+              className="high-urgency"
+              id="high-urgency"
+              name="urgency"
+              onChange={[Function]}
+              type="radio"
+              value="high"
+            />,
+            <label
+              htmlFor="high-urgency"
+            >
+              High
+            </label>,
+            <input
+              className="medium-urgency"
+              id="medium-urgency"
+              name="urgency"
+              onChange={[Function]}
+              type="radio"
+              value="medium"
+            />,
+            <label
+              htmlFor="medium-urgency"
+            >
+              Medium
+            </label>,
+            <input
+              className="low-urgency"
+              id="low-urgency"
+              name="urgency"
+              onChange={[Function]}
+              type="radio"
+              value="low"
+            />,
+            <label
+              htmlFor="low-urgency"
+            >
+              Low
+            </label>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Select Urgency:",
+            },
+            "ref": null,
+            "rendered": "Select Urgency:",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "className": "high-urgency",
+              "id": "high-urgency",
+              "name": "urgency",
+              "onChange": [Function],
+              "type": "radio",
+              "value": "high",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "High",
+              "htmlFor": "high-urgency",
+            },
+            "ref": null,
+            "rendered": "High",
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "className": "medium-urgency",
+              "id": "medium-urgency",
+              "name": "urgency",
+              "onChange": [Function],
+              "type": "radio",
+              "value": "medium",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Medium",
+              "htmlFor": "medium-urgency",
+            },
+            "ref": null,
+            "rendered": "Medium",
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "className": "low-urgency",
+              "id": "low-urgency",
+              "name": "urgency",
+              "onChange": [Function],
+              "type": "radio",
+              "value": "low",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Low",
+              "htmlFor": "low-urgency",
+            },
+            "ref": null,
+            "rendered": "Low",
+            "type": "label",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Submit",
+          "disabled": false,
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Submit",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Reset",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Reset",
+        "type": "button",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <input
+            className="chore-input"
+            onChange={[Function]}
+            placeholder="Title"
+            type="text"
+          />,
+          <textarea
+            className="chore-input"
+            onChange={[Function]}
+            placeholder="Details"
+            type="text"
+          />,
+          <input
+            id="selfassign"
+            onChange={[Function]}
+            type="checkbox"
+          />,
+          <label
+            htmlFor="selfassign"
+          >
+            Claim for Self
+          </label>,
+          <input
+            id="alreadyDone"
+            onChange={[Function]}
+            type="checkbox"
+          />,
+          <label
+            htmlFor="alreadyDone"
+          >
+            Already Done
+          </label>,
+          <div>
+            <p>
+              Select Urgency:
+            </p>
+            <input
+              className="high-urgency"
+              id="high-urgency"
+              name="urgency"
+              onChange={[Function]}
+              type="radio"
+              value="high"
+            />
+            <label
+              htmlFor="high-urgency"
+            >
+              High
+            </label>
+            <input
+              className="medium-urgency"
+              id="medium-urgency"
+              name="urgency"
+              onChange={[Function]}
+              type="radio"
+              value="medium"
+            />
+            <label
+              htmlFor="medium-urgency"
+            >
+              Medium
+            </label>
+            <input
+              className="low-urgency"
+              id="low-urgency"
+              name="urgency"
+              onChange={[Function]}
+              type="radio"
+              value="low"
+            />
+            <label
+              htmlFor="low-urgency"
+            >
+              Low
+            </label>
+          </div>,
+          <button
+            disabled={false}
+            onClick={[Function]}
+          >
+            Submit
+          </button>,
+          <button
+            onClick={[Function]}
+          >
+            Reset
+          </button>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "className": "chore-input",
+            "onChange": [Function],
+            "placeholder": "Title",
+            "type": "text",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "className": "chore-input",
+            "onChange": [Function],
+            "placeholder": "Details",
+            "type": "text",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "textarea",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "id": "selfassign",
+            "onChange": [Function],
+            "type": "checkbox",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Claim for Self",
+            "htmlFor": "selfassign",
+          },
+          "ref": null,
+          "rendered": "Claim for Self",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "id": "alreadyDone",
+            "onChange": [Function],
+            "type": "checkbox",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Already Done",
+            "htmlFor": "alreadyDone",
+          },
+          "ref": null,
+          "rendered": "Already Done",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p>
+                Select Urgency:
+              </p>,
+              <input
+                className="high-urgency"
+                id="high-urgency"
+                name="urgency"
+                onChange={[Function]}
+                type="radio"
+                value="high"
+              />,
+              <label
+                htmlFor="high-urgency"
+              >
+                High
+              </label>,
+              <input
+                className="medium-urgency"
+                id="medium-urgency"
+                name="urgency"
+                onChange={[Function]}
+                type="radio"
+                value="medium"
+              />,
+              <label
+                htmlFor="medium-urgency"
+              >
+                Medium
+              </label>,
+              <input
+                className="low-urgency"
+                id="low-urgency"
+                name="urgency"
+                onChange={[Function]}
+                type="radio"
+                value="low"
+              />,
+              <label
+                htmlFor="low-urgency"
+              >
+                Low
+              </label>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Select Urgency:",
+              },
+              "ref": null,
+              "rendered": "Select Urgency:",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "className": "high-urgency",
+                "id": "high-urgency",
+                "name": "urgency",
+                "onChange": [Function],
+                "type": "radio",
+                "value": "high",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "High",
+                "htmlFor": "high-urgency",
+              },
+              "ref": null,
+              "rendered": "High",
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "className": "medium-urgency",
+                "id": "medium-urgency",
+                "name": "urgency",
+                "onChange": [Function],
+                "type": "radio",
+                "value": "medium",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Medium",
+                "htmlFor": "medium-urgency",
+              },
+              "ref": null,
+              "rendered": "Medium",
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "className": "low-urgency",
+                "id": "low-urgency",
+                "name": "urgency",
+                "onChange": [Function],
+                "type": "radio",
+                "value": "low",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Low",
+                "htmlFor": "low-urgency",
+              },
+              "ref": null,
+              "rendered": "Low",
+              "type": "label",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Submit",
+            "disabled": false,
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Submit",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Reset",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Reset",
+          "type": "button",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

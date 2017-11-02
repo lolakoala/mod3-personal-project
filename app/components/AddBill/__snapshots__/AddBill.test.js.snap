@@ -1,0 +1,765 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddBill component should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <AddBill
+    addBill={[Function]}
+    currentUser={
+      Object {
+        "house": "Dog9",
+        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+        "name": "Amanda Brenner",
+      }
+    }
+    getTodaysDate={[Function]}
+    updateItem={[Function]}
+    usersHouse={
+      Object {
+        "bills": Array [
+          Object {
+            "allUsersTotals": Array [
+              Object {
+                "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                "paid": false,
+                "total": 50,
+              },
+              Object {
+                "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                "paid": false,
+                "total": 50,
+              },
+            ],
+            "datePosted": "11/01/2017",
+            "details": "We used a lot of water.",
+            "duedate": "11/9/17",
+            "id": "b3019762705779",
+            "parsedDuedate": 1510210800000,
+            "postedBy": Object {
+              "house": "Dog9",
+              "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+              "name": "Amanda Brenner",
+            },
+            "title": "Water Bill",
+            "total": "100",
+          },
+        ],
+        "bulletins": Array [
+          Object {
+            "datePosted": "11/01/2017",
+            "details": "The dogs got out through a hole in the fence yesterday.",
+            "hasRead": Array [
+              "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+            ],
+            "id": 1509567098747,
+            "postedBy": Object {
+              "house": "Dog9",
+              "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+              "name": "Amanda Brenner",
+            },
+            "title": "Don't leave dogs out unattended.",
+          },
+        ],
+        "chores": Array [
+          Object {
+            "assignedTo": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+            "datePosted": "10/31/2017",
+            "details": "Empty the dishwasher.",
+            "done": false,
+            "id": "c1509485241076",
+            "postedBy": Object {
+              "house": "Dog9",
+              "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+              "name": "Amanda Brenner",
+            },
+            "title": "Dishes",
+            "urgency": "low",
+          },
+        ],
+        "houseCode": "woof9",
+        "houseKey": "-KxoIBWy5UYRscFYdWty",
+        "houseName": "Dog9",
+        "users": Array [
+          Object {
+            "house": "Dog9",
+            "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+            "name": "Amanda Brenner",
+          },
+          Object {
+            "house": "Dog9",
+            "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+            "name": "Lola Koala",
+          },
+        ],
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <input
+          className="bill-input title-input"
+          onChange={[Function]}
+          placeholder="Title"
+          type="text"
+        />,
+        <input
+          className="bill-input duedate-input"
+          onChange={[Function]}
+          placeholder="Due Date"
+          type="text"
+        />,
+        <input
+          className="bill-input total-input"
+          onChange={[Function]}
+          placeholder="Total"
+          type="text"
+        />,
+        <button
+          className="equal-all-button"
+          onClick={[Function]}
+        >
+          Equal Split with All House Members
+        </button>,
+        <button
+          className="equal-select-button"
+          onClick={[Function]}
+        >
+          Equal Split with Select House Members
+        </button>,
+        <button
+          className="custom-percentage-button"
+          onClick={[Function]}
+        >
+          Custom Split by Percentage
+        </button>,
+        <button
+          className="custom-dollar-button"
+          onClick={[Function]}
+        >
+          Custom Split by Dollar Amount
+        </button>,
+        <p />,
+        Array [
+          <div>
+            <p>
+              Amanda Brenner
+            </p>
+            <p>
+              75
+            </p>
+          </div>,
+          <div>
+            <p>
+              Lola Koala
+            </p>
+            <p>
+              75
+            </p>
+          </div>,
+        ],
+        null,
+        null,
+        null,
+        null,
+        <textarea
+          onChange={[Function]}
+          placeholder="Details"
+          type="text"
+        />,
+        <button
+          className="bill-submit"
+          disabled={false}
+          onClick={[Function]}
+        >
+          Submit
+        </button>,
+        <button
+          onClick={[Function]}
+        >
+          Reset
+        </button>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "className": "bill-input title-input",
+          "onChange": [Function],
+          "placeholder": "Title",
+          "type": "text",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "className": "bill-input duedate-input",
+          "onChange": [Function],
+          "placeholder": "Due Date",
+          "type": "text",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "className": "bill-input total-input",
+          "onChange": [Function],
+          "placeholder": "Total",
+          "type": "text",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Equal Split with All House Members",
+          "className": "equal-all-button",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Equal Split with All House Members",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Equal Split with Select House Members",
+          "className": "equal-select-button",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Equal Split with Select House Members",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Custom Split by Percentage",
+          "className": "custom-percentage-button",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Custom Split by Percentage",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Custom Split by Dollar Amount",
+          "className": "custom-dollar-button",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Custom Split by Dollar Amount",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": null,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p>
+              Amanda Brenner
+            </p>,
+            <p>
+              75
+            </p>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Amanda Brenner",
+            },
+            "ref": null,
+            "rendered": "Amanda Brenner",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": 75,
+            },
+            "ref": null,
+            "rendered": 75,
+            "type": "p",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p>
+              Lola Koala
+            </p>,
+            <p>
+              75
+            </p>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Lola Koala",
+            },
+            "ref": null,
+            "rendered": "Lola Koala",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": 75,
+            },
+            "ref": null,
+            "rendered": 75,
+            "type": "p",
+          },
+        ],
+        "type": "div",
+      },
+      null,
+      null,
+      null,
+      null,
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "onChange": [Function],
+          "placeholder": "Details",
+          "type": "text",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "textarea",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Submit",
+          "className": "bill-submit",
+          "disabled": false,
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Submit",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Reset",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Reset",
+        "type": "button",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <input
+            className="bill-input title-input"
+            onChange={[Function]}
+            placeholder="Title"
+            type="text"
+          />,
+          <input
+            className="bill-input duedate-input"
+            onChange={[Function]}
+            placeholder="Due Date"
+            type="text"
+          />,
+          <input
+            className="bill-input total-input"
+            onChange={[Function]}
+            placeholder="Total"
+            type="text"
+          />,
+          <button
+            className="equal-all-button"
+            onClick={[Function]}
+          >
+            Equal Split with All House Members
+          </button>,
+          <button
+            className="equal-select-button"
+            onClick={[Function]}
+          >
+            Equal Split with Select House Members
+          </button>,
+          <button
+            className="custom-percentage-button"
+            onClick={[Function]}
+          >
+            Custom Split by Percentage
+          </button>,
+          <button
+            className="custom-dollar-button"
+            onClick={[Function]}
+          >
+            Custom Split by Dollar Amount
+          </button>,
+          <p />,
+          Array [
+            <div>
+              <p>
+                Amanda Brenner
+              </p>
+              <p>
+                75
+              </p>
+            </div>,
+            <div>
+              <p>
+                Lola Koala
+              </p>
+              <p>
+                75
+              </p>
+            </div>,
+          ],
+          null,
+          null,
+          null,
+          null,
+          <textarea
+            onChange={[Function]}
+            placeholder="Details"
+            type="text"
+          />,
+          <button
+            className="bill-submit"
+            disabled={false}
+            onClick={[Function]}
+          >
+            Submit
+          </button>,
+          <button
+            onClick={[Function]}
+          >
+            Reset
+          </button>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "className": "bill-input title-input",
+            "onChange": [Function],
+            "placeholder": "Title",
+            "type": "text",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "className": "bill-input duedate-input",
+            "onChange": [Function],
+            "placeholder": "Due Date",
+            "type": "text",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "className": "bill-input total-input",
+            "onChange": [Function],
+            "placeholder": "Total",
+            "type": "text",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Equal Split with All House Members",
+            "className": "equal-all-button",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Equal Split with All House Members",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Equal Split with Select House Members",
+            "className": "equal-select-button",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Equal Split with Select House Members",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Custom Split by Percentage",
+            "className": "custom-percentage-button",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Custom Split by Percentage",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Custom Split by Dollar Amount",
+            "className": "custom-dollar-button",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Custom Split by Dollar Amount",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": null,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p>
+                Amanda Brenner
+              </p>,
+              <p>
+                75
+              </p>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Amanda Brenner",
+              },
+              "ref": null,
+              "rendered": "Amanda Brenner",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": 75,
+              },
+              "ref": null,
+              "rendered": 75,
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p>
+                Lola Koala
+              </p>,
+              <p>
+                75
+              </p>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Lola Koala",
+              },
+              "ref": null,
+              "rendered": "Lola Koala",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": 75,
+              },
+              "ref": null,
+              "rendered": 75,
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+        null,
+        null,
+        null,
+        null,
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "onChange": [Function],
+            "placeholder": "Details",
+            "type": "text",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "textarea",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Submit",
+            "className": "bill-submit",
+            "disabled": false,
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Submit",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Reset",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Reset",
+          "type": "button",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

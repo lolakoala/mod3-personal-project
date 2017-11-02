@@ -33,9 +33,9 @@ class AddItem extends Component {
   renderButtons = () => {
     return (
       <div>
-        <button onClick={() => this.updateItem('bill')}>Add Bill</button>
-        <button onClick={() => this.updateItem('chore')}>Add Chore</button>
-        <button onClick={() => this.updateItem('bulletin')}>Add Bulletin</button>
+        <button className='add-bill' onClick={() => this.updateItem('bill')}>Add Bill</button>
+        <button className='add-chore' onClick={() => this.updateItem('chore')}>Add Chore</button>
+        <button className='add-bulletin' onClick={() => this.updateItem('bulletin')}>Add Bulletin</button>
       </div>
     );
   }
@@ -59,7 +59,7 @@ class AddItem extends Component {
             getTodaysDate={this.getTodaysDate}
             updateItem={this.updateItem}/>
           : null}
-        {this.state.item === 'chore' ? 
+        {this.state.item === 'chore' ?
           <AddChore usersHouse={usersHouse}
             currentUser={currentUser}
             addChore={addChore}

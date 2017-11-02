@@ -1,7 +1,8 @@
 export const loginSuccess = (user, usersHouse = {}) => {
   let currentUser = Object.assign({}, {
     id: user.uid,
-    name: user.displayName
+    name: user.displayName,
+    house: usersHouse.houseName
   });
   return {
     type: 'LOGIN_SUCCESS',

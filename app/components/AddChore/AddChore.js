@@ -52,13 +52,13 @@ class Chore extends Component {
     return (
       <div>
         <p>Select Urgency:</p>
-        <input type="radio" id="high-urgency"
+        <input className='high-urgency' type="radio" id="high-urgency"
           name="urgency" value="high" onChange={event => this.handleChange(event, 'urgency')}/>
         <label htmlFor="high-urgency">High</label>
-        <input type="radio" id="medium-urgency"
+        <input className='medium-urgency' type="radio" id="medium-urgency"
           name="urgency" value="medium" onChange={event => this.handleChange(event, 'urgency')}/>
         <label htmlFor="medium-urgency">Medium</label>
-        <input type="radio" id="low-urgency"
+        <input className='low-urgency' type="radio" id="low-urgency"
           name="urgency" value="low" onChange={event => this.handleChange(event, 'urgency')}/>
         <label htmlFor="low-urgency">Low</label>
       </div>
