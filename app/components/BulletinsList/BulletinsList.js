@@ -4,9 +4,12 @@ import { Link } from 'react-router-dom';
 
 class BulletinsList extends Component {
   getBulletins = () => {
-    const { usersHouse, currentUser, placeRendered } = this.props;
+    const { usersHouse, currentUser, placeRendered, searchValue } = this.props;
     const iNeedToRead = usersHouse.bulletins.filter(bulletin => {
       return !bulletin.hasRead.includes(currentUser.id);
+    });
+    const matchingBulletins = usersHouse.bulletins.filter(bulletin => {
+      return bulletin.title.includes(searchValue) || bulletin.details.includes(searchValue);
     });
     if (placeRendered === '/') {
       return iNeedToRead;
@@ -16,12 +19,15 @@ class BulletinsList extends Component {
       const today = Date.now();
       const weekBulletins = usersHouse.bulletins.filter(bulletin => today - bulletin.id <= 604800000);
       return weekBulletins;
+    } else if (placeRendered === 'search') {
+      return matchingBulletins;
     }
   }
 
   getHeaders = () => {
     const { placeRendered } = this.props;
     const allBulletinHeaders = <div>
+      {placeRendered === 'search' ? <h4>Matching Bulletins</h4> : null}
       <h4>Title</h4>
       <h4>Date Posted</h4>
       <h4>All Read</h4>
@@ -33,9 +39,7 @@ class BulletinsList extends Component {
     </div>;
     if (placeRendered === '/') {
       return unreadBulletinHeaders;
-    } else if (placeRendered === '/houselist') {
-      return allBulletinHeaders;
-    } else if (placeRendered === 'summary') {
+    } else {
       return allBulletinHeaders;
     }
   }
@@ -78,5 +82,6 @@ BulletinsList.propTypes = {
   usersHouse: PropTypes.object,
   currentUser: PropTypes.object,
   addReaderToBulletin: PropTypes.func,
-  placeRendered: PropTypes.string
+  placeRendered: PropTypes.string,
+  searchValue: PropTypes.string
 };

@@ -20,9 +20,9 @@ class Bill extends Component {
         <p className='split'>House Split:</p>
         {bill.allUsersTotals.map(user => {
           const name = usersHouse.users.find(houseMember => houseMember.id === user.id).name;
-          return (<div key={`${bill.parsedDuedate}, ${user.id}`} className='user-split'>
+          return (<div key={`${bill.parsedDuedate} ${user.id} user-split`} className='user-split'>
             <p>{`${name}: ${user.total}`}</p>
-            <p onClick={() => this.markBillPaid(bill.id, user.id, usersHouse)}>{user.paid ? 'Paid' : 'Mark as Paid'}</p>
+            <p className='mark-paid' onClick={() => this.markBillPaid(bill.id, user.id, usersHouse)}>{user.paid ? 'Paid' : 'Mark as Paid'}</p>
           </div>);
         })}
       </div>

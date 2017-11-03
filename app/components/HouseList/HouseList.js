@@ -15,6 +15,31 @@ class HouseList extends Component {
     };
   }
 
+  handleSearch = event => {
+    const { bills, chores, bulletins } = this.props.usersHouse;
+    const { value } = event.target;
+    let searchResults = false;
+    const billsMatch = bills.filter(bill => {
+      return bill.title.includes(value) || bill.details.includes(value);
+    });
+    const choresMatch = chores.filter(chore => {
+      return chore.title.includes(value) || chore.details.includes(value);
+    });
+    const bulletinsMatch = bulletins.filter(bulletin => {
+      return bulletin.title.includes(value) || bulletin.details.includes(value);
+    });
+    if (bulletinsMatch.length > 0 || billsMatch.length > 0 || choresMatch.length > 0) {
+      searchResults = true;
+    }
+    if (bulletinsMatch.length === bulletins.length && billsMatch.length === bills.length && choresMatch.length === chores.length) {
+      this.setState({ currentView: '', searchInput: value });
+      return;
+    }
+    searchResults ?
+      this.setState({ currentView: 'search', searchInput: value })
+      : this.setState({ currentView: '', searchInput: value });
+  };
+
   render() {
     const {
       currentUser,
@@ -28,7 +53,7 @@ class HouseList extends Component {
 
     return (
       <div>
-        <input type='text' placeholder='search'/>
+        <input onChange={event => this.handleSearch(event)} type='text' placeholder='search'/>
         <button
           onClick={() => { this.setState({ currentView: 'bills'}); }}>
           View Bills
@@ -73,6 +98,26 @@ class HouseList extends Component {
             addReaderToBulletin={addReaderToBulletin}
             markBillPaid={() => {}}
             placeRendered='summary'/>
+          : null}
+        {this.state.currentView === 'search' ?
+          <div>
+            <BillsList usersHouse={usersHouse}
+              currentUser={currentUser}
+              markBillPaid={markBillPaid}
+              searchValue={this.state.searchInput}
+              placeRendered={'search'}/>
+            <BulletinsList usersHouse={usersHouse}
+              currentUser={currentUser}
+              addReaderToBulletin={addReaderToBulletin}
+              searchValue={this.state.searchInput}
+              placeRendered={'search'}/>
+            <ChoresList usersHouse={usersHouse}
+              currentUser={currentUser}
+              placeRendered={'search'}
+              markChoreDone={markChoreDone}
+              searchValue={this.state.searchInput}
+              claimChore={claimChore}/>
+          </div>
           : null}
       </div>
     );

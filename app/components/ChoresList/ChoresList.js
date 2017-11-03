@@ -4,11 +4,14 @@ import { Link } from 'react-router-dom';
 
 class ChoresList extends Component {
   getChoresToMap = () => {
-    const { usersHouse, placeRendered, currentUser } = this.props;
+    const { usersHouse, placeRendered, currentUser, searchValue } = this.props;
     const userChores = usersHouse.chores.filter(chore => chore.assignedTo === currentUser.id);
     const userChoresToDo = userChores.filter(chore => chore.done === false);
     const userChoresDone = userChores.filter(chore => chore.done === true);
     const allChoresToDo = usersHouse.chores.filter(chore => chore.done === false);
+    const matchingChores = usersHouse.chores.filter(chore => {
+      return chore.title.includes(searchValue) || chore.details.includes(searchValue);
+    });
     let choresToMap;
     if (placeRendered === '/houselist') {
       choresToMap = usersHouse.chores;
@@ -18,6 +21,8 @@ class ChoresList extends Component {
       choresToMap = userChoresToDo;
     } else if (placeRendered === 'summary') {
       choresToMap = allChoresToDo;
+    } else if (placeRendered === 'search') {
+      choresToMap = matchingChores;
     }
     return choresToMap;
   }
@@ -33,6 +38,8 @@ class ChoresList extends Component {
       title = 'House Chores';
     } else if (placeRendered === 'summary') {
       title = 'Chores to Be Done';
+    } else if (placeRendered === 'search') {
+      title = 'Matching Chores';
     }
     return title;
   }
@@ -57,15 +64,14 @@ class ChoresList extends Component {
             <h2>{this.getTitle()}</h2>
             <h4>Title</h4>
             <h4>Urgency</h4>
-            <h4>{placeRendered === '/houselist' ? 'Claimed by' : null}</h4>
-            <h4>{placeRendered === '/houselist' ? 'Done' : null}</h4>
-            <h4>{placeRendered === '/userlist' ? 'Done' : null}</h4>
+            <h4>{placeRendered !== '/userlist' && placeRendered === '/' ? 'Claimed by' : null}</h4>
+            <h4>{placeRendered !== '/' ? null : 'Done'}</h4>
             {choresToMap.map(chore => {
               const assignedTo = chore.assignedTo.length ? usersHouse.users.find(user => user.id === chore.assignedTo).name : 'claim';
               return (<div key={chore.datePosted}>
                 <Link to={`chores/${chore.id}`}>{chore.title}</Link>
                 <p>{`Urgency: ${chore.urgency}`}</p>
-                <p onClick={() => this.claimChore(currentUser.id, chore, usersHouse)}>{placeRendered === '/houselist' ? assignedTo : null}</p>
+                <p onClick={() => this.claimChore(currentUser.id, chore, usersHouse)}>{placeRendered !== '/userlist' && placeRendered === '/' ? assignedTo : null}</p>
                 <div onClick={() => this.markChoreDone(chore, usersHouse)}>{chore.done === false ? 'Mark as Done' : null}</div>
               </div>);
             })}
@@ -87,5 +93,6 @@ ChoresList.propTypes = {
   currentUser: PropTypes.object,
   placeRendered: PropTypes.string,
   markChoreDone: PropTypes.func,
-  claimChore: PropTypes.func
+  claimChore: PropTypes.func,
+  searchValue: PropTypes.string
 };

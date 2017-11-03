@@ -23,12 +23,15 @@ class Chore extends Component {
     const chore = usersHouse.chores.find(chore => chore.id === this.props.match.params.id);
     return (
       <div>
-        <p>{`Chore: ${chore.title}`}</p>
-        <p>{`Urgency: ${chore.urgency}`}</p>
-        <p>{`Posted by ${chore.postedBy.name} on ${chore.datePosted}`}</p>
-        <p onClick={() => this.claimChore(currentUser.id, chore, usersHouse)}>{chore.assignedTo.length ? `Claimed by ${this.getUserAssigned()}` : 'Claim Chore'}</p>
-        <p>{`Details: ${chore.details}`}</p>
-        <p onClick={() => this.markChoreDone(chore, usersHouse)}>{chore.done === false ? 'Mark as Done' : 'Done'}</p>
+        <p className='title'>{`Chore: ${chore.title}`}</p>
+        <p className='urgency'>{`Urgency: ${chore.urgency}`}</p>
+        <p className='posted-by-on'>{`Posted by ${chore.postedBy.name} on ${chore.datePosted}`}</p>
+        <p className='claim-chore'
+          onClick={() => this.claimChore(currentUser.id, chore, usersHouse)}>
+          {chore.assignedTo.length ? `Claimed by ${this.getUserAssigned()}` : 'Claim Chore'}
+        </p>
+        <p className='details'>{`Details: ${chore.details}`}</p>
+        <p className='chore-done' onClick={() => this.markChoreDone(chore, usersHouse)}>{chore.done === false ? 'Mark as Done' : 'Done'}</p>
       </div>
     );
   }

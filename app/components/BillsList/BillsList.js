@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 class BillsList extends Component {
   getBillsToMap = () => {
     let billsToMap;
-    const { usersHouse, currentUser, placeRendered } = this.props;
+    const { usersHouse, currentUser, placeRendered, searchValue } = this.props;
     const mybills = usersHouse.bills.filter(bill => {
       const usersOwe = bill.allUsersTotals.map(user => user.id);
       return usersOwe.includes(currentUser.id);
@@ -17,6 +17,9 @@ class BillsList extends Component {
       const usersNotPaid = bill.allUsersTotals.filter(user => user.paid === false);
       return usersNotPaid.length > 0;
     });
+    const matchingBills = usersHouse.bills.filter(bill => {
+      return bill.title.includes(searchValue) || bill.details.includes(searchValue);
+    });
     if (placeRendered === '/') {
       billsToMap = billsDue;
     } else if (placeRendered === '/userlist') {
@@ -25,6 +28,8 @@ class BillsList extends Component {
       billsToMap = usersHouse.bills;
     } else if (placeRendered === 'summary') {
       billsToMap = billsNotPaidByAll;
+    } else if (placeRendered === 'search') {
+      billsToMap = matchingBills;
     }
     return billsToMap;
   }
@@ -40,6 +45,8 @@ class BillsList extends Component {
       title = 'House Bills';
     } else if (placeRendered === 'summary') {
       title = 'Bills to Be Paid';
+    } else if (placeRendered === 'search') {
+      title = 'Matching Bills';
     }
     return title;
   }
@@ -92,6 +99,7 @@ class BillsList extends Component {
             {placeRendered === '/' ? this.getUserBills(billsToMap) : null}
             {placeRendered === '/userlist' ? this.getUserBills(billsToMap) : null}
             {placeRendered === 'summary' ? this.getHouseBills(billsToMap) : null}
+            {placeRendered === 'search' ? this.getHouseBills(billsToMap) : null}
           </div>
         );
 
@@ -115,5 +123,6 @@ BillsList.propTypes = {
   usersHouse: PropTypes.object,
   currentUser: PropTypes.object,
   markBillPaid: PropTypes.func,
-  placeRendered: PropTypes.string
+  placeRendered: PropTypes.string,
+  searchValue: PropTypes.string
 };

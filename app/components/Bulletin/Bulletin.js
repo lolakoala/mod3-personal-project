@@ -13,12 +13,12 @@ class Bulletin extends Component {
     });
     return (
       <div>
-        <p>{bulletin.title}</p>
-        <p>{bulletin.details}</p>
-        <p>{`Posted by ${bulletin.postedBy.name} on ${bulletin.datePosted}`}</p>
+        <p className='title'>{bulletin.title}</p>
+        <p className='details'>{bulletin.details}</p>
+        <p className='posted-by-on'>{`Posted by ${bulletin.postedBy.name} on ${bulletin.datePosted}`}</p>
         <p>Needs to be read by ...</p>
         {needsToRead.map(user => {
-          return <p key={user.id}>{user.name}</p>;
+          return <p className='needs-to-read' key={user.id}>{user.name}</p>;
         })}
       </div>
     );
