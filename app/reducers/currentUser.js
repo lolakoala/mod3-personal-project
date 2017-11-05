@@ -16,7 +16,7 @@ const currentUser = (state = {}, action) => {
     return user;
   case 'SIGNOUT':
     return {};
-  case 'LEAVE HOUSE':
+  case 'LEAVE_HOUSE':
     return Object.assign(action.currentUser, { house: {} });
   default:
     return state;

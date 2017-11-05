@@ -1,0 +1,376 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChoresList component should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ChoresList
+    claimChore={[Function]}
+    currentUser={
+      Object {
+        "house": "Dog9",
+        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+        "name": "Amanda Brenner",
+      }
+    }
+    markChoreDone={[Function]}
+    placeRendered="/houselist"
+    searchValue=""
+    usersHouse={
+      Object {
+        "bills": Array [
+          Object {
+            "allUsersTotals": Array [
+              Object {
+                "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                "paid": false,
+                "total": 50,
+              },
+              Object {
+                "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                "paid": false,
+                "total": 50,
+              },
+            ],
+            "datePosted": "11/01/2017",
+            "details": "We used a lot of water.",
+            "duedate": "11/9/17",
+            "id": "b3019762705779",
+            "parsedDuedate": 1510210800000,
+            "postedBy": Object {
+              "house": "Dog9",
+              "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+              "name": "Amanda Brenner",
+            },
+            "title": "Water Bill",
+            "total": "100",
+          },
+        ],
+        "bulletins": Array [
+          Object {
+            "datePosted": "11/01/2017",
+            "details": "The dogs got out through a hole in the fence yesterday.",
+            "hasRead": Array [
+              "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+            ],
+            "id": 1509567098747,
+            "postedBy": Object {
+              "house": "Dog9",
+              "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+              "name": "Amanda Brenner",
+            },
+            "title": "Don't leave dogs out unattended.",
+          },
+        ],
+        "chores": Array [
+          Object {
+            "assignedTo": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+            "datePosted": "10/31/2017",
+            "details": "Empty the dishwasher.",
+            "done": false,
+            "id": "c1509485241076",
+            "postedBy": Object {
+              "house": "Dog9",
+              "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+              "name": "Amanda Brenner",
+            },
+            "title": "Dishes",
+            "urgency": "low",
+          },
+        ],
+        "houseCode": "woof9",
+        "houseKey": "-KxoIBWy5UYRscFYdWty",
+        "houseName": "Dog9",
+        "users": Array [
+          Object {
+            "house": "Dog9",
+            "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+            "name": "Amanda Brenner",
+          },
+          Object {
+            "house": "Dog9",
+            "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+            "name": "Lola Koala",
+          },
+        ],
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        null,
+        null,
+        Array [
+          <div
+            className="chore"
+          >
+            <Link
+              replace={false}
+              to="chores/c1509485241076"
+            >
+              Dishes
+            </Link>
+            <p>
+              not urgent
+            </p>
+            <p
+              className="claim-button"
+              onClick={[Function]}
+            >
+              Claimed
+            </p>
+            <p
+              className="choredone"
+              onClick={[Function]}
+            >
+              Mark Done
+            </p>
+          </div>,
+        ],
+      ],
+      "className": "choreslist",
+    },
+    "ref": null,
+    "rendered": Array [
+      null,
+      null,
+      Object {
+        "instance": null,
+        "key": "10/31/2017",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Link
+              replace={false}
+              to="chores/c1509485241076"
+            >
+              Dishes
+            </Link>,
+            <p>
+              not urgent
+            </p>,
+            <p
+              className="claim-button"
+              onClick={[Function]}
+            >
+              Claimed
+            </p>,
+            <p
+              className="choredone"
+              onClick={[Function]}
+            >
+              Mark Done
+            </p>,
+          ],
+          "className": "chore",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Dishes",
+              "replace": false,
+              "to": "chores/c1509485241076",
+            },
+            "ref": null,
+            "rendered": "Dishes",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "not urgent",
+            },
+            "ref": null,
+            "rendered": "not urgent",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Claimed",
+              "className": "claim-button",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Claimed",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Mark Done",
+              "className": "choredone",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Mark Done",
+            "type": "p",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          null,
+          null,
+          Array [
+            <div
+              className="chore"
+            >
+              <Link
+                replace={false}
+                to="chores/c1509485241076"
+              >
+                Dishes
+              </Link>
+              <p>
+                not urgent
+              </p>
+              <p
+                className="claim-button"
+                onClick={[Function]}
+              >
+                Claimed
+              </p>
+              <p
+                className="choredone"
+                onClick={[Function]}
+              >
+                Mark Done
+              </p>
+            </div>,
+          ],
+        ],
+        "className": "choreslist",
+      },
+      "ref": null,
+      "rendered": Array [
+        null,
+        null,
+        Object {
+          "instance": null,
+          "key": "10/31/2017",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Link
+                replace={false}
+                to="chores/c1509485241076"
+              >
+                Dishes
+              </Link>,
+              <p>
+                not urgent
+              </p>,
+              <p
+                className="claim-button"
+                onClick={[Function]}
+              >
+                Claimed
+              </p>,
+              <p
+                className="choredone"
+                onClick={[Function]}
+              >
+                Mark Done
+              </p>,
+            ],
+            "className": "chore",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Dishes",
+                "replace": false,
+                "to": "chores/c1509485241076",
+              },
+              "ref": null,
+              "rendered": "Dishes",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "not urgent",
+              },
+              "ref": null,
+              "rendered": "not urgent",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Claimed",
+                "className": "claim-button",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Claimed",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Mark Done",
+                "className": "choredone",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Mark Done",
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const JoinHouse = ({ handleChange, getHouse, createHouse }) => {
   return (
-    <div>
+    <div className='join-house'>
       <input type='text'
         placeholder="House Code"
         onChange={ (event) => handleChange(event, 'houseCode' ) }/>

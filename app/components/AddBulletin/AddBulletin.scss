@@ -1,0 +1,54 @@
+.add-bulletin input,
+.add-bulletin button,
+.add-bulletin textarea {
+  font-family: 'BenchNine', sans-serif;
+  border-radius: 25px;
+  margin-top: 20px;
+  height: 25px;
+  font-size: 20px;
+  width: 120px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.add-bulletin input,
+.add-bulletin textarea {
+  padding-left: 10px;
+  border: 1px solid #D83D59;
+  color: #D83D59;
+  border-radius: 5px;
+}
+
+.add-bulletin input::placeholder,
+.add-bulletin textarea::placeholder {
+  color: #D83D59;
+}
+
+.add-bulletin button {
+  border: none;
+  background-color: #D83D59;
+  color: #F4CCE2;
+}
+
+.add-bulletin button:hover,
+.add-bulletin .active {
+  cursor: pointer;
+  border: 2px dashed #D83D59;
+  background-color: #F4CCE2;
+  color: #D83D59;
+}
+
+.add-bulletin textarea {
+  height: 70px;
+}
+
+.add-bulletin-inputs,
+.add-bulletin-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-bulletin{
+  display: flex;
+  margin-left: 20px;
+}

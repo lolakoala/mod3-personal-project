@@ -1,0 +1,98 @@
+.app-header {
+  width: auto;
+  height: auto;
+}
+
+.logo {
+  font-family: 'Shadows Into Light', cursive;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  background-color: rgba(141, 132, 73, 0.7);
+  border-radius: 25px;
+  height: 75px;
+  width: 125px;
+  height: 150px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  color: #3d6aa2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.logo h1 {
+  width: 125px;
+  text-align: center;
+  color: #3d6aa2;
+  line-height: normal;
+  font-size: 50px;
+  background-color: rgba(141, 132, 73, 0);
+}
+
+.logo h1:hover {
+  cursor: pointer;
+  color: #D83D59;
+}
+
+.logo h3{
+  background-color: rgba(141, 132, 73, 0);
+}
+
+.app-header a {
+  text-decoration: none;
+}
+
+.user-stuff-nav {
+  height: auto;
+  width: auto;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.user-stuff-nav .manage-house,
+.user-stuff-nav .my-lists,
+.user-stuff-nav .leave-house,
+.user-stuff-nav .signout,
+.user-stuff-nav .home {
+  border: none;
+  font-family: 'BenchNine', sans-serif;
+  background-color: #D83D59;
+  width: 120px;
+  height: 25px;
+  color: #F4CCE2;
+  font-size: 20px;
+  border-radius: 25px;
+  text-align: center;
+  margin: 5px;
+}
+
+.user-stuff-nav .manage-house:hover,
+.user-stuff-nav .my-lists:hover,
+.user-stuff-nav .leave-house:hover,
+.user-stuff-nav .signout:hover,
+.user-stuff-nav .home:hover,
+.user-stuff-nav .active {
+  cursor: pointer;
+  border: 2px dashed #D83D59;
+  background-color: #F4CCE2;
+  color: #D83D59;
+}
+
+.greeting {
+  display: inline-block;
+  margin: 20px;
+  height: auto;
+  width: auto;
+  font-size: 20px;
+  color:  color: #3d6aa2;
+  text-align: center;
+  font-family: 'BenchNine', sans-serif;
+  margin-top: 200px;
+}

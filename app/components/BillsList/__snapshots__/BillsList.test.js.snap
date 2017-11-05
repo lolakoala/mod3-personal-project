@@ -1,0 +1,395 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BillsList component should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <BillsList
+    currentUser={
+      Object {
+        "house": "Dog9",
+        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+        "name": "Amanda Brenner",
+      }
+    }
+    markBillPaid={[Function]}
+    placeRendered="/houselist"
+    searchValue=""
+    usersHouse={
+      Object {
+        "bills": Array [
+          Object {
+            "allUsersTotals": Array [
+              Object {
+                "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                "paid": false,
+                "total": 50,
+              },
+              Object {
+                "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                "paid": false,
+                "total": 50,
+              },
+            ],
+            "datePosted": "11/01/2017",
+            "details": "We used a lot of water.",
+            "duedate": "11/9/17",
+            "id": "b3019762705779",
+            "parsedDuedate": 1510210800000,
+            "postedBy": Object {
+              "house": "Dog9",
+              "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+              "name": "Amanda Brenner",
+            },
+            "title": "Water Bill",
+            "total": "100",
+          },
+        ],
+        "bulletins": Array [
+          Object {
+            "datePosted": "11/01/2017",
+            "details": "The dogs got out through a hole in the fence yesterday.",
+            "hasRead": Array [
+              "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+            ],
+            "id": 1509567098747,
+            "postedBy": Object {
+              "house": "Dog9",
+              "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+              "name": "Amanda Brenner",
+            },
+            "title": "Don't leave dogs out unattended.",
+          },
+        ],
+        "chores": Array [
+          Object {
+            "assignedTo": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+            "datePosted": "10/31/2017",
+            "details": "Empty the dishwasher.",
+            "done": false,
+            "id": "c1509485241076",
+            "postedBy": Object {
+              "house": "Dog9",
+              "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+              "name": "Amanda Brenner",
+            },
+            "title": "Dishes",
+            "urgency": "low",
+          },
+        ],
+        "houseCode": "woof9",
+        "houseKey": "-KxoIBWy5UYRscFYdWty",
+        "houseName": "Dog9",
+        "users": Array [
+          Object {
+            "house": "Dog9",
+            "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+            "name": "Amanda Brenner",
+          },
+          Object {
+            "house": "Dog9",
+            "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+            "name": "Lola Koala",
+          },
+        ],
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        null,
+        null,
+        Array [
+          <div
+            className="bill"
+          >
+            <Link
+              replace={false}
+              to="bills/b3019762705779"
+            >
+              Water Bill
+            </Link>
+            <p
+              className="due"
+            >
+              Due: 11/9/17
+            </p>
+            <p
+              className="total"
+            >
+              Total: 100
+            </p>
+            <p
+              className="mark-paid"
+              onClick={[Function]}
+            >
+              Mark Paid
+            </p>
+          </div>,
+        ],
+        null,
+        null,
+        null,
+        null,
+      ],
+      "className": "billslist",
+    },
+    "ref": null,
+    "rendered": Array [
+      null,
+      null,
+      Object {
+        "instance": null,
+        "key": "1510210800000",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Link
+              replace={false}
+              to="bills/b3019762705779"
+            >
+              Water Bill
+            </Link>,
+            <p
+              className="due"
+            >
+              Due: 11/9/17
+            </p>,
+            <p
+              className="total"
+            >
+              Total: 100
+            </p>,
+            <p
+              className="mark-paid"
+              onClick={[Function]}
+            >
+              Mark Paid
+            </p>,
+          ],
+          "className": "bill",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Water Bill",
+              "replace": false,
+              "to": "bills/b3019762705779",
+            },
+            "ref": null,
+            "rendered": "Water Bill",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Due: 11/9/17",
+              "className": "due",
+            },
+            "ref": null,
+            "rendered": "Due: 11/9/17",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Total: 100",
+              "className": "total",
+            },
+            "ref": null,
+            "rendered": "Total: 100",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Mark Paid",
+              "className": "mark-paid",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Mark Paid",
+            "type": "p",
+          },
+        ],
+        "type": "div",
+      },
+      null,
+      null,
+      null,
+      null,
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          null,
+          null,
+          Array [
+            <div
+              className="bill"
+            >
+              <Link
+                replace={false}
+                to="bills/b3019762705779"
+              >
+                Water Bill
+              </Link>
+              <p
+                className="due"
+              >
+                Due: 11/9/17
+              </p>
+              <p
+                className="total"
+              >
+                Total: 100
+              </p>
+              <p
+                className="mark-paid"
+                onClick={[Function]}
+              >
+                Mark Paid
+              </p>
+            </div>,
+          ],
+          null,
+          null,
+          null,
+          null,
+        ],
+        "className": "billslist",
+      },
+      "ref": null,
+      "rendered": Array [
+        null,
+        null,
+        Object {
+          "instance": null,
+          "key": "1510210800000",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Link
+                replace={false}
+                to="bills/b3019762705779"
+              >
+                Water Bill
+              </Link>,
+              <p
+                className="due"
+              >
+                Due: 11/9/17
+              </p>,
+              <p
+                className="total"
+              >
+                Total: 100
+              </p>,
+              <p
+                className="mark-paid"
+                onClick={[Function]}
+              >
+                Mark Paid
+              </p>,
+            ],
+            "className": "bill",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Water Bill",
+                "replace": false,
+                "to": "bills/b3019762705779",
+              },
+              "ref": null,
+              "rendered": "Water Bill",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Due: 11/9/17",
+                "className": "due",
+              },
+              "ref": null,
+              "rendered": "Due: 11/9/17",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Total: 100",
+                "className": "total",
+              },
+              "ref": null,
+              "rendered": "Total: 100",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Mark Paid",
+                "className": "mark-paid",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Mark Paid",
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+        null,
+        null,
+        null,
+        null,
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

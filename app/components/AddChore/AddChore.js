@@ -16,9 +16,7 @@ class Chore extends Component {
 
   handleChange(event, type) {
     const { value } = event.target;
-    if ((type === 'title' && value.length) && this.state.urgency.length) {
-      this.setState({ [type]: value, submitDisabled: false });
-    } else if (type === 'urgency' && this.state.title.length) {
+    if (type === 'title' && value.length) {
       this.setState({ [type]: value, submitDisabled: false });
     } else {
       this.setState({ [type]: value });
@@ -48,23 +46,6 @@ class Chore extends Component {
     this.state.done === false ? this.setState({ done: true }) : this.setState({ done: false });
   }
 
-  renderUrgency = () => {
-    return (
-      <div>
-        <p>Select Urgency:</p>
-        <input className='high-urgency' type="radio" id="high-urgency"
-          name="urgency" value="high" onChange={event => this.handleChange(event, 'urgency')}/>
-        <label htmlFor="high-urgency">High</label>
-        <input className='medium-urgency' type="radio" id="medium-urgency"
-          name="urgency" value="medium" onChange={event => this.handleChange(event, 'urgency')}/>
-        <label htmlFor="medium-urgency">Medium</label>
-        <input className='low-urgency' type="radio" id="low-urgency"
-          name="urgency" value="low" onChange={event => this.handleChange(event, 'urgency')}/>
-        <label htmlFor="low-urgency">Low</label>
-      </div>
-    );
-  }
-
   reset = () => {
     document.querySelector('.chore-input').value = "";
     const newState = {
@@ -77,16 +58,28 @@ class Chore extends Component {
   render() {
     const { currentUser } = this.props;
     return (
-      <div>
-        <input className='chore-input' type='text' placeholder='Title' onChange={event => this.handleChange(event, 'title')}/>
-        <textarea className='chore-input' type='text' placeholder='Details' onChange={event => this.handleChange(event, 'details')}/>
-        <input type='checkbox' id='selfassign' onChange={() => this.assignToSelf(currentUser.id)}/>
-        <label htmlFor='selfassign'>Claim for Self</label>
-        <input type='checkbox' id='alreadyDone' onChange={() => this.toggleDone()}/>
-        <label htmlFor='alreadyDone'>Already Done</label>
-        {this.state.done === false ? this.renderUrgency() : null}
-        <button onClick={() => this.addChore()} disabled={this.state.submitDisabled}>Submit</button>
-        <button onClick={this.reset}>Reset</button>
+      <div className='add-chore'>
+        <div className='add-chore-inputs'>
+          <input className='chore-input' type='text' placeholder='Title' onChange={event => this.handleChange(event, 'title')}/>
+          <textarea className='chore-input' type='text' placeholder='Details' onChange={event => this.handleChange(event, 'details')}/>
+        </div>
+        <div className='add-chore-buttons'>
+          <div className='checkbox'>
+            <input type='checkbox' id='selfassign' onChange={() => this.assignToSelf(currentUser.id)}/>
+            <label htmlFor='selfassign'>Claim for Self</label>
+          </div>
+          <div className='checkbox'>
+            <input type='checkbox' id='alreadyDone' onChange={() => this.toggleDone()}/>
+            <label htmlFor='alreadyDone'>Already Done</label>
+          </div>
+          <div className='checkbox'>
+            <input className='high-urgency' type="checkbox" id="high-urgency"
+              name="urgency" value="high" onChange={event => this.handleChange(event, 'urgency')}/>
+            <label htmlFor="high-urgency">Urgent</label>
+          </div>
+          <button onClick={() => this.addChore()} disabled={this.state.submitDisabled}>Submit</button>
+          <button onClick={this.reset}>Reset</button>
+        </div>
       </div>
     );
   }

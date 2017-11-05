@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { markBillPaid } from '../actions/actions.js';
 
 const mapStateToProps =  store => ({
-  usersHouse: store.usersHouse
+  usersHouse: store.usersHouse,
+  currentUser: store.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({

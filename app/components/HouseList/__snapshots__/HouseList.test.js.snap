@@ -1,0 +1,2307 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HouseList component should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <HouseList
+    addReaderToBulletin={[Function]}
+    claimChore={[Function]}
+    currentUser={
+      Object {
+        "house": "Dog9",
+        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+        "name": "Amanda Brenner",
+      }
+    }
+    markBillPaid={[Function]}
+    markChoreDone={[Function]}
+    match={Object {}}
+    usersHouse={
+      Object {
+        "bills": Array [
+          Object {
+            "allUsersTotals": Array [
+              Object {
+                "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                "paid": false,
+                "total": 50,
+              },
+              Object {
+                "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                "paid": false,
+                "total": 50,
+              },
+            ],
+            "datePosted": "11/01/2017",
+            "details": "We used a lot of water.",
+            "duedate": "11/9/17",
+            "id": "b3019762705779",
+            "parsedDuedate": 1510210800000,
+            "postedBy": Object {
+              "house": "Dog9",
+              "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+              "name": "Amanda Brenner",
+            },
+            "title": "Water Bill",
+            "total": "100",
+          },
+        ],
+        "bulletins": Array [
+          Object {
+            "datePosted": "11/01/2017",
+            "details": "The dogs got out through a hole in the fence yesterday.",
+            "hasRead": Array [
+              "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+            ],
+            "id": 1509567098747,
+            "postedBy": Object {
+              "house": "Dog9",
+              "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+              "name": "Amanda Brenner",
+            },
+            "title": "Don't leave dogs out unattended.",
+          },
+        ],
+        "chores": Array [
+          Object {
+            "assignedTo": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+            "datePosted": "10/31/2017",
+            "details": "Empty the dishwasher.",
+            "done": false,
+            "id": "c1509485241076",
+            "postedBy": Object {
+              "house": "Dog9",
+              "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+              "name": "Amanda Brenner",
+            },
+            "title": "Dishes",
+            "urgency": "low",
+          },
+        ],
+        "houseCode": "woof9",
+        "houseKey": "-KxoIBWy5UYRscFYdWty",
+        "houseName": "Dog9",
+        "users": Array [
+          Object {
+            "house": "Dog9",
+            "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+            "name": "Amanda Brenner",
+          },
+          Object {
+            "house": "Dog9",
+            "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+            "name": "Lola Koala",
+          },
+        ],
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="houselist-nav"
+        >
+          <input
+            onChange={[Function]}
+            placeholder="search"
+            type="text"
+          />
+          <div>
+            <button
+              className=" view-bills"
+              onClick={[Function]}
+            >
+              View Bills
+            </button>
+            <button
+              className=" view-bulletins"
+              onClick={[Function]}
+            >
+              View Bulletins
+            </button>
+          </div>
+          <div>
+            <button
+              className=" view-chores"
+              onClick={[Function]}
+            >
+              View Chores
+            </button>
+            <button
+              className=" view-summary"
+              onClick={[Function]}
+            >
+              View Summary
+            </button>
+          </div>
+          <Link
+            replace={false}
+            to="/additem"
+          >
+            Add Bills, Chores, or Bulletins
+          </Link>
+        </div>,
+        null,
+        null,
+        null,
+        null,
+        <div>
+          <BillsList
+            currentUser={
+              Object {
+                "house": "Dog9",
+                "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                "name": "Amanda Brenner",
+              }
+            }
+            markBillPaid={[Function]}
+            placeRendered="search"
+            searchValue="wa"
+            usersHouse={
+              Object {
+                "bills": Array [
+                  Object {
+                    "allUsersTotals": Array [
+                      Object {
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "paid": false,
+                        "total": 50,
+                      },
+                      Object {
+                        "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                        "paid": false,
+                        "total": 50,
+                      },
+                    ],
+                    "datePosted": "11/01/2017",
+                    "details": "We used a lot of water.",
+                    "duedate": "11/9/17",
+                    "id": "b3019762705779",
+                    "parsedDuedate": 1510210800000,
+                    "postedBy": Object {
+                      "house": "Dog9",
+                      "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "name": "Amanda Brenner",
+                    },
+                    "title": "Water Bill",
+                    "total": "100",
+                  },
+                ],
+                "bulletins": Array [
+                  Object {
+                    "datePosted": "11/01/2017",
+                    "details": "The dogs got out through a hole in the fence yesterday.",
+                    "hasRead": Array [
+                      "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                    ],
+                    "id": 1509567098747,
+                    "postedBy": Object {
+                      "house": "Dog9",
+                      "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "name": "Amanda Brenner",
+                    },
+                    "title": "Don't leave dogs out unattended.",
+                  },
+                ],
+                "chores": Array [
+                  Object {
+                    "assignedTo": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                    "datePosted": "10/31/2017",
+                    "details": "Empty the dishwasher.",
+                    "done": false,
+                    "id": "c1509485241076",
+                    "postedBy": Object {
+                      "house": "Dog9",
+                      "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "name": "Amanda Brenner",
+                    },
+                    "title": "Dishes",
+                    "urgency": "low",
+                  },
+                ],
+                "houseCode": "woof9",
+                "houseKey": "-KxoIBWy5UYRscFYdWty",
+                "houseName": "Dog9",
+                "users": Array [
+                  Object {
+                    "house": "Dog9",
+                    "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                    "name": "Amanda Brenner",
+                  },
+                  Object {
+                    "house": "Dog9",
+                    "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                    "name": "Lola Koala",
+                  },
+                ],
+              }
+            }
+          />
+          <BulletinsList
+            addReaderToBulletin={[Function]}
+            currentUser={
+              Object {
+                "house": "Dog9",
+                "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                "name": "Amanda Brenner",
+              }
+            }
+            placeRendered="search"
+            searchValue="wa"
+            usersHouse={
+              Object {
+                "bills": Array [
+                  Object {
+                    "allUsersTotals": Array [
+                      Object {
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "paid": false,
+                        "total": 50,
+                      },
+                      Object {
+                        "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                        "paid": false,
+                        "total": 50,
+                      },
+                    ],
+                    "datePosted": "11/01/2017",
+                    "details": "We used a lot of water.",
+                    "duedate": "11/9/17",
+                    "id": "b3019762705779",
+                    "parsedDuedate": 1510210800000,
+                    "postedBy": Object {
+                      "house": "Dog9",
+                      "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "name": "Amanda Brenner",
+                    },
+                    "title": "Water Bill",
+                    "total": "100",
+                  },
+                ],
+                "bulletins": Array [
+                  Object {
+                    "datePosted": "11/01/2017",
+                    "details": "The dogs got out through a hole in the fence yesterday.",
+                    "hasRead": Array [
+                      "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                    ],
+                    "id": 1509567098747,
+                    "postedBy": Object {
+                      "house": "Dog9",
+                      "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "name": "Amanda Brenner",
+                    },
+                    "title": "Don't leave dogs out unattended.",
+                  },
+                ],
+                "chores": Array [
+                  Object {
+                    "assignedTo": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                    "datePosted": "10/31/2017",
+                    "details": "Empty the dishwasher.",
+                    "done": false,
+                    "id": "c1509485241076",
+                    "postedBy": Object {
+                      "house": "Dog9",
+                      "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "name": "Amanda Brenner",
+                    },
+                    "title": "Dishes",
+                    "urgency": "low",
+                  },
+                ],
+                "houseCode": "woof9",
+                "houseKey": "-KxoIBWy5UYRscFYdWty",
+                "houseName": "Dog9",
+                "users": Array [
+                  Object {
+                    "house": "Dog9",
+                    "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                    "name": "Amanda Brenner",
+                  },
+                  Object {
+                    "house": "Dog9",
+                    "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                    "name": "Lola Koala",
+                  },
+                ],
+              }
+            }
+          />
+          <ChoresList
+            claimChore={[Function]}
+            currentUser={
+              Object {
+                "house": "Dog9",
+                "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                "name": "Amanda Brenner",
+              }
+            }
+            markChoreDone={[Function]}
+            placeRendered="search"
+            searchValue="wa"
+            usersHouse={
+              Object {
+                "bills": Array [
+                  Object {
+                    "allUsersTotals": Array [
+                      Object {
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "paid": false,
+                        "total": 50,
+                      },
+                      Object {
+                        "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                        "paid": false,
+                        "total": 50,
+                      },
+                    ],
+                    "datePosted": "11/01/2017",
+                    "details": "We used a lot of water.",
+                    "duedate": "11/9/17",
+                    "id": "b3019762705779",
+                    "parsedDuedate": 1510210800000,
+                    "postedBy": Object {
+                      "house": "Dog9",
+                      "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "name": "Amanda Brenner",
+                    },
+                    "title": "Water Bill",
+                    "total": "100",
+                  },
+                ],
+                "bulletins": Array [
+                  Object {
+                    "datePosted": "11/01/2017",
+                    "details": "The dogs got out through a hole in the fence yesterday.",
+                    "hasRead": Array [
+                      "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                    ],
+                    "id": 1509567098747,
+                    "postedBy": Object {
+                      "house": "Dog9",
+                      "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "name": "Amanda Brenner",
+                    },
+                    "title": "Don't leave dogs out unattended.",
+                  },
+                ],
+                "chores": Array [
+                  Object {
+                    "assignedTo": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                    "datePosted": "10/31/2017",
+                    "details": "Empty the dishwasher.",
+                    "done": false,
+                    "id": "c1509485241076",
+                    "postedBy": Object {
+                      "house": "Dog9",
+                      "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "name": "Amanda Brenner",
+                    },
+                    "title": "Dishes",
+                    "urgency": "low",
+                  },
+                ],
+                "houseCode": "woof9",
+                "houseKey": "-KxoIBWy5UYRscFYdWty",
+                "houseName": "Dog9",
+                "users": Array [
+                  Object {
+                    "house": "Dog9",
+                    "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                    "name": "Amanda Brenner",
+                  },
+                  Object {
+                    "house": "Dog9",
+                    "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                    "name": "Lola Koala",
+                  },
+                ],
+              }
+            }
+          />
+        </div>,
+      ],
+      "className": "house-list",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <input
+              onChange={[Function]}
+              placeholder="search"
+              type="text"
+            />,
+            <div>
+              <button
+                className=" view-bills"
+                onClick={[Function]}
+              >
+                View Bills
+              </button>
+              <button
+                className=" view-bulletins"
+                onClick={[Function]}
+              >
+                View Bulletins
+              </button>
+            </div>,
+            <div>
+              <button
+                className=" view-chores"
+                onClick={[Function]}
+              >
+                View Chores
+              </button>
+              <button
+                className=" view-summary"
+                onClick={[Function]}
+              >
+                View Summary
+              </button>
+            </div>,
+            <Link
+              replace={false}
+              to="/additem"
+            >
+              Add Bills, Chores, or Bulletins
+            </Link>,
+          ],
+          "className": "houselist-nav",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "onChange": [Function],
+              "placeholder": "search",
+              "type": "text",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <button
+                  className=" view-bills"
+                  onClick={[Function]}
+                >
+                  View Bills
+                </button>,
+                <button
+                  className=" view-bulletins"
+                  onClick={[Function]}
+                >
+                  View Bulletins
+                </button>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "View Bills",
+                  "className": " view-bills",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "View Bills",
+                "type": "button",
+              },
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "View Bulletins",
+                  "className": " view-bulletins",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "View Bulletins",
+                "type": "button",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <button
+                  className=" view-chores"
+                  onClick={[Function]}
+                >
+                  View Chores
+                </button>,
+                <button
+                  className=" view-summary"
+                  onClick={[Function]}
+                >
+                  View Summary
+                </button>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "View Chores",
+                  "className": " view-chores",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "View Chores",
+                "type": "button",
+              },
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "View Summary",
+                  "className": " view-summary",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "View Summary",
+                "type": "button",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Add Bills, Chores, or Bulletins",
+              "replace": false,
+              "to": "/additem",
+            },
+            "ref": null,
+            "rendered": "Add Bills, Chores, or Bulletins",
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      null,
+      null,
+      null,
+      null,
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <BillsList
+              currentUser={
+                Object {
+                  "house": "Dog9",
+                  "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                  "name": "Amanda Brenner",
+                }
+              }
+              markBillPaid={[Function]}
+              placeRendered="search"
+              searchValue="wa"
+              usersHouse={
+                Object {
+                  "bills": Array [
+                    Object {
+                      "allUsersTotals": Array [
+                        Object {
+                          "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                          "paid": false,
+                          "total": 50,
+                        },
+                        Object {
+                          "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                          "paid": false,
+                          "total": 50,
+                        },
+                      ],
+                      "datePosted": "11/01/2017",
+                      "details": "We used a lot of water.",
+                      "duedate": "11/9/17",
+                      "id": "b3019762705779",
+                      "parsedDuedate": 1510210800000,
+                      "postedBy": Object {
+                        "house": "Dog9",
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "name": "Amanda Brenner",
+                      },
+                      "title": "Water Bill",
+                      "total": "100",
+                    },
+                  ],
+                  "bulletins": Array [
+                    Object {
+                      "datePosted": "11/01/2017",
+                      "details": "The dogs got out through a hole in the fence yesterday.",
+                      "hasRead": Array [
+                        "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      ],
+                      "id": 1509567098747,
+                      "postedBy": Object {
+                        "house": "Dog9",
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "name": "Amanda Brenner",
+                      },
+                      "title": "Don't leave dogs out unattended.",
+                    },
+                  ],
+                  "chores": Array [
+                    Object {
+                      "assignedTo": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "datePosted": "10/31/2017",
+                      "details": "Empty the dishwasher.",
+                      "done": false,
+                      "id": "c1509485241076",
+                      "postedBy": Object {
+                        "house": "Dog9",
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "name": "Amanda Brenner",
+                      },
+                      "title": "Dishes",
+                      "urgency": "low",
+                    },
+                  ],
+                  "houseCode": "woof9",
+                  "houseKey": "-KxoIBWy5UYRscFYdWty",
+                  "houseName": "Dog9",
+                  "users": Array [
+                    Object {
+                      "house": "Dog9",
+                      "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "name": "Amanda Brenner",
+                    },
+                    Object {
+                      "house": "Dog9",
+                      "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                      "name": "Lola Koala",
+                    },
+                  ],
+                }
+              }
+            />,
+            <BulletinsList
+              addReaderToBulletin={[Function]}
+              currentUser={
+                Object {
+                  "house": "Dog9",
+                  "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                  "name": "Amanda Brenner",
+                }
+              }
+              placeRendered="search"
+              searchValue="wa"
+              usersHouse={
+                Object {
+                  "bills": Array [
+                    Object {
+                      "allUsersTotals": Array [
+                        Object {
+                          "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                          "paid": false,
+                          "total": 50,
+                        },
+                        Object {
+                          "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                          "paid": false,
+                          "total": 50,
+                        },
+                      ],
+                      "datePosted": "11/01/2017",
+                      "details": "We used a lot of water.",
+                      "duedate": "11/9/17",
+                      "id": "b3019762705779",
+                      "parsedDuedate": 1510210800000,
+                      "postedBy": Object {
+                        "house": "Dog9",
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "name": "Amanda Brenner",
+                      },
+                      "title": "Water Bill",
+                      "total": "100",
+                    },
+                  ],
+                  "bulletins": Array [
+                    Object {
+                      "datePosted": "11/01/2017",
+                      "details": "The dogs got out through a hole in the fence yesterday.",
+                      "hasRead": Array [
+                        "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      ],
+                      "id": 1509567098747,
+                      "postedBy": Object {
+                        "house": "Dog9",
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "name": "Amanda Brenner",
+                      },
+                      "title": "Don't leave dogs out unattended.",
+                    },
+                  ],
+                  "chores": Array [
+                    Object {
+                      "assignedTo": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "datePosted": "10/31/2017",
+                      "details": "Empty the dishwasher.",
+                      "done": false,
+                      "id": "c1509485241076",
+                      "postedBy": Object {
+                        "house": "Dog9",
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "name": "Amanda Brenner",
+                      },
+                      "title": "Dishes",
+                      "urgency": "low",
+                    },
+                  ],
+                  "houseCode": "woof9",
+                  "houseKey": "-KxoIBWy5UYRscFYdWty",
+                  "houseName": "Dog9",
+                  "users": Array [
+                    Object {
+                      "house": "Dog9",
+                      "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "name": "Amanda Brenner",
+                    },
+                    Object {
+                      "house": "Dog9",
+                      "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                      "name": "Lola Koala",
+                    },
+                  ],
+                }
+              }
+            />,
+            <ChoresList
+              claimChore={[Function]}
+              currentUser={
+                Object {
+                  "house": "Dog9",
+                  "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                  "name": "Amanda Brenner",
+                }
+              }
+              markChoreDone={[Function]}
+              placeRendered="search"
+              searchValue="wa"
+              usersHouse={
+                Object {
+                  "bills": Array [
+                    Object {
+                      "allUsersTotals": Array [
+                        Object {
+                          "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                          "paid": false,
+                          "total": 50,
+                        },
+                        Object {
+                          "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                          "paid": false,
+                          "total": 50,
+                        },
+                      ],
+                      "datePosted": "11/01/2017",
+                      "details": "We used a lot of water.",
+                      "duedate": "11/9/17",
+                      "id": "b3019762705779",
+                      "parsedDuedate": 1510210800000,
+                      "postedBy": Object {
+                        "house": "Dog9",
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "name": "Amanda Brenner",
+                      },
+                      "title": "Water Bill",
+                      "total": "100",
+                    },
+                  ],
+                  "bulletins": Array [
+                    Object {
+                      "datePosted": "11/01/2017",
+                      "details": "The dogs got out through a hole in the fence yesterday.",
+                      "hasRead": Array [
+                        "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      ],
+                      "id": 1509567098747,
+                      "postedBy": Object {
+                        "house": "Dog9",
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "name": "Amanda Brenner",
+                      },
+                      "title": "Don't leave dogs out unattended.",
+                    },
+                  ],
+                  "chores": Array [
+                    Object {
+                      "assignedTo": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "datePosted": "10/31/2017",
+                      "details": "Empty the dishwasher.",
+                      "done": false,
+                      "id": "c1509485241076",
+                      "postedBy": Object {
+                        "house": "Dog9",
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "name": "Amanda Brenner",
+                      },
+                      "title": "Dishes",
+                      "urgency": "low",
+                    },
+                  ],
+                  "houseCode": "woof9",
+                  "houseKey": "-KxoIBWy5UYRscFYdWty",
+                  "houseName": "Dog9",
+                  "users": Array [
+                    Object {
+                      "house": "Dog9",
+                      "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "name": "Amanda Brenner",
+                    },
+                    Object {
+                      "house": "Dog9",
+                      "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                      "name": "Lola Koala",
+                    },
+                  ],
+                }
+              }
+            />,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "class",
+            "props": Object {
+              "currentUser": Object {
+                "house": "Dog9",
+                "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                "name": "Amanda Brenner",
+              },
+              "markBillPaid": [Function],
+              "placeRendered": "search",
+              "searchValue": "wa",
+              "usersHouse": Object {
+                "bills": Array [
+                  Object {
+                    "allUsersTotals": Array [
+                      Object {
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "paid": false,
+                        "total": 50,
+                      },
+                      Object {
+                        "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                        "paid": false,
+                        "total": 50,
+                      },
+                    ],
+                    "datePosted": "11/01/2017",
+                    "details": "We used a lot of water.",
+                    "duedate": "11/9/17",
+                    "id": "b3019762705779",
+                    "parsedDuedate": 1510210800000,
+                    "postedBy": Object {
+                      "house": "Dog9",
+                      "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "name": "Amanda Brenner",
+                    },
+                    "title": "Water Bill",
+                    "total": "100",
+                  },
+                ],
+                "bulletins": Array [
+                  Object {
+                    "datePosted": "11/01/2017",
+                    "details": "The dogs got out through a hole in the fence yesterday.",
+                    "hasRead": Array [
+                      "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                    ],
+                    "id": 1509567098747,
+                    "postedBy": Object {
+                      "house": "Dog9",
+                      "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "name": "Amanda Brenner",
+                    },
+                    "title": "Don't leave dogs out unattended.",
+                  },
+                ],
+                "chores": Array [
+                  Object {
+                    "assignedTo": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                    "datePosted": "10/31/2017",
+                    "details": "Empty the dishwasher.",
+                    "done": false,
+                    "id": "c1509485241076",
+                    "postedBy": Object {
+                      "house": "Dog9",
+                      "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "name": "Amanda Brenner",
+                    },
+                    "title": "Dishes",
+                    "urgency": "low",
+                  },
+                ],
+                "houseCode": "woof9",
+                "houseKey": "-KxoIBWy5UYRscFYdWty",
+                "houseName": "Dog9",
+                "users": Array [
+                  Object {
+                    "house": "Dog9",
+                    "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                    "name": "Amanda Brenner",
+                  },
+                  Object {
+                    "house": "Dog9",
+                    "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                    "name": "Lola Koala",
+                  },
+                ],
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "class",
+            "props": Object {
+              "addReaderToBulletin": [Function],
+              "currentUser": Object {
+                "house": "Dog9",
+                "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                "name": "Amanda Brenner",
+              },
+              "placeRendered": "search",
+              "searchValue": "wa",
+              "usersHouse": Object {
+                "bills": Array [
+                  Object {
+                    "allUsersTotals": Array [
+                      Object {
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "paid": false,
+                        "total": 50,
+                      },
+                      Object {
+                        "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                        "paid": false,
+                        "total": 50,
+                      },
+                    ],
+                    "datePosted": "11/01/2017",
+                    "details": "We used a lot of water.",
+                    "duedate": "11/9/17",
+                    "id": "b3019762705779",
+                    "parsedDuedate": 1510210800000,
+                    "postedBy": Object {
+                      "house": "Dog9",
+                      "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "name": "Amanda Brenner",
+                    },
+                    "title": "Water Bill",
+                    "total": "100",
+                  },
+                ],
+                "bulletins": Array [
+                  Object {
+                    "datePosted": "11/01/2017",
+                    "details": "The dogs got out through a hole in the fence yesterday.",
+                    "hasRead": Array [
+                      "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                    ],
+                    "id": 1509567098747,
+                    "postedBy": Object {
+                      "house": "Dog9",
+                      "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "name": "Amanda Brenner",
+                    },
+                    "title": "Don't leave dogs out unattended.",
+                  },
+                ],
+                "chores": Array [
+                  Object {
+                    "assignedTo": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                    "datePosted": "10/31/2017",
+                    "details": "Empty the dishwasher.",
+                    "done": false,
+                    "id": "c1509485241076",
+                    "postedBy": Object {
+                      "house": "Dog9",
+                      "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "name": "Amanda Brenner",
+                    },
+                    "title": "Dishes",
+                    "urgency": "low",
+                  },
+                ],
+                "houseCode": "woof9",
+                "houseKey": "-KxoIBWy5UYRscFYdWty",
+                "houseName": "Dog9",
+                "users": Array [
+                  Object {
+                    "house": "Dog9",
+                    "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                    "name": "Amanda Brenner",
+                  },
+                  Object {
+                    "house": "Dog9",
+                    "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                    "name": "Lola Koala",
+                  },
+                ],
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "class",
+            "props": Object {
+              "claimChore": [Function],
+              "currentUser": Object {
+                "house": "Dog9",
+                "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                "name": "Amanda Brenner",
+              },
+              "markChoreDone": [Function],
+              "placeRendered": "search",
+              "searchValue": "wa",
+              "usersHouse": Object {
+                "bills": Array [
+                  Object {
+                    "allUsersTotals": Array [
+                      Object {
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "paid": false,
+                        "total": 50,
+                      },
+                      Object {
+                        "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                        "paid": false,
+                        "total": 50,
+                      },
+                    ],
+                    "datePosted": "11/01/2017",
+                    "details": "We used a lot of water.",
+                    "duedate": "11/9/17",
+                    "id": "b3019762705779",
+                    "parsedDuedate": 1510210800000,
+                    "postedBy": Object {
+                      "house": "Dog9",
+                      "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "name": "Amanda Brenner",
+                    },
+                    "title": "Water Bill",
+                    "total": "100",
+                  },
+                ],
+                "bulletins": Array [
+                  Object {
+                    "datePosted": "11/01/2017",
+                    "details": "The dogs got out through a hole in the fence yesterday.",
+                    "hasRead": Array [
+                      "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                    ],
+                    "id": 1509567098747,
+                    "postedBy": Object {
+                      "house": "Dog9",
+                      "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "name": "Amanda Brenner",
+                    },
+                    "title": "Don't leave dogs out unattended.",
+                  },
+                ],
+                "chores": Array [
+                  Object {
+                    "assignedTo": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                    "datePosted": "10/31/2017",
+                    "details": "Empty the dishwasher.",
+                    "done": false,
+                    "id": "c1509485241076",
+                    "postedBy": Object {
+                      "house": "Dog9",
+                      "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "name": "Amanda Brenner",
+                    },
+                    "title": "Dishes",
+                    "urgency": "low",
+                  },
+                ],
+                "houseCode": "woof9",
+                "houseKey": "-KxoIBWy5UYRscFYdWty",
+                "houseName": "Dog9",
+                "users": Array [
+                  Object {
+                    "house": "Dog9",
+                    "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                    "name": "Amanda Brenner",
+                  },
+                  Object {
+                    "house": "Dog9",
+                    "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                    "name": "Lola Koala",
+                  },
+                ],
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="houselist-nav"
+          >
+            <input
+              onChange={[Function]}
+              placeholder="search"
+              type="text"
+            />
+            <div>
+              <button
+                className=" view-bills"
+                onClick={[Function]}
+              >
+                View Bills
+              </button>
+              <button
+                className=" view-bulletins"
+                onClick={[Function]}
+              >
+                View Bulletins
+              </button>
+            </div>
+            <div>
+              <button
+                className=" view-chores"
+                onClick={[Function]}
+              >
+                View Chores
+              </button>
+              <button
+                className=" view-summary"
+                onClick={[Function]}
+              >
+                View Summary
+              </button>
+            </div>
+            <Link
+              replace={false}
+              to="/additem"
+            >
+              Add Bills, Chores, or Bulletins
+            </Link>
+          </div>,
+          null,
+          null,
+          null,
+          null,
+          <div>
+            <BillsList
+              currentUser={
+                Object {
+                  "house": "Dog9",
+                  "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                  "name": "Amanda Brenner",
+                }
+              }
+              markBillPaid={[Function]}
+              placeRendered="search"
+              searchValue="wa"
+              usersHouse={
+                Object {
+                  "bills": Array [
+                    Object {
+                      "allUsersTotals": Array [
+                        Object {
+                          "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                          "paid": false,
+                          "total": 50,
+                        },
+                        Object {
+                          "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                          "paid": false,
+                          "total": 50,
+                        },
+                      ],
+                      "datePosted": "11/01/2017",
+                      "details": "We used a lot of water.",
+                      "duedate": "11/9/17",
+                      "id": "b3019762705779",
+                      "parsedDuedate": 1510210800000,
+                      "postedBy": Object {
+                        "house": "Dog9",
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "name": "Amanda Brenner",
+                      },
+                      "title": "Water Bill",
+                      "total": "100",
+                    },
+                  ],
+                  "bulletins": Array [
+                    Object {
+                      "datePosted": "11/01/2017",
+                      "details": "The dogs got out through a hole in the fence yesterday.",
+                      "hasRead": Array [
+                        "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      ],
+                      "id": 1509567098747,
+                      "postedBy": Object {
+                        "house": "Dog9",
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "name": "Amanda Brenner",
+                      },
+                      "title": "Don't leave dogs out unattended.",
+                    },
+                  ],
+                  "chores": Array [
+                    Object {
+                      "assignedTo": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "datePosted": "10/31/2017",
+                      "details": "Empty the dishwasher.",
+                      "done": false,
+                      "id": "c1509485241076",
+                      "postedBy": Object {
+                        "house": "Dog9",
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "name": "Amanda Brenner",
+                      },
+                      "title": "Dishes",
+                      "urgency": "low",
+                    },
+                  ],
+                  "houseCode": "woof9",
+                  "houseKey": "-KxoIBWy5UYRscFYdWty",
+                  "houseName": "Dog9",
+                  "users": Array [
+                    Object {
+                      "house": "Dog9",
+                      "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "name": "Amanda Brenner",
+                    },
+                    Object {
+                      "house": "Dog9",
+                      "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                      "name": "Lola Koala",
+                    },
+                  ],
+                }
+              }
+            />
+            <BulletinsList
+              addReaderToBulletin={[Function]}
+              currentUser={
+                Object {
+                  "house": "Dog9",
+                  "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                  "name": "Amanda Brenner",
+                }
+              }
+              placeRendered="search"
+              searchValue="wa"
+              usersHouse={
+                Object {
+                  "bills": Array [
+                    Object {
+                      "allUsersTotals": Array [
+                        Object {
+                          "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                          "paid": false,
+                          "total": 50,
+                        },
+                        Object {
+                          "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                          "paid": false,
+                          "total": 50,
+                        },
+                      ],
+                      "datePosted": "11/01/2017",
+                      "details": "We used a lot of water.",
+                      "duedate": "11/9/17",
+                      "id": "b3019762705779",
+                      "parsedDuedate": 1510210800000,
+                      "postedBy": Object {
+                        "house": "Dog9",
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "name": "Amanda Brenner",
+                      },
+                      "title": "Water Bill",
+                      "total": "100",
+                    },
+                  ],
+                  "bulletins": Array [
+                    Object {
+                      "datePosted": "11/01/2017",
+                      "details": "The dogs got out through a hole in the fence yesterday.",
+                      "hasRead": Array [
+                        "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      ],
+                      "id": 1509567098747,
+                      "postedBy": Object {
+                        "house": "Dog9",
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "name": "Amanda Brenner",
+                      },
+                      "title": "Don't leave dogs out unattended.",
+                    },
+                  ],
+                  "chores": Array [
+                    Object {
+                      "assignedTo": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "datePosted": "10/31/2017",
+                      "details": "Empty the dishwasher.",
+                      "done": false,
+                      "id": "c1509485241076",
+                      "postedBy": Object {
+                        "house": "Dog9",
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "name": "Amanda Brenner",
+                      },
+                      "title": "Dishes",
+                      "urgency": "low",
+                    },
+                  ],
+                  "houseCode": "woof9",
+                  "houseKey": "-KxoIBWy5UYRscFYdWty",
+                  "houseName": "Dog9",
+                  "users": Array [
+                    Object {
+                      "house": "Dog9",
+                      "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "name": "Amanda Brenner",
+                    },
+                    Object {
+                      "house": "Dog9",
+                      "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                      "name": "Lola Koala",
+                    },
+                  ],
+                }
+              }
+            />
+            <ChoresList
+              claimChore={[Function]}
+              currentUser={
+                Object {
+                  "house": "Dog9",
+                  "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                  "name": "Amanda Brenner",
+                }
+              }
+              markChoreDone={[Function]}
+              placeRendered="search"
+              searchValue="wa"
+              usersHouse={
+                Object {
+                  "bills": Array [
+                    Object {
+                      "allUsersTotals": Array [
+                        Object {
+                          "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                          "paid": false,
+                          "total": 50,
+                        },
+                        Object {
+                          "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                          "paid": false,
+                          "total": 50,
+                        },
+                      ],
+                      "datePosted": "11/01/2017",
+                      "details": "We used a lot of water.",
+                      "duedate": "11/9/17",
+                      "id": "b3019762705779",
+                      "parsedDuedate": 1510210800000,
+                      "postedBy": Object {
+                        "house": "Dog9",
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "name": "Amanda Brenner",
+                      },
+                      "title": "Water Bill",
+                      "total": "100",
+                    },
+                  ],
+                  "bulletins": Array [
+                    Object {
+                      "datePosted": "11/01/2017",
+                      "details": "The dogs got out through a hole in the fence yesterday.",
+                      "hasRead": Array [
+                        "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      ],
+                      "id": 1509567098747,
+                      "postedBy": Object {
+                        "house": "Dog9",
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "name": "Amanda Brenner",
+                      },
+                      "title": "Don't leave dogs out unattended.",
+                    },
+                  ],
+                  "chores": Array [
+                    Object {
+                      "assignedTo": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "datePosted": "10/31/2017",
+                      "details": "Empty the dishwasher.",
+                      "done": false,
+                      "id": "c1509485241076",
+                      "postedBy": Object {
+                        "house": "Dog9",
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "name": "Amanda Brenner",
+                      },
+                      "title": "Dishes",
+                      "urgency": "low",
+                    },
+                  ],
+                  "houseCode": "woof9",
+                  "houseKey": "-KxoIBWy5UYRscFYdWty",
+                  "houseName": "Dog9",
+                  "users": Array [
+                    Object {
+                      "house": "Dog9",
+                      "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "name": "Amanda Brenner",
+                    },
+                    Object {
+                      "house": "Dog9",
+                      "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                      "name": "Lola Koala",
+                    },
+                  ],
+                }
+              }
+            />
+          </div>,
+        ],
+        "className": "house-list",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <input
+                onChange={[Function]}
+                placeholder="search"
+                type="text"
+              />,
+              <div>
+                <button
+                  className=" view-bills"
+                  onClick={[Function]}
+                >
+                  View Bills
+                </button>
+                <button
+                  className=" view-bulletins"
+                  onClick={[Function]}
+                >
+                  View Bulletins
+                </button>
+              </div>,
+              <div>
+                <button
+                  className=" view-chores"
+                  onClick={[Function]}
+                >
+                  View Chores
+                </button>
+                <button
+                  className=" view-summary"
+                  onClick={[Function]}
+                >
+                  View Summary
+                </button>
+              </div>,
+              <Link
+                replace={false}
+                to="/additem"
+              >
+                Add Bills, Chores, or Bulletins
+              </Link>,
+            ],
+            "className": "houselist-nav",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "onChange": [Function],
+                "placeholder": "search",
+                "type": "text",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <button
+                    className=" view-bills"
+                    onClick={[Function]}
+                  >
+                    View Bills
+                  </button>,
+                  <button
+                    className=" view-bulletins"
+                    onClick={[Function]}
+                  >
+                    View Bulletins
+                  </button>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "View Bills",
+                    "className": " view-bills",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "View Bills",
+                  "type": "button",
+                },
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "View Bulletins",
+                    "className": " view-bulletins",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "View Bulletins",
+                  "type": "button",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <button
+                    className=" view-chores"
+                    onClick={[Function]}
+                  >
+                    View Chores
+                  </button>,
+                  <button
+                    className=" view-summary"
+                    onClick={[Function]}
+                  >
+                    View Summary
+                  </button>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "View Chores",
+                    "className": " view-chores",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "View Chores",
+                  "type": "button",
+                },
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "View Summary",
+                    "className": " view-summary",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "View Summary",
+                  "type": "button",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Add Bills, Chores, or Bulletins",
+                "replace": false,
+                "to": "/additem",
+              },
+              "ref": null,
+              "rendered": "Add Bills, Chores, or Bulletins",
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+        null,
+        null,
+        null,
+        null,
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <BillsList
+                currentUser={
+                  Object {
+                    "house": "Dog9",
+                    "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                    "name": "Amanda Brenner",
+                  }
+                }
+                markBillPaid={[Function]}
+                placeRendered="search"
+                searchValue="wa"
+                usersHouse={
+                  Object {
+                    "bills": Array [
+                      Object {
+                        "allUsersTotals": Array [
+                          Object {
+                            "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                            "paid": false,
+                            "total": 50,
+                          },
+                          Object {
+                            "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                            "paid": false,
+                            "total": 50,
+                          },
+                        ],
+                        "datePosted": "11/01/2017",
+                        "details": "We used a lot of water.",
+                        "duedate": "11/9/17",
+                        "id": "b3019762705779",
+                        "parsedDuedate": 1510210800000,
+                        "postedBy": Object {
+                          "house": "Dog9",
+                          "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                          "name": "Amanda Brenner",
+                        },
+                        "title": "Water Bill",
+                        "total": "100",
+                      },
+                    ],
+                    "bulletins": Array [
+                      Object {
+                        "datePosted": "11/01/2017",
+                        "details": "The dogs got out through a hole in the fence yesterday.",
+                        "hasRead": Array [
+                          "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        ],
+                        "id": 1509567098747,
+                        "postedBy": Object {
+                          "house": "Dog9",
+                          "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                          "name": "Amanda Brenner",
+                        },
+                        "title": "Don't leave dogs out unattended.",
+                      },
+                    ],
+                    "chores": Array [
+                      Object {
+                        "assignedTo": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "datePosted": "10/31/2017",
+                        "details": "Empty the dishwasher.",
+                        "done": false,
+                        "id": "c1509485241076",
+                        "postedBy": Object {
+                          "house": "Dog9",
+                          "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                          "name": "Amanda Brenner",
+                        },
+                        "title": "Dishes",
+                        "urgency": "low",
+                      },
+                    ],
+                    "houseCode": "woof9",
+                    "houseKey": "-KxoIBWy5UYRscFYdWty",
+                    "houseName": "Dog9",
+                    "users": Array [
+                      Object {
+                        "house": "Dog9",
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "name": "Amanda Brenner",
+                      },
+                      Object {
+                        "house": "Dog9",
+                        "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                        "name": "Lola Koala",
+                      },
+                    ],
+                  }
+                }
+              />,
+              <BulletinsList
+                addReaderToBulletin={[Function]}
+                currentUser={
+                  Object {
+                    "house": "Dog9",
+                    "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                    "name": "Amanda Brenner",
+                  }
+                }
+                placeRendered="search"
+                searchValue="wa"
+                usersHouse={
+                  Object {
+                    "bills": Array [
+                      Object {
+                        "allUsersTotals": Array [
+                          Object {
+                            "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                            "paid": false,
+                            "total": 50,
+                          },
+                          Object {
+                            "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                            "paid": false,
+                            "total": 50,
+                          },
+                        ],
+                        "datePosted": "11/01/2017",
+                        "details": "We used a lot of water.",
+                        "duedate": "11/9/17",
+                        "id": "b3019762705779",
+                        "parsedDuedate": 1510210800000,
+                        "postedBy": Object {
+                          "house": "Dog9",
+                          "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                          "name": "Amanda Brenner",
+                        },
+                        "title": "Water Bill",
+                        "total": "100",
+                      },
+                    ],
+                    "bulletins": Array [
+                      Object {
+                        "datePosted": "11/01/2017",
+                        "details": "The dogs got out through a hole in the fence yesterday.",
+                        "hasRead": Array [
+                          "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        ],
+                        "id": 1509567098747,
+                        "postedBy": Object {
+                          "house": "Dog9",
+                          "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                          "name": "Amanda Brenner",
+                        },
+                        "title": "Don't leave dogs out unattended.",
+                      },
+                    ],
+                    "chores": Array [
+                      Object {
+                        "assignedTo": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "datePosted": "10/31/2017",
+                        "details": "Empty the dishwasher.",
+                        "done": false,
+                        "id": "c1509485241076",
+                        "postedBy": Object {
+                          "house": "Dog9",
+                          "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                          "name": "Amanda Brenner",
+                        },
+                        "title": "Dishes",
+                        "urgency": "low",
+                      },
+                    ],
+                    "houseCode": "woof9",
+                    "houseKey": "-KxoIBWy5UYRscFYdWty",
+                    "houseName": "Dog9",
+                    "users": Array [
+                      Object {
+                        "house": "Dog9",
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "name": "Amanda Brenner",
+                      },
+                      Object {
+                        "house": "Dog9",
+                        "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                        "name": "Lola Koala",
+                      },
+                    ],
+                  }
+                }
+              />,
+              <ChoresList
+                claimChore={[Function]}
+                currentUser={
+                  Object {
+                    "house": "Dog9",
+                    "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                    "name": "Amanda Brenner",
+                  }
+                }
+                markChoreDone={[Function]}
+                placeRendered="search"
+                searchValue="wa"
+                usersHouse={
+                  Object {
+                    "bills": Array [
+                      Object {
+                        "allUsersTotals": Array [
+                          Object {
+                            "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                            "paid": false,
+                            "total": 50,
+                          },
+                          Object {
+                            "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                            "paid": false,
+                            "total": 50,
+                          },
+                        ],
+                        "datePosted": "11/01/2017",
+                        "details": "We used a lot of water.",
+                        "duedate": "11/9/17",
+                        "id": "b3019762705779",
+                        "parsedDuedate": 1510210800000,
+                        "postedBy": Object {
+                          "house": "Dog9",
+                          "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                          "name": "Amanda Brenner",
+                        },
+                        "title": "Water Bill",
+                        "total": "100",
+                      },
+                    ],
+                    "bulletins": Array [
+                      Object {
+                        "datePosted": "11/01/2017",
+                        "details": "The dogs got out through a hole in the fence yesterday.",
+                        "hasRead": Array [
+                          "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        ],
+                        "id": 1509567098747,
+                        "postedBy": Object {
+                          "house": "Dog9",
+                          "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                          "name": "Amanda Brenner",
+                        },
+                        "title": "Don't leave dogs out unattended.",
+                      },
+                    ],
+                    "chores": Array [
+                      Object {
+                        "assignedTo": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "datePosted": "10/31/2017",
+                        "details": "Empty the dishwasher.",
+                        "done": false,
+                        "id": "c1509485241076",
+                        "postedBy": Object {
+                          "house": "Dog9",
+                          "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                          "name": "Amanda Brenner",
+                        },
+                        "title": "Dishes",
+                        "urgency": "low",
+                      },
+                    ],
+                    "houseCode": "woof9",
+                    "houseKey": "-KxoIBWy5UYRscFYdWty",
+                    "houseName": "Dog9",
+                    "users": Array [
+                      Object {
+                        "house": "Dog9",
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "name": "Amanda Brenner",
+                      },
+                      Object {
+                        "house": "Dog9",
+                        "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                        "name": "Lola Koala",
+                      },
+                    ],
+                  }
+                }
+              />,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "class",
+              "props": Object {
+                "currentUser": Object {
+                  "house": "Dog9",
+                  "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                  "name": "Amanda Brenner",
+                },
+                "markBillPaid": [Function],
+                "placeRendered": "search",
+                "searchValue": "wa",
+                "usersHouse": Object {
+                  "bills": Array [
+                    Object {
+                      "allUsersTotals": Array [
+                        Object {
+                          "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                          "paid": false,
+                          "total": 50,
+                        },
+                        Object {
+                          "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                          "paid": false,
+                          "total": 50,
+                        },
+                      ],
+                      "datePosted": "11/01/2017",
+                      "details": "We used a lot of water.",
+                      "duedate": "11/9/17",
+                      "id": "b3019762705779",
+                      "parsedDuedate": 1510210800000,
+                      "postedBy": Object {
+                        "house": "Dog9",
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "name": "Amanda Brenner",
+                      },
+                      "title": "Water Bill",
+                      "total": "100",
+                    },
+                  ],
+                  "bulletins": Array [
+                    Object {
+                      "datePosted": "11/01/2017",
+                      "details": "The dogs got out through a hole in the fence yesterday.",
+                      "hasRead": Array [
+                        "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      ],
+                      "id": 1509567098747,
+                      "postedBy": Object {
+                        "house": "Dog9",
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "name": "Amanda Brenner",
+                      },
+                      "title": "Don't leave dogs out unattended.",
+                    },
+                  ],
+                  "chores": Array [
+                    Object {
+                      "assignedTo": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "datePosted": "10/31/2017",
+                      "details": "Empty the dishwasher.",
+                      "done": false,
+                      "id": "c1509485241076",
+                      "postedBy": Object {
+                        "house": "Dog9",
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "name": "Amanda Brenner",
+                      },
+                      "title": "Dishes",
+                      "urgency": "low",
+                    },
+                  ],
+                  "houseCode": "woof9",
+                  "houseKey": "-KxoIBWy5UYRscFYdWty",
+                  "houseName": "Dog9",
+                  "users": Array [
+                    Object {
+                      "house": "Dog9",
+                      "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "name": "Amanda Brenner",
+                    },
+                    Object {
+                      "house": "Dog9",
+                      "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                      "name": "Lola Koala",
+                    },
+                  ],
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "class",
+              "props": Object {
+                "addReaderToBulletin": [Function],
+                "currentUser": Object {
+                  "house": "Dog9",
+                  "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                  "name": "Amanda Brenner",
+                },
+                "placeRendered": "search",
+                "searchValue": "wa",
+                "usersHouse": Object {
+                  "bills": Array [
+                    Object {
+                      "allUsersTotals": Array [
+                        Object {
+                          "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                          "paid": false,
+                          "total": 50,
+                        },
+                        Object {
+                          "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                          "paid": false,
+                          "total": 50,
+                        },
+                      ],
+                      "datePosted": "11/01/2017",
+                      "details": "We used a lot of water.",
+                      "duedate": "11/9/17",
+                      "id": "b3019762705779",
+                      "parsedDuedate": 1510210800000,
+                      "postedBy": Object {
+                        "house": "Dog9",
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "name": "Amanda Brenner",
+                      },
+                      "title": "Water Bill",
+                      "total": "100",
+                    },
+                  ],
+                  "bulletins": Array [
+                    Object {
+                      "datePosted": "11/01/2017",
+                      "details": "The dogs got out through a hole in the fence yesterday.",
+                      "hasRead": Array [
+                        "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      ],
+                      "id": 1509567098747,
+                      "postedBy": Object {
+                        "house": "Dog9",
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "name": "Amanda Brenner",
+                      },
+                      "title": "Don't leave dogs out unattended.",
+                    },
+                  ],
+                  "chores": Array [
+                    Object {
+                      "assignedTo": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "datePosted": "10/31/2017",
+                      "details": "Empty the dishwasher.",
+                      "done": false,
+                      "id": "c1509485241076",
+                      "postedBy": Object {
+                        "house": "Dog9",
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "name": "Amanda Brenner",
+                      },
+                      "title": "Dishes",
+                      "urgency": "low",
+                    },
+                  ],
+                  "houseCode": "woof9",
+                  "houseKey": "-KxoIBWy5UYRscFYdWty",
+                  "houseName": "Dog9",
+                  "users": Array [
+                    Object {
+                      "house": "Dog9",
+                      "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "name": "Amanda Brenner",
+                    },
+                    Object {
+                      "house": "Dog9",
+                      "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                      "name": "Lola Koala",
+                    },
+                  ],
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "class",
+              "props": Object {
+                "claimChore": [Function],
+                "currentUser": Object {
+                  "house": "Dog9",
+                  "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                  "name": "Amanda Brenner",
+                },
+                "markChoreDone": [Function],
+                "placeRendered": "search",
+                "searchValue": "wa",
+                "usersHouse": Object {
+                  "bills": Array [
+                    Object {
+                      "allUsersTotals": Array [
+                        Object {
+                          "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                          "paid": false,
+                          "total": 50,
+                        },
+                        Object {
+                          "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                          "paid": false,
+                          "total": 50,
+                        },
+                      ],
+                      "datePosted": "11/01/2017",
+                      "details": "We used a lot of water.",
+                      "duedate": "11/9/17",
+                      "id": "b3019762705779",
+                      "parsedDuedate": 1510210800000,
+                      "postedBy": Object {
+                        "house": "Dog9",
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "name": "Amanda Brenner",
+                      },
+                      "title": "Water Bill",
+                      "total": "100",
+                    },
+                  ],
+                  "bulletins": Array [
+                    Object {
+                      "datePosted": "11/01/2017",
+                      "details": "The dogs got out through a hole in the fence yesterday.",
+                      "hasRead": Array [
+                        "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      ],
+                      "id": 1509567098747,
+                      "postedBy": Object {
+                        "house": "Dog9",
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "name": "Amanda Brenner",
+                      },
+                      "title": "Don't leave dogs out unattended.",
+                    },
+                  ],
+                  "chores": Array [
+                    Object {
+                      "assignedTo": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "datePosted": "10/31/2017",
+                      "details": "Empty the dishwasher.",
+                      "done": false,
+                      "id": "c1509485241076",
+                      "postedBy": Object {
+                        "house": "Dog9",
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "name": "Amanda Brenner",
+                      },
+                      "title": "Dishes",
+                      "urgency": "low",
+                    },
+                  ],
+                  "houseCode": "woof9",
+                  "houseKey": "-KxoIBWy5UYRscFYdWty",
+                  "houseName": "Dog9",
+                  "users": Array [
+                    Object {
+                      "house": "Dog9",
+                      "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "name": "Amanda Brenner",
+                    },
+                    Object {
+                      "house": "Dog9",
+                      "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                      "name": "Lola Koala",
+                    },
+                  ],
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

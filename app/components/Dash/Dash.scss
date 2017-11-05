@@ -1,0 +1,68 @@
+.dash-div {
+  margin: 20px;
+  // overflow: scroll;
+  background-color: #F4CCE2;
+  height: auto;
+  width: auto;
+}
+
+.dash-div .login-button {
+  font-family: 'BenchNine', sans-serif;
+  border: none;
+  background-color: #D83D59;
+  width: 100px;
+  height: 50px;
+  color: #F4CCE2;
+  font-size: 40px;
+  border-radius: 25px;
+  position: fixed;
+  top: 50%;
+  left: 35px;
+  margin: auto;
+  text-align: center;
+}
+
+.dash-div .login-button:hover,
+.join-house button:hover {
+  cursor: pointer;
+  border: 2px dashed #D83D59;
+  background-color: #F4CCE2;
+  color: #D83D59;
+}
+
+.join-house {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: auto;
+}
+
+.join-house input,
+.join-house button {
+  font-family: 'BenchNine', sans-serif;
+  border-radius: 25px;
+  margin-top: 20px;
+  height: 40px;
+  font-size: 30px;
+}
+
+.join-house input {
+  padding-left: 10px;
+  border: 1px solid #D83D59;
+  color: #D83D59;
+}
+
+.join-house input::placeholder {
+  color: #D83D59;
+}
+
+.join-house button {
+  border: none;
+  background-color: #D83D59;
+  color: #F4CCE2;
+}
+
+.dash-lists {
+  font-family: 'BenchNine', sans-serif;
+}

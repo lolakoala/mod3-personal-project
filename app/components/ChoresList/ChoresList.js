@@ -3,45 +3,47 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 class ChoresList extends Component {
-  getChoresToMap = () => {
-    const { usersHouse, placeRendered, currentUser, searchValue } = this.props;
-    const userChores = usersHouse.chores.filter(chore => chore.assignedTo === currentUser.id);
-    const userChoresToDo = userChores.filter(chore => chore.done === false);
-    const userChoresDone = userChores.filter(chore => chore.done === true);
-    const allChoresToDo = usersHouse.chores.filter(chore => chore.done === false);
-    const matchingChores = usersHouse.chores.filter(chore => {
-      return chore.title.includes(searchValue) || chore.details.includes(searchValue);
-    });
-    let choresToMap;
-    if (placeRendered === '/houselist') {
-      choresToMap = usersHouse.chores;
-    } else if (placeRendered === '/userlist') {
-      choresToMap = [...userChoresToDo, ...userChoresDone];
-    } else if (placeRendered === '/') {
-      choresToMap = userChoresToDo;
-    } else if (placeRendered === 'summary') {
-      choresToMap = allChoresToDo;
-    } else if (placeRendered === 'search') {
-      choresToMap = matchingChores;
-    }
-    return choresToMap;
+  getUserChores = (chores, id, which) => {
+    const userChores = chores.filter(chore => chore.assignedTo === id);
+    const userChoresToDo = userChores.filter(chore => chore.done === false)
+      .sort((itemA, itemB) => Date.parse(itemA.datePosted) - Date.parse(itemB.datePosted));
+    const userChoresDone = userChores.filter(chore => chore.done === true)
+      .sort((itemA, itemB) => Date.parse(itemA.datePosted) - Date.parse(itemB.datePosted));
+    return which === 'all' ? [...userChoresToDo, ...userChoresDone] : userChoresToDo;
   }
 
-  getTitle = () => {
-    const { placeRendered } = this.props;
-    let title;
-    if (placeRendered === '/') {
-      title = 'Chores I Need To Do';
+  getMatchingChores = (chores, value) => {
+    return chores.filter(chore => {
+      return chore.title.includes(value) || chore.details.includes(value);
+    }).sort((itemA, itemB) => Date.parse(itemB.datePosted) - Date.parse(itemA.datePosted));
+  }
+
+  getChoresToMap = () => {
+    const { usersHouse, placeRendered, currentUser, searchValue } = this.props;
+    if (placeRendered === '/houselist') {
+      return usersHouse.chores.sort((itemA, itemB) => Date.parse(itemB.datePosted) - Date.parse(itemA.datePosted));
     } else if (placeRendered === '/userlist') {
-      title = 'My Chores';
-    } else if (placeRendered === '/houselist') {
-      title = 'House Chores';
+      return this.getUserChores(usersHouse.chores, currentUser.id, 'all');
+    } else if (placeRendered === '/') {
+      return this.getUserChores(usersHouse.chores, currentUser.id, 'todo');
     } else if (placeRendered === 'summary') {
-      title = 'Chores to Be Done';
+      return usersHouse.chores.filter(chore => chore.done === false).sort((itemA, itemB) => Date.parse(itemB.datePosted) - Date.parse(itemA.datePosted));
     } else if (placeRendered === 'search') {
-      title = 'Matching Chores';
+      return this.getMatchingChores(usersHouse.chores, searchValue);
     }
-    return title;
+  }
+
+  getError = () => {
+    const { placeRendered, usersHouse } = this.props;
+    if (placeRendered === '/') {
+      return 'You have chores to do.';
+    } else if (placeRendered === '/houselist') {
+      return `${usersHouse.houseName} has no chores posted.`;
+    } else if (placeRendered === 'summary') {
+      return `${usersHouse.houseName} has no chores to do.`;
+    } else if (placeRendered === 'search') {
+      return 'No chores match your query.';
+    }
   }
 
   claimChore = (userId, chore, usersHouse) => {
@@ -60,28 +62,26 @@ class ChoresList extends Component {
       const choresToMap = this.getChoresToMap();
       if (choresToMap.length) {
         return (
-          <div>
-            <h2>{this.getTitle()}</h2>
-            <h4>Title</h4>
-            <h4>Urgency</h4>
-            <h4>{placeRendered !== '/userlist' && placeRendered === '/' ? 'Claimed by' : null}</h4>
-            <h4>{placeRendered !== '/' ? null : 'Done'}</h4>
+          <div className='choreslist'>
+            {placeRendered === '/' ? <h4>Chores I Need To Do</h4> : null}
+            {placeRendered === 'summary' ? <h4>Chores To Be Done</h4> : null}
             {choresToMap.map(chore => {
-              const assignedTo = chore.assignedTo.length ? usersHouse.users.find(user => user.id === chore.assignedTo).name : 'claim';
-              return (<div key={chore.datePosted}>
+              return (<div key={chore.datePosted} className='chore'>
                 <Link to={`chores/${chore.id}`}>{chore.title}</Link>
-                <p>{`Urgency: ${chore.urgency}`}</p>
-                <p onClick={() => this.claimChore(currentUser.id, chore, usersHouse)}>{placeRendered !== '/userlist' && placeRendered === '/' ? assignedTo : null}</p>
-                <div onClick={() => this.markChoreDone(chore, usersHouse)}>{chore.done === false ? 'Mark as Done' : null}</div>
+                <p>{chore.urgency === 'high' ? 'urgent' : 'not urgent'}</p>
+                <p className='claim-button' onClick={() => this.claimChore(currentUser.id, chore, usersHouse)}>
+                  {chore.assignedTo.length ? 'Claimed' : 'Claim Chore'}
+                </p>
+                <p className='choredone' onClick={() => this.markChoreDone(chore, usersHouse)}>{chore.done === false ? 'Mark Done' : 'Done'}</p>
               </div>);
             })}
           </div>
         );
       } else {
-        return <div></div>;
+        return <p className='error'>{this.getError()}</p>;
       }
     } else {
-      return <div></div>;
+      return <p className='error'>{`${usersHouse.houseName} has no chores posted.`}</p>;
     }
   }
 }

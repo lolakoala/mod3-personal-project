@@ -10,7 +10,7 @@ export default class Root extends Component {
       <BrowserRouter>
         <div>
           <Routes />
-          <Devtools />
+          {/* <Devtools /> */}
         </div>
       </BrowserRouter>
     );

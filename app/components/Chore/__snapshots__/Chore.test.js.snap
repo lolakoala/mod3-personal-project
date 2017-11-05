@@ -1,0 +1,359 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`chore component should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Chore
+    claimChore={[Function]}
+    currentUser={
+      Object {
+        "house": "Dog9",
+        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+        "name": "Amanda Brenner",
+      }
+    }
+    markChoreDone={[Function]}
+    match={
+      Object {
+        "params": Object {
+          "id": "c1509485241076",
+        },
+      }
+    }
+    usersHouse={
+      Object {
+        "bills": Array [
+          Object {
+            "allUsersTotals": Array [
+              Object {
+                "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                "paid": false,
+                "total": 50,
+              },
+              Object {
+                "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                "paid": false,
+                "total": 50,
+              },
+            ],
+            "datePosted": "11/01/2017",
+            "details": "We used a lot of water.",
+            "duedate": "11/9/17",
+            "id": "b3019762705779",
+            "parsedDuedate": 1510210800000,
+            "postedBy": Object {
+              "house": "Dog9",
+              "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+              "name": "Amanda Brenner",
+            },
+            "title": "Water Bill",
+            "total": "100",
+          },
+        ],
+        "bulletins": Array [
+          Object {
+            "datePosted": "11/01/2017",
+            "details": "The dogs got out through a hole in the fence yesterday.",
+            "hasRead": Array [
+              "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+            ],
+            "id": 1509567098747,
+            "postedBy": Object {
+              "house": "Dog9",
+              "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+              "name": "Amanda Brenner",
+            },
+            "title": "Don't leave dogs out unattended.",
+          },
+        ],
+        "chores": Array [
+          Object {
+            "assignedTo": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+            "datePosted": "10/31/2017",
+            "details": "Empty the dishwasher.",
+            "done": false,
+            "id": "c1509485241076",
+            "postedBy": Object {
+              "house": "Dog9",
+              "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+              "name": "Amanda Brenner",
+            },
+            "title": "Dishes",
+            "urgency": "low",
+          },
+        ],
+        "houseCode": "woof9",
+        "houseKey": "-KxoIBWy5UYRscFYdWty",
+        "houseName": "Dog9",
+        "users": Array [
+          Object {
+            "house": "Dog9",
+            "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+            "name": "Amanda Brenner",
+          },
+          Object {
+            "house": "Dog9",
+            "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+            "name": "Lola Koala",
+          },
+        ],
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <p
+          className="title"
+        >
+          Chore: Dishes
+        </p>,
+        <p
+          className="urgency"
+        >
+          Urgency: low
+        </p>,
+        <p
+          className="posted-by-on"
+        >
+          Posted by Amanda Brenner on 10/31/2017
+        </p>,
+        <p
+          className="claim-chore"
+          onClick={[Function]}
+        >
+          Claimed by Amanda Brenner
+        </p>,
+        <p
+          className="details"
+        >
+          Details: Empty the dishwasher.
+        </p>,
+        <p
+          className="chore-done"
+          onClick={[Function]}
+        >
+          Mark as Done
+        </p>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Chore: Dishes",
+          "className": "title",
+        },
+        "ref": null,
+        "rendered": "Chore: Dishes",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Urgency: low",
+          "className": "urgency",
+        },
+        "ref": null,
+        "rendered": "Urgency: low",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Posted by Amanda Brenner on 10/31/2017",
+          "className": "posted-by-on",
+        },
+        "ref": null,
+        "rendered": "Posted by Amanda Brenner on 10/31/2017",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Claimed by Amanda Brenner",
+          "className": "claim-chore",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Claimed by Amanda Brenner",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Details: Empty the dishwasher.",
+          "className": "details",
+        },
+        "ref": null,
+        "rendered": "Details: Empty the dishwasher.",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Mark as Done",
+          "className": "chore-done",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Mark as Done",
+        "type": "p",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <p
+            className="title"
+          >
+            Chore: Dishes
+          </p>,
+          <p
+            className="urgency"
+          >
+            Urgency: low
+          </p>,
+          <p
+            className="posted-by-on"
+          >
+            Posted by Amanda Brenner on 10/31/2017
+          </p>,
+          <p
+            className="claim-chore"
+            onClick={[Function]}
+          >
+            Claimed by Amanda Brenner
+          </p>,
+          <p
+            className="details"
+          >
+            Details: Empty the dishwasher.
+          </p>,
+          <p
+            className="chore-done"
+            onClick={[Function]}
+          >
+            Mark as Done
+          </p>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Chore: Dishes",
+            "className": "title",
+          },
+          "ref": null,
+          "rendered": "Chore: Dishes",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Urgency: low",
+            "className": "urgency",
+          },
+          "ref": null,
+          "rendered": "Urgency: low",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Posted by Amanda Brenner on 10/31/2017",
+            "className": "posted-by-on",
+          },
+          "ref": null,
+          "rendered": "Posted by Amanda Brenner on 10/31/2017",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Claimed by Amanda Brenner",
+            "className": "claim-chore",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Claimed by Amanda Brenner",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Details: Empty the dishwasher.",
+            "className": "details",
+          },
+          "ref": null,
+          "rendered": "Details: Empty the dishwasher.",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Mark as Done",
+            "className": "chore-done",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Mark as Done",
+          "type": "p",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

@@ -3,74 +3,78 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 class BulletinsList extends Component {
+  getINeedToRead = (bulletins, id) => {
+    return bulletins.filter(bulletin => {
+      return !bulletin.hasRead.includes(id);
+    }).sort((itemA, itemB) => Date.parse(itemA.datePosted) - Date.parse(itemB.datePosted));
+  }
+
+  getWeekBulletins = bulletins => {
+    return bulletins.filter(bulletin => Date.now() - bulletin.id <= 604800000)
+      .sort((itemA, itemB) => Date.parse(itemA.datePosted) - Date.parse(itemB.datePosted));
+  }
+
+  getMatchingBulletins = (bulletins, value) => {
+    return bulletins.filter(bulletin => {
+      return bulletin.title.includes(value) || bulletin.details.includes(value);
+    }).sort((itemA, itemB) => Date.parse(itemB.datePosted) - Date.parse(itemA.datePosted));
+  }
+
   getBulletins = () => {
     const { usersHouse, currentUser, placeRendered, searchValue } = this.props;
-    const iNeedToRead = usersHouse.bulletins.filter(bulletin => {
-      return !bulletin.hasRead.includes(currentUser.id);
-    });
-    const matchingBulletins = usersHouse.bulletins.filter(bulletin => {
-      return bulletin.title.includes(searchValue) || bulletin.details.includes(searchValue);
-    });
     if (placeRendered === '/') {
-      return iNeedToRead;
+      return this.getINeedToRead(usersHouse.bulletins, currentUser.id);
     } else if (placeRendered === '/houselist') {
-      return usersHouse.bulletins;
+      return usersHouse.bulletins.sort((itemA, itemB) => Date.parse(itemB.datePosted) - Date.parse(itemA.datePosted));
     } else if (placeRendered === 'summary') {
-      const today = Date.now();
-      const weekBulletins = usersHouse.bulletins.filter(bulletin => today - bulletin.id <= 604800000);
-      return weekBulletins;
+      return this.getWeekBulletins(usersHouse.bulletins);
     } else if (placeRendered === 'search') {
-      return matchingBulletins;
+      return this.getMatchingBulletins(usersHouse.bulletins, searchValue);
     }
   }
 
-  getHeaders = () => {
-    const { placeRendered } = this.props;
-    const allBulletinHeaders = <div>
-      {placeRendered === 'search' ? <h4>Matching Bulletins</h4> : null}
-      <h4>Title</h4>
-      <h4>Date Posted</h4>
-      <h4>All Read</h4>
-    </div>;
-    const unreadBulletinHeaders = <div>
-      <h2>Bulletins I Need to Read</h2>
-      <h4>Title</h4>
-      <h4>Date Posted</h4>
-    </div>;
+  getError = () => {
+    const { placeRendered, usersHouse } = this.props;
     if (placeRendered === '/') {
-      return unreadBulletinHeaders;
-    } else {
-      return allBulletinHeaders;
+      return 'You have no unread bulletins.';
+    } else if (placeRendered === '/houselist') {
+      return `${usersHouse.houseName} has no bulletins posted.`;
+    } else if (placeRendered === 'summary') {
+      return `${usersHouse.houseName} has no bulletins posted this week.`;
+    } else if (placeRendered === 'search') {
+      return 'No bulletins match your query.';
     }
   }
 
   render() {
-    const { usersHouse, currentUser, addReaderToBulletin } = this.props;
+    const { usersHouse, currentUser, addReaderToBulletin, placeRendered } = this.props;
     if (usersHouse.bulletins.length && usersHouse.bulletins[0].title !== 'fake') {
       const bulletins = this.getBulletins();
       if (bulletins.length) {
         return (
-          <div>
-            {this.getHeaders()}
+          <div className='bulletinslist'>
+            {placeRendered === 'summary' ? <h4>Current Bulletins</h4> : null}
+            {placeRendered === '/' ? <h4>Bulletins I Need to Read</h4> : null}
             {bulletins.map(bulletin => {
               let bulletinClass;
               bulletin.hasRead.includes(currentUser.id) ? bulletinClass = 'read' : bulletinClass = 'not-read';
-              return (<div key={bulletin.id} className={bulletinClass}>
+              return (<div key={bulletin.id} className={`${bulletinClass} bulletin`}>
                 <Link
+                  className='bulletin-title'
                   to={`bulletins/${bulletin.id}`}
                   onClick={() => addReaderToBulletin(bulletin.id, currentUser.id, usersHouse)}>
                   {bulletin.title}
                 </Link>
-                <p>{bulletin.datePosted}</p>
+                <p>{`Posted on: ${bulletin.datePosted}`}</p>
               </div>);
             })}
           </div>
         );
       } else {
-        return <div></div>;
+        return <p className='error'>{this.getError()}</p>;
       }
     } else {
-      return <div></div>;
+      return <p className='error'>{`${usersHouse.houseName} has no bulletins posted.`}</p>;
     }
 
   }

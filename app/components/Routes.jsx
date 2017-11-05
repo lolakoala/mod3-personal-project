@@ -20,6 +20,7 @@ const Routes = () => {
       <Route path='/bills/:id' component={ BillContainer }/>
       <Route path='/bulletins/:id' component={ BulletinContainer }/>
       <Route path='/chores/:id' component={ ChoreContainer }/>
+      <div className='footer'></div>
     </div>
   );
 

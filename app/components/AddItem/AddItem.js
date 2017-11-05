@@ -30,12 +30,16 @@ class AddItem extends Component {
     return `${mm}/${dd}/${yyyy}`;
   }
 
+  isActive = item => {
+    return this.state.item === item ? 'active' : '';
+  }
+
   renderButtons = () => {
     return (
-      <div>
-        <button className='add-bill' onClick={() => this.updateItem('bill')}>Add Bill</button>
-        <button className='add-chore' onClick={() => this.updateItem('chore')}>Add Chore</button>
-        <button className='add-bulletin' onClick={() => this.updateItem('bulletin')}>Add Bulletin</button>
+      <div className='additem'>
+        <button className={`add-bill-button ${this.isActive('bill')}`} onClick={() => this.updateItem('bill')}>Add Bill</button>
+        <button className={`add-chore-button ${this.isActive('chore')}`} onClick={() => this.updateItem('chore')}>Add Chore</button>
+        <button className={`add-bulletin-button ${this.isActive('bulletin')}`} onClick={() => this.updateItem('bulletin')}>Add Bulletin</button>
       </div>
     );
   }
@@ -43,7 +47,7 @@ class AddItem extends Component {
   render() {
     const { usersHouse, currentUser, addBill, addBulletin, addChore } = this.props;
     return (
-      <div>
+      <div className='additem-with-items'>
         {usersHouse.users ? this.renderButtons() : null}
         {this.state.item === 'bill' ?
           <AddBill usersHouse={usersHouse}

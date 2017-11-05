@@ -45,11 +45,15 @@ class AddBulletin extends Component {
 
   render() {
     return (
-      <div>
-        <input className='bulletin-input' type='text' placeholder='Title' onChange={(event) => this.handleChange(event, 'title')}/>
-        <textarea className='bulletin-input' type='text' placeholder='Details' onChange={(event) => this.handleChange(event, 'details')}/>
-        <button onClick={() => this.addBulletin()} disabled={this.state.submitDisabled}>Submit</button>
-        <button onClick={this.reset}>Reset</button>
+      <div className='add-bulletin'>
+        <div className='add-bulletin-inputs'>
+          <input className='bulletin-input' type='text' placeholder='Title' onChange={(event) => this.handleChange(event, 'title')}/>
+          <textarea className='bulletin-input' type='text' placeholder='Details' onChange={(event) => this.handleChange(event, 'details')}/>
+        </div>
+        <div className='add-bulletin-buttons'>
+          <button onClick={() => this.addBulletin()} disabled={this.state.submitDisabled}>Submit</button>
+          <button onClick={this.reset}>Reset</button>
+        </div>
       </div>
     );
   }

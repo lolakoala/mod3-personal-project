@@ -22,16 +22,20 @@ class Chore extends Component {
     const { usersHouse, currentUser } = this.props;
     const chore = usersHouse.chores.find(chore => chore.id === this.props.match.params.id);
     return (
-      <div>
+      <div id='chore-page'>
         <p className='title'>{`Chore: ${chore.title}`}</p>
-        <p className='urgency'>{`Urgency: ${chore.urgency}`}</p>
-        <p className='posted-by-on'>{`Posted by ${chore.postedBy.name} on ${chore.datePosted}`}</p>
+        <p className='details'>{`Details: ${chore.details}`}</p>
         <p className='claim-chore'
           onClick={() => this.claimChore(currentUser.id, chore, usersHouse)}>
           {chore.assignedTo.length ? `Claimed by ${this.getUserAssigned()}` : 'Claim Chore'}
         </p>
-        <p className='details'>{`Details: ${chore.details}`}</p>
-        <p className='chore-done' onClick={() => this.markChoreDone(chore, usersHouse)}>{chore.done === false ? 'Mark as Done' : 'Done'}</p>
+        <div className='urgency-done'>
+          <p className='urgency'>{chore.urgency === 'high' ? 'Urgent!' : 'not urgent'}</p>
+          <div>
+            <p className='chore-done' onClick={() => this.markChoreDone(chore, usersHouse)}>{chore.done === false ? 'Mark as Done' : 'Done'}</p>
+          </div>
+        </div>
+        <p className='posted-by-on'>{`Posted by ${chore.postedBy.name} on ${chore.datePosted}`}</p>
       </div>
     );
   }

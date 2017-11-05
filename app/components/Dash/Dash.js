@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import firebase, { auth, provider } from '../../firebase.js';
 import JoinHouse from '../JoinHouse/JoinHouse.js';
 import BillsList from '../BillsList/BillsList.js';
@@ -79,7 +78,7 @@ class Dash extends Component {
     } = this.props;
     const { bills, bulletins, chores } = this.props.usersHouse;
     return (
-      <div>
+      <div className='dash-lists'>
         {(bills.length && bills[0].title !== 'fake') ?
           <BillsList usersHouse={usersHouse}
             currentUser={currentUser}
@@ -112,11 +111,11 @@ class Dash extends Component {
 
   render() {
     return (
-      <div>
+      <div className='dash-div'>
         {this.props.currentUser.name ?
           this.getHouseOrDash()
           :
-          <button onClick={this.login}>Log In</button>
+          <button className='login-button' onClick={this.login}>Log In</button>
         }
       </div>
 

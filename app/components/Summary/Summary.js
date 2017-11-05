@@ -17,7 +17,6 @@ class Summary extends Component {
     } = this.props;
     return (
       <div>
-        <h3>Bulletins from the Past Week</h3>
         <BulletinsList usersHouse={usersHouse}
           currentUser={currentUser}
           addReaderToBulletin={addReaderToBulletin}

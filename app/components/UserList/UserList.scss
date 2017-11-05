@@ -1,0 +1,25 @@
+.user-list {
+  font-family: 'BenchNine', sans-serif;
+  margin: 20px;
+}
+
+.user-list button {
+  font-family: 'BenchNine', sans-serif;
+  border: none;
+  background-color: #D83D59;
+  width: 120px;
+  height: 25px;
+  color: #F4CCE2;
+  font-size: 20px;
+  border-radius: 25px;
+  text-align: center;
+  margin: 5px;
+}
+
+.user-list button:hover,
+.user-list .active {
+  cursor: pointer;
+  border: 2px dashed #D83D59;
+  background-color: #F4CCE2;
+  color: #D83D59;
+}

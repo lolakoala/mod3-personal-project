@@ -108,30 +108,39 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <input
-          className="bulletin-input"
-          onChange={[Function]}
-          placeholder="Title"
-          type="text"
-        />,
-        <textarea
-          className="bulletin-input"
-          onChange={[Function]}
-          placeholder="Details"
-          type="text"
-        />,
-        <button
-          disabled={false}
-          onClick={[Function]}
+        <div
+          className="add-bulletin-inputs"
         >
-          Submit
-        </button>,
-        <button
-          onClick={[Function]}
+          <input
+            className="bulletin-input"
+            onChange={[Function]}
+            placeholder="Title"
+            type="text"
+          />
+          <textarea
+            className="bulletin-input"
+            onChange={[Function]}
+            placeholder="Details"
+            type="text"
+          />
+        </div>,
+        <div
+          className="add-bulletin-buttons"
         >
-          Reset
-        </button>,
+          <button
+            disabled={false}
+            onClick={[Function]}
+          >
+            Submit
+          </button>
+          <button
+            onClick={[Function]}
+          >
+            Reset
+          </button>
+        </div>,
       ],
+      "className": "add-bulletin",
     },
     "ref": null,
     "rendered": Array [
@@ -140,53 +149,104 @@ ShallowWrapper {
         "key": null,
         "nodeType": "host",
         "props": Object {
-          "className": "bulletin-input",
-          "onChange": [Function],
-          "placeholder": "Title",
-          "type": "text",
+          "children": Array [
+            <input
+              className="bulletin-input"
+              onChange={[Function]}
+              placeholder="Title"
+              type="text"
+            />,
+            <textarea
+              className="bulletin-input"
+              onChange={[Function]}
+              placeholder="Details"
+              type="text"
+            />,
+          ],
+          "className": "add-bulletin-inputs",
         },
         "ref": null,
-        "rendered": null,
-        "type": "input",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "className": "bulletin-input",
+              "onChange": [Function],
+              "placeholder": "Title",
+              "type": "text",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "className": "bulletin-input",
+              "onChange": [Function],
+              "placeholder": "Details",
+              "type": "text",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "textarea",
+          },
+        ],
+        "type": "div",
       },
       Object {
         "instance": null,
         "key": null,
         "nodeType": "host",
         "props": Object {
-          "className": "bulletin-input",
-          "onChange": [Function],
-          "placeholder": "Details",
-          "type": "text",
+          "children": Array [
+            <button
+              disabled={false}
+              onClick={[Function]}
+            >
+              Submit
+            </button>,
+            <button
+              onClick={[Function]}
+            >
+              Reset
+            </button>,
+          ],
+          "className": "add-bulletin-buttons",
         },
         "ref": null,
-        "rendered": null,
-        "type": "textarea",
-      },
-      Object {
-        "instance": null,
-        "key": null,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Submit",
-          "disabled": false,
-          "onClick": [Function],
-        },
-        "ref": null,
-        "rendered": "Submit",
-        "type": "button",
-      },
-      Object {
-        "instance": null,
-        "key": null,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Reset",
-          "onClick": [Function],
-        },
-        "ref": null,
-        "rendered": "Reset",
-        "type": "button",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Submit",
+              "disabled": false,
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Submit",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Reset",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Reset",
+            "type": "button",
+          },
+        ],
+        "type": "div",
       },
     ],
     "type": "div",
@@ -198,30 +258,39 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <input
-            className="bulletin-input"
-            onChange={[Function]}
-            placeholder="Title"
-            type="text"
-          />,
-          <textarea
-            className="bulletin-input"
-            onChange={[Function]}
-            placeholder="Details"
-            type="text"
-          />,
-          <button
-            disabled={false}
-            onClick={[Function]}
+          <div
+            className="add-bulletin-inputs"
           >
-            Submit
-          </button>,
-          <button
-            onClick={[Function]}
+            <input
+              className="bulletin-input"
+              onChange={[Function]}
+              placeholder="Title"
+              type="text"
+            />
+            <textarea
+              className="bulletin-input"
+              onChange={[Function]}
+              placeholder="Details"
+              type="text"
+            />
+          </div>,
+          <div
+            className="add-bulletin-buttons"
           >
-            Reset
-          </button>,
+            <button
+              disabled={false}
+              onClick={[Function]}
+            >
+              Submit
+            </button>
+            <button
+              onClick={[Function]}
+            >
+              Reset
+            </button>
+          </div>,
         ],
+        "className": "add-bulletin",
       },
       "ref": null,
       "rendered": Array [
@@ -230,53 +299,104 @@ ShallowWrapper {
           "key": null,
           "nodeType": "host",
           "props": Object {
-            "className": "bulletin-input",
-            "onChange": [Function],
-            "placeholder": "Title",
-            "type": "text",
+            "children": Array [
+              <input
+                className="bulletin-input"
+                onChange={[Function]}
+                placeholder="Title"
+                type="text"
+              />,
+              <textarea
+                className="bulletin-input"
+                onChange={[Function]}
+                placeholder="Details"
+                type="text"
+              />,
+            ],
+            "className": "add-bulletin-inputs",
           },
           "ref": null,
-          "rendered": null,
-          "type": "input",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "className": "bulletin-input",
+                "onChange": [Function],
+                "placeholder": "Title",
+                "type": "text",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "className": "bulletin-input",
+                "onChange": [Function],
+                "placeholder": "Details",
+                "type": "text",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "textarea",
+            },
+          ],
+          "type": "div",
         },
         Object {
           "instance": null,
           "key": null,
           "nodeType": "host",
           "props": Object {
-            "className": "bulletin-input",
-            "onChange": [Function],
-            "placeholder": "Details",
-            "type": "text",
+            "children": Array [
+              <button
+                disabled={false}
+                onClick={[Function]}
+              >
+                Submit
+              </button>,
+              <button
+                onClick={[Function]}
+              >
+                Reset
+              </button>,
+            ],
+            "className": "add-bulletin-buttons",
           },
           "ref": null,
-          "rendered": null,
-          "type": "textarea",
-        },
-        Object {
-          "instance": null,
-          "key": null,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Submit",
-            "disabled": false,
-            "onClick": [Function],
-          },
-          "ref": null,
-          "rendered": "Submit",
-          "type": "button",
-        },
-        Object {
-          "instance": null,
-          "key": null,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Reset",
-            "onClick": [Function],
-          },
-          "ref": null,
-          "rendered": "Reset",
-          "type": "button",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Submit",
+                "disabled": false,
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Submit",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Reset",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Reset",
+              "type": "button",
+            },
+          ],
+          "type": "div",
         },
       ],
       "type": "div",

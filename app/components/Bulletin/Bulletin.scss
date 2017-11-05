@@ -1,0 +1,37 @@
+#bulletin-page {
+  margin: 20px;
+  height: auto;
+  width: 280px;
+  border-radius: 5px;
+  background-color: rgba(141, 132, 73, 0.7);
+  color: #3d6aa2;
+  padding: 20px;
+  font-size: 20px;
+}
+
+#bulletin-page .title {
+  height: auto;
+  width: 90%;
+  background-color: #F4CCE2;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+#bulletin-page .posted-by-on {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+#bulletin-page .details,
+#bulletin-page .needs-to-read {
+  height: auto;
+  width: 90%;
+  background-color: #F4CCE2;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

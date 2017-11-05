@@ -12,14 +12,14 @@ class Bulletin extends Component {
       return !bulletin.hasRead.includes(user.id);
     });
     return (
-      <div>
+      <div id='bulletin-page'>
         <p className='title'>{bulletin.title}</p>
         <p className='details'>{bulletin.details}</p>
-        <p className='posted-by-on'>{`Posted by ${bulletin.postedBy.name} on ${bulletin.datePosted}`}</p>
         <p>Needs to be read by ...</p>
         {needsToRead.map(user => {
           return <p className='needs-to-read' key={user.id}>{user.name}</p>;
         })}
+        <p className='posted-by-on'>{`Posted by ${bulletin.postedBy.name} on ${bulletin.datePosted}`}</p>
       </div>
     );
   }

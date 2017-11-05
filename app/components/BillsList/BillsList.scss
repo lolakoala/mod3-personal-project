@@ -1,0 +1,78 @@
+.billslist h4,
+.error {
+  background-color: rgba(141, 132, 73, 0.7);
+  color: #3d6aa2;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 20px;
+  width: 250px;
+  padding: 5px;
+  text-align: center;
+  height: 35px;
+  border-radius: 5px;
+  line-height: 35px;
+  margin-top: 10px;
+}
+
+.billslist .bill {
+  display: flex;
+  height: 30px;
+  width: 300px;
+  border-radius: 5px;
+  border: 2px solid rgba(141, 132, 73, 0.7);
+  margin-top: 10px;
+  line-height: 30px;
+  // text-align: center;
+  font-family: 'BenchNine', sans-serif;
+  position: relative;
+}
+
+.bill a {
+  text-decoration: none;
+  width: 75px;
+  overflow: hidden;
+  display: inline-block;
+  margin: 2px 5px;
+  background-color: #D83D59;
+  border: none;
+  // font-family: 'BenchNine', sans-serif;
+  height: 25px;
+  color: #F4CCE2;
+  font-size: 20px;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.bill a:hover {
+  cursor: pointer;
+  border: 2px dashed #D83D59;
+  background-color: #F4CCE2;
+  color: #D83D59;
+}
+
+.bill .due,
+.bill .total {
+  width: 60px;
+  font-size: 15px;
+  display: inline-block;
+  margin: 2px 0px 2px 5px;
+  text-align: center;
+}
+
+.bill .mark-paid {
+  height: 100%;
+  width: 75px;
+  background-color: #eb6b3c;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #F4CCE2;
+  display: inline-block;
+  font-size: 15px;
+  padding-left: 10px;
+}
+
+.mark-paid:hover {
+  cursor: pointer;
+  background-color: #F4CCE2;
+  color: #eb6b3c;
+}

@@ -1,0 +1,233 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`JoinHouse component should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <JoinHouse
+    createHouse={[Function]}
+    getHouse={[Function]}
+    handleChange={[Function]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <input
+          onChange={[Function]}
+          placeholder="House Code"
+          type="text"
+        />,
+        <button
+          onClick={[Function]}
+        >
+          Join a House
+        </button>,
+        <input
+          onChange={[Function]}
+          placeholder="House Name"
+          type="text"
+        />,
+        <input
+          onChange={[Function]}
+          placeholder="House Code"
+          type="text"
+        />,
+        <button
+          onClick={[Function]}
+        >
+          Add My House
+        </button>,
+      ],
+      "className": "join-house",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "onChange": [Function],
+          "placeholder": "House Code",
+          "type": "text",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Join a House",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Join a House",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "onChange": [Function],
+          "placeholder": "House Name",
+          "type": "text",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "onChange": [Function],
+          "placeholder": "House Code",
+          "type": "text",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Add My House",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Add My House",
+        "type": "button",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <input
+            onChange={[Function]}
+            placeholder="House Code"
+            type="text"
+          />,
+          <button
+            onClick={[Function]}
+          >
+            Join a House
+          </button>,
+          <input
+            onChange={[Function]}
+            placeholder="House Name"
+            type="text"
+          />,
+          <input
+            onChange={[Function]}
+            placeholder="House Code"
+            type="text"
+          />,
+          <button
+            onClick={[Function]}
+          >
+            Add My House
+          </button>,
+        ],
+        "className": "join-house",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "onChange": [Function],
+            "placeholder": "House Code",
+            "type": "text",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Join a House",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Join a House",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "onChange": [Function],
+            "placeholder": "House Name",
+            "type": "text",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "onChange": [Function],
+            "placeholder": "House Code",
+            "type": "text",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Add My House",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Add My House",
+          "type": "button",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

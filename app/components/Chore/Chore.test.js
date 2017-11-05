@@ -18,6 +18,7 @@ describe('chore component', () => {
     claimChore={mockFn}
     markChoreDone={mockFn}
     match={match}/>);
+  const claimedInfo = wrapper.find('.claim-chore');
 
   it('should exist', () => {
     expect(wrapper).toBeDefined();
@@ -27,5 +28,41 @@ describe('chore component', () => {
     const title = wrapper.find('.title');
 
     expect(title.text()).toEqual(`Chore: ${chore.title}`);
+  });
+
+  it('should have an urgency', () => {
+    const urgency = wrapper.find('.urgency');
+
+    expect(urgency.text()).toEqual(`Urgency: ${chore.urgency}`);
+  });
+
+  it('should have posted info', () => {
+    const postedInfo = wrapper.find('.posted-by-on');
+
+    expect(postedInfo.text()).toEqual(`Posted by ${chore.postedBy.name} on ${chore.datePosted}`);
+  });
+
+  it('should have claimed info', () => {
+
+    expect(chore.assignedTo).toEqual(currentUser1.id);
+    expect(claimedInfo.text()).toEqual(`Claimed by ${currentUser1.name}`);
+  });
+
+  it('should have details', () => {
+    const details = wrapper.find('.details');
+
+    expect(details.text()).toEqual(`Details: ${chore.details}`);
+  });
+
+  it('should fire actions', () => {
+    const doneButton = wrapper.find('.chore-done');
+
+    doneButton.simulate('click');
+    claimedInfo.simulate('click');
+    expect(mockFn).toHaveBeenCalledTimes(2);
+  });
+
+  it('should match snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
   });
 });

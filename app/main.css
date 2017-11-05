@@ -2,7 +2,49 @@
 @import './components/Dash/Dash.scss';
 @import './components/HeaderNav/HeaderNav.scss';
 @import './components/HouseList/HouseList.scss';
-@import './components/Item/Item.scss';
-@import './components/LogIn/LogIn.scss';
-@import './components/Nav/Nav.scss';
 @import './components/UserList/UserList.scss';
+@import './components/BillsList/BillsList.scss';
+@import './components/BulletinsList/BulletinsList.scss';
+@import './components/ChoresList/ChoresList.scss';
+@import './components/AddBill/AddBill.scss';
+@import './components/AddBulletin/AddBulletin.scss';
+@import './components/AddChore/AddChore.scss';
+@import './components/Bill/Bill.scss';
+@import './components/Chore/Chore.scss';
+@import './components/Bulletin/Bulletin.scss';
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #F4CCE2;
+  margin:0;
+  padding:0;
+  height:100%;
+  padding-bottom: 200px;
+  color: rgba(141, 132, 73, 2);
+  font-family: 'BenchNine', sans-serif;
+}
+
+.footer {
+  margin-top: 20px;
+  width: 100%;
+  height: 100px;
+  background-image: url("../../images/logo.png");
+  background-position: center;
+  background-repeat: repeat-x;
+  background-size: contain;
+  position: fixed;
+  bottom: 0;
+  background-color: #F4CCE2;
+}
+
+* button:disabled,
+* button:disabled:hover {
+  cursor: auto;
+  border: 2px solid rgba(141, 132, 73, 0.5);;
+  background-color: #F4CCE2;
+  color: rgba(141, 132, 73, 0.5);;
+}

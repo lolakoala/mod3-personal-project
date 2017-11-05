@@ -108,50 +108,64 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <input
-          className="bill-input title-input"
-          onChange={[Function]}
-          placeholder="Title"
-          type="text"
-        />,
-        <input
-          className="bill-input duedate-input"
-          onChange={[Function]}
-          placeholder="Due Date"
-          type="text"
-        />,
-        <input
-          className="bill-input total-input"
-          onChange={[Function]}
-          placeholder="Total"
-          type="text"
-        />,
-        <button
-          className="equal-all-button"
-          onClick={[Function]}
+        <div
+          className="inputs-and-splits"
         >
-          Equal Split with All House Members
-        </button>,
-        <button
-          className="equal-select-button"
-          onClick={[Function]}
+          <div
+            className="add-bill-inputs"
+          >
+            <input
+              className="bill-input title-input"
+              onChange={[Function]}
+              placeholder="Title"
+              type="text"
+            />
+            <input
+              className="bill-input duedate-input"
+              onChange={[Function]}
+              placeholder="Due Date"
+              type="text"
+            />
+            <input
+              className="bill-input total-input"
+              onChange={[Function]}
+              placeholder="Total"
+              type="text"
+            />
+          </div>
+          <div
+            className="split-buttons"
+          >
+            <button
+              className="split equal-all-button active"
+              onClick={[Function]}
+            >
+              Equal Split with All House Members
+            </button>
+            <button
+              className="split equal-select-button "
+              onClick={[Function]}
+            >
+              Equal Split with Select House Members
+            </button>
+            <button
+              className="split custom-percentage-button "
+              onClick={[Function]}
+            >
+              Custom Split by Percentage
+            </button>
+            <button
+              className="split custom-dollar-button "
+              onClick={[Function]}
+            >
+              Custom Split by Dollar Amount
+            </button>
+          </div>
+        </div>,
+        <div
+          className="split-info"
         >
-          Equal Split with Select House Members
-        </button>,
-        <button
-          className="custom-percentage-button"
-          onClick={[Function]}
-        >
-          Custom Split by Percentage
-        </button>,
-        <button
-          className="custom-dollar-button"
-          onClick={[Function]}
-        >
-          Custom Split by Dollar Amount
-        </button>,
-        <p />,
-        Array [
+          <p />
           <div>
             <p>
               Amanda Brenner
@@ -159,7 +173,7 @@ ShallowWrapper {
             <p>
               75
             </p>
-          </div>,
+          </div>
           <div>
             <p>
               Lola Koala
@@ -167,30 +181,35 @@ ShallowWrapper {
             <p>
               75
             </p>
-          </div>,
-        ],
-        null,
-        null,
-        null,
-        null,
-        <textarea
-          onChange={[Function]}
-          placeholder="Details"
-          type="text"
-        />,
-        <button
-          className="bill-submit"
-          disabled={false}
-          onClick={[Function]}
+          </div>
+        </div>,
+        <div
+          className="details-and-buttons"
         >
-          Submit
-        </button>,
-        <button
-          onClick={[Function]}
-        >
-          Reset
-        </button>,
+          <textarea
+            onChange={[Function]}
+            placeholder="Details"
+            type="text"
+          />
+          <div
+            className="form-buttons"
+          >
+            <button
+              className="bill-submit"
+              disabled={false}
+              onClick={[Function]}
+            >
+              Submit
+            </button>
+            <button
+              onClick={[Function]}
+            >
+              Reset
+            </button>
+          </div>
+        </div>,
       ],
+      "className": "add-bill",
     },
     "ref": null,
     "rendered": Array [
@@ -199,119 +218,59 @@ ShallowWrapper {
         "key": null,
         "nodeType": "host",
         "props": Object {
-          "className": "bill-input title-input",
-          "onChange": [Function],
-          "placeholder": "Title",
-          "type": "text",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": null,
-        "nodeType": "host",
-        "props": Object {
-          "className": "bill-input duedate-input",
-          "onChange": [Function],
-          "placeholder": "Due Date",
-          "type": "text",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": null,
-        "nodeType": "host",
-        "props": Object {
-          "className": "bill-input total-input",
-          "onChange": [Function],
-          "placeholder": "Total",
-          "type": "text",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": null,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Equal Split with All House Members",
-          "className": "equal-all-button",
-          "onClick": [Function],
-        },
-        "ref": null,
-        "rendered": "Equal Split with All House Members",
-        "type": "button",
-      },
-      Object {
-        "instance": null,
-        "key": null,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Equal Split with Select House Members",
-          "className": "equal-select-button",
-          "onClick": [Function],
-        },
-        "ref": null,
-        "rendered": "Equal Split with Select House Members",
-        "type": "button",
-      },
-      Object {
-        "instance": null,
-        "key": null,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Custom Split by Percentage",
-          "className": "custom-percentage-button",
-          "onClick": [Function],
-        },
-        "ref": null,
-        "rendered": "Custom Split by Percentage",
-        "type": "button",
-      },
-      Object {
-        "instance": null,
-        "key": null,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Custom Split by Dollar Amount",
-          "className": "custom-dollar-button",
-          "onClick": [Function],
-        },
-        "ref": null,
-        "rendered": "Custom Split by Dollar Amount",
-        "type": "button",
-      },
-      Object {
-        "instance": null,
-        "key": null,
-        "nodeType": "host",
-        "props": Object {
-          "children": null,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
-        "nodeType": "host",
-        "props": Object {
           "children": Array [
-            <p>
-              Amanda Brenner
-            </p>,
-            <p>
-              75
-            </p>,
+            <div
+              className="add-bill-inputs"
+            >
+              <input
+                className="bill-input title-input"
+                onChange={[Function]}
+                placeholder="Title"
+                type="text"
+              />
+              <input
+                className="bill-input duedate-input"
+                onChange={[Function]}
+                placeholder="Due Date"
+                type="text"
+              />
+              <input
+                className="bill-input total-input"
+                onChange={[Function]}
+                placeholder="Total"
+                type="text"
+              />
+            </div>,
+            <div
+              className="split-buttons"
+            >
+              <button
+                className="split equal-all-button active"
+                onClick={[Function]}
+              >
+                Equal Split with All House Members
+              </button>
+              <button
+                className="split equal-select-button "
+                onClick={[Function]}
+              >
+                Equal Split with Select House Members
+              </button>
+              <button
+                className="split custom-percentage-button "
+                onClick={[Function]}
+              >
+                Custom Split by Percentage
+              </button>
+              <button
+                className="split custom-dollar-button "
+                onClick={[Function]}
+              >
+                Custom Split by Dollar Amount
+              </button>
+            </div>,
           ],
+          "className": "inputs-and-splits",
         },
         "ref": null,
         "rendered": Array [
@@ -320,39 +279,199 @@ ShallowWrapper {
             "key": null,
             "nodeType": "host",
             "props": Object {
-              "children": "Amanda Brenner",
+              "children": Array [
+                <input
+                  className="bill-input title-input"
+                  onChange={[Function]}
+                  placeholder="Title"
+                  type="text"
+                />,
+                <input
+                  className="bill-input duedate-input"
+                  onChange={[Function]}
+                  placeholder="Due Date"
+                  type="text"
+                />,
+                <input
+                  className="bill-input total-input"
+                  onChange={[Function]}
+                  placeholder="Total"
+                  type="text"
+                />,
+              ],
+              "className": "add-bill-inputs",
             },
             "ref": null,
-            "rendered": "Amanda Brenner",
-            "type": "p",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "bill-input title-input",
+                  "onChange": [Function],
+                  "placeholder": "Title",
+                  "type": "text",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "bill-input duedate-input",
+                  "onChange": [Function],
+                  "placeholder": "Due Date",
+                  "type": "text",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "bill-input total-input",
+                  "onChange": [Function],
+                  "placeholder": "Total",
+                  "type": "text",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+            ],
+            "type": "div",
           },
           Object {
             "instance": null,
             "key": null,
             "nodeType": "host",
             "props": Object {
-              "children": 75,
+              "children": Array [
+                <button
+                  className="split equal-all-button active"
+                  onClick={[Function]}
+                >
+                  Equal Split with All House Members
+                </button>,
+                <button
+                  className="split equal-select-button "
+                  onClick={[Function]}
+                >
+                  Equal Split with Select House Members
+                </button>,
+                <button
+                  className="split custom-percentage-button "
+                  onClick={[Function]}
+                >
+                  Custom Split by Percentage
+                </button>,
+                <button
+                  className="split custom-dollar-button "
+                  onClick={[Function]}
+                >
+                  Custom Split by Dollar Amount
+                </button>,
+              ],
+              "className": "split-buttons",
             },
             "ref": null,
-            "rendered": 75,
-            "type": "p",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Equal Split with All House Members",
+                  "className": "split equal-all-button active",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Equal Split with All House Members",
+                "type": "button",
+              },
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Equal Split with Select House Members",
+                  "className": "split equal-select-button ",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Equal Split with Select House Members",
+                "type": "button",
+              },
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Custom Split by Percentage",
+                  "className": "split custom-percentage-button ",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Custom Split by Percentage",
+                "type": "button",
+              },
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Custom Split by Dollar Amount",
+                  "className": "split custom-dollar-button ",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Custom Split by Dollar Amount",
+                "type": "button",
+              },
+            ],
+            "type": "div",
           },
         ],
         "type": "div",
       },
       Object {
         "instance": null,
-        "key": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+        "key": null,
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <p>
-              Lola Koala
-            </p>,
-            <p>
-              75
-            </p>,
+            <p />,
+            Array [
+              <div>
+                <p>
+                  Amanda Brenner
+                </p>
+                <p>
+                  75
+                </p>
+              </div>,
+              <div>
+                <p>
+                  Lola Koala
+                </p>
+                <p>
+                  75
+                </p>
+              </div>,
+            ],
+            null,
+            null,
+            null,
+            null,
           ],
+          "className": "split-info",
         },
         "ref": null,
         "rendered": Array [
@@ -361,68 +480,200 @@ ShallowWrapper {
             "key": null,
             "nodeType": "host",
             "props": Object {
-              "children": "Lola Koala",
+              "children": null,
             },
             "ref": null,
-            "rendered": "Lola Koala",
+            "rendered": null,
             "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  Amanda Brenner
+                </p>,
+                <p>
+                  75
+                </p>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Amanda Brenner",
+                },
+                "ref": null,
+                "rendered": "Amanda Brenner",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": 75,
+                },
+                "ref": null,
+                "rendered": 75,
+                "type": "p",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  Lola Koala
+                </p>,
+                <p>
+                  75
+                </p>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Lola Koala",
+                },
+                "ref": null,
+                "rendered": "Lola Koala",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": 75,
+                },
+                "ref": null,
+                "rendered": 75,
+                "type": "p",
+              },
+            ],
+            "type": "div",
+          },
+          null,
+          null,
+          null,
+          null,
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <textarea
+              onChange={[Function]}
+              placeholder="Details"
+              type="text"
+            />,
+            <div
+              className="form-buttons"
+            >
+              <button
+                className="bill-submit"
+                disabled={false}
+                onClick={[Function]}
+              >
+                Submit
+              </button>
+              <button
+                onClick={[Function]}
+              >
+                Reset
+              </button>
+            </div>,
+          ],
+          "className": "details-and-buttons",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "onChange": [Function],
+              "placeholder": "Details",
+              "type": "text",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "textarea",
           },
           Object {
             "instance": null,
             "key": null,
             "nodeType": "host",
             "props": Object {
-              "children": 75,
+              "children": Array [
+                <button
+                  className="bill-submit"
+                  disabled={false}
+                  onClick={[Function]}
+                >
+                  Submit
+                </button>,
+                <button
+                  onClick={[Function]}
+                >
+                  Reset
+                </button>,
+              ],
+              "className": "form-buttons",
             },
             "ref": null,
-            "rendered": 75,
-            "type": "p",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Submit",
+                  "className": "bill-submit",
+                  "disabled": false,
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Submit",
+                "type": "button",
+              },
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Reset",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Reset",
+                "type": "button",
+              },
+            ],
+            "type": "div",
           },
         ],
         "type": "div",
-      },
-      null,
-      null,
-      null,
-      null,
-      Object {
-        "instance": null,
-        "key": null,
-        "nodeType": "host",
-        "props": Object {
-          "onChange": [Function],
-          "placeholder": "Details",
-          "type": "text",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "textarea",
-      },
-      Object {
-        "instance": null,
-        "key": null,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Submit",
-          "className": "bill-submit",
-          "disabled": false,
-          "onClick": [Function],
-        },
-        "ref": null,
-        "rendered": "Submit",
-        "type": "button",
-      },
-      Object {
-        "instance": null,
-        "key": null,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Reset",
-          "onClick": [Function],
-        },
-        "ref": null,
-        "rendered": "Reset",
-        "type": "button",
       },
     ],
     "type": "div",
@@ -434,50 +685,64 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <input
-            className="bill-input title-input"
-            onChange={[Function]}
-            placeholder="Title"
-            type="text"
-          />,
-          <input
-            className="bill-input duedate-input"
-            onChange={[Function]}
-            placeholder="Due Date"
-            type="text"
-          />,
-          <input
-            className="bill-input total-input"
-            onChange={[Function]}
-            placeholder="Total"
-            type="text"
-          />,
-          <button
-            className="equal-all-button"
-            onClick={[Function]}
+          <div
+            className="inputs-and-splits"
           >
-            Equal Split with All House Members
-          </button>,
-          <button
-            className="equal-select-button"
-            onClick={[Function]}
+            <div
+              className="add-bill-inputs"
+            >
+              <input
+                className="bill-input title-input"
+                onChange={[Function]}
+                placeholder="Title"
+                type="text"
+              />
+              <input
+                className="bill-input duedate-input"
+                onChange={[Function]}
+                placeholder="Due Date"
+                type="text"
+              />
+              <input
+                className="bill-input total-input"
+                onChange={[Function]}
+                placeholder="Total"
+                type="text"
+              />
+            </div>
+            <div
+              className="split-buttons"
+            >
+              <button
+                className="split equal-all-button active"
+                onClick={[Function]}
+              >
+                Equal Split with All House Members
+              </button>
+              <button
+                className="split equal-select-button "
+                onClick={[Function]}
+              >
+                Equal Split with Select House Members
+              </button>
+              <button
+                className="split custom-percentage-button "
+                onClick={[Function]}
+              >
+                Custom Split by Percentage
+              </button>
+              <button
+                className="split custom-dollar-button "
+                onClick={[Function]}
+              >
+                Custom Split by Dollar Amount
+              </button>
+            </div>
+          </div>,
+          <div
+            className="split-info"
           >
-            Equal Split with Select House Members
-          </button>,
-          <button
-            className="custom-percentage-button"
-            onClick={[Function]}
-          >
-            Custom Split by Percentage
-          </button>,
-          <button
-            className="custom-dollar-button"
-            onClick={[Function]}
-          >
-            Custom Split by Dollar Amount
-          </button>,
-          <p />,
-          Array [
+            <p />
             <div>
               <p>
                 Amanda Brenner
@@ -485,7 +750,7 @@ ShallowWrapper {
               <p>
                 75
               </p>
-            </div>,
+            </div>
             <div>
               <p>
                 Lola Koala
@@ -493,30 +758,35 @@ ShallowWrapper {
               <p>
                 75
               </p>
-            </div>,
-          ],
-          null,
-          null,
-          null,
-          null,
-          <textarea
-            onChange={[Function]}
-            placeholder="Details"
-            type="text"
-          />,
-          <button
-            className="bill-submit"
-            disabled={false}
-            onClick={[Function]}
+            </div>
+          </div>,
+          <div
+            className="details-and-buttons"
           >
-            Submit
-          </button>,
-          <button
-            onClick={[Function]}
-          >
-            Reset
-          </button>,
+            <textarea
+              onChange={[Function]}
+              placeholder="Details"
+              type="text"
+            />
+            <div
+              className="form-buttons"
+            >
+              <button
+                className="bill-submit"
+                disabled={false}
+                onClick={[Function]}
+              >
+                Submit
+              </button>
+              <button
+                onClick={[Function]}
+              >
+                Reset
+              </button>
+            </div>
+          </div>,
         ],
+        "className": "add-bill",
       },
       "ref": null,
       "rendered": Array [
@@ -525,119 +795,59 @@ ShallowWrapper {
           "key": null,
           "nodeType": "host",
           "props": Object {
-            "className": "bill-input title-input",
-            "onChange": [Function],
-            "placeholder": "Title",
-            "type": "text",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": null,
-          "nodeType": "host",
-          "props": Object {
-            "className": "bill-input duedate-input",
-            "onChange": [Function],
-            "placeholder": "Due Date",
-            "type": "text",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": null,
-          "nodeType": "host",
-          "props": Object {
-            "className": "bill-input total-input",
-            "onChange": [Function],
-            "placeholder": "Total",
-            "type": "text",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": null,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Equal Split with All House Members",
-            "className": "equal-all-button",
-            "onClick": [Function],
-          },
-          "ref": null,
-          "rendered": "Equal Split with All House Members",
-          "type": "button",
-        },
-        Object {
-          "instance": null,
-          "key": null,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Equal Split with Select House Members",
-            "className": "equal-select-button",
-            "onClick": [Function],
-          },
-          "ref": null,
-          "rendered": "Equal Split with Select House Members",
-          "type": "button",
-        },
-        Object {
-          "instance": null,
-          "key": null,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Custom Split by Percentage",
-            "className": "custom-percentage-button",
-            "onClick": [Function],
-          },
-          "ref": null,
-          "rendered": "Custom Split by Percentage",
-          "type": "button",
-        },
-        Object {
-          "instance": null,
-          "key": null,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Custom Split by Dollar Amount",
-            "className": "custom-dollar-button",
-            "onClick": [Function],
-          },
-          "ref": null,
-          "rendered": "Custom Split by Dollar Amount",
-          "type": "button",
-        },
-        Object {
-          "instance": null,
-          "key": null,
-          "nodeType": "host",
-          "props": Object {
-            "children": null,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
-          "nodeType": "host",
-          "props": Object {
             "children": Array [
-              <p>
-                Amanda Brenner
-              </p>,
-              <p>
-                75
-              </p>,
+              <div
+                className="add-bill-inputs"
+              >
+                <input
+                  className="bill-input title-input"
+                  onChange={[Function]}
+                  placeholder="Title"
+                  type="text"
+                />
+                <input
+                  className="bill-input duedate-input"
+                  onChange={[Function]}
+                  placeholder="Due Date"
+                  type="text"
+                />
+                <input
+                  className="bill-input total-input"
+                  onChange={[Function]}
+                  placeholder="Total"
+                  type="text"
+                />
+              </div>,
+              <div
+                className="split-buttons"
+              >
+                <button
+                  className="split equal-all-button active"
+                  onClick={[Function]}
+                >
+                  Equal Split with All House Members
+                </button>
+                <button
+                  className="split equal-select-button "
+                  onClick={[Function]}
+                >
+                  Equal Split with Select House Members
+                </button>
+                <button
+                  className="split custom-percentage-button "
+                  onClick={[Function]}
+                >
+                  Custom Split by Percentage
+                </button>
+                <button
+                  className="split custom-dollar-button "
+                  onClick={[Function]}
+                >
+                  Custom Split by Dollar Amount
+                </button>
+              </div>,
             ],
+            "className": "inputs-and-splits",
           },
           "ref": null,
           "rendered": Array [
@@ -646,39 +856,199 @@ ShallowWrapper {
               "key": null,
               "nodeType": "host",
               "props": Object {
-                "children": "Amanda Brenner",
+                "children": Array [
+                  <input
+                    className="bill-input title-input"
+                    onChange={[Function]}
+                    placeholder="Title"
+                    type="text"
+                  />,
+                  <input
+                    className="bill-input duedate-input"
+                    onChange={[Function]}
+                    placeholder="Due Date"
+                    type="text"
+                  />,
+                  <input
+                    className="bill-input total-input"
+                    onChange={[Function]}
+                    placeholder="Total"
+                    type="text"
+                  />,
+                ],
+                "className": "add-bill-inputs",
               },
               "ref": null,
-              "rendered": "Amanda Brenner",
-              "type": "p",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "bill-input title-input",
+                    "onChange": [Function],
+                    "placeholder": "Title",
+                    "type": "text",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "bill-input duedate-input",
+                    "onChange": [Function],
+                    "placeholder": "Due Date",
+                    "type": "text",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "bill-input total-input",
+                    "onChange": [Function],
+                    "placeholder": "Total",
+                    "type": "text",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+              ],
+              "type": "div",
             },
             Object {
               "instance": null,
               "key": null,
               "nodeType": "host",
               "props": Object {
-                "children": 75,
+                "children": Array [
+                  <button
+                    className="split equal-all-button active"
+                    onClick={[Function]}
+                  >
+                    Equal Split with All House Members
+                  </button>,
+                  <button
+                    className="split equal-select-button "
+                    onClick={[Function]}
+                  >
+                    Equal Split with Select House Members
+                  </button>,
+                  <button
+                    className="split custom-percentage-button "
+                    onClick={[Function]}
+                  >
+                    Custom Split by Percentage
+                  </button>,
+                  <button
+                    className="split custom-dollar-button "
+                    onClick={[Function]}
+                  >
+                    Custom Split by Dollar Amount
+                  </button>,
+                ],
+                "className": "split-buttons",
               },
               "ref": null,
-              "rendered": 75,
-              "type": "p",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Equal Split with All House Members",
+                    "className": "split equal-all-button active",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Equal Split with All House Members",
+                  "type": "button",
+                },
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Equal Split with Select House Members",
+                    "className": "split equal-select-button ",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Equal Split with Select House Members",
+                  "type": "button",
+                },
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Custom Split by Percentage",
+                    "className": "split custom-percentage-button ",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Custom Split by Percentage",
+                  "type": "button",
+                },
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Custom Split by Dollar Amount",
+                    "className": "split custom-dollar-button ",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Custom Split by Dollar Amount",
+                  "type": "button",
+                },
+              ],
+              "type": "div",
             },
           ],
           "type": "div",
         },
         Object {
           "instance": null,
-          "key": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+          "key": null,
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <p>
-                Lola Koala
-              </p>,
-              <p>
-                75
-              </p>,
+              <p />,
+              Array [
+                <div>
+                  <p>
+                    Amanda Brenner
+                  </p>
+                  <p>
+                    75
+                  </p>
+                </div>,
+                <div>
+                  <p>
+                    Lola Koala
+                  </p>
+                  <p>
+                    75
+                  </p>
+                </div>,
+              ],
+              null,
+              null,
+              null,
+              null,
             ],
+            "className": "split-info",
           },
           "ref": null,
           "rendered": Array [
@@ -687,68 +1057,200 @@ ShallowWrapper {
               "key": null,
               "nodeType": "host",
               "props": Object {
-                "children": "Lola Koala",
+                "children": null,
               },
               "ref": null,
-              "rendered": "Lola Koala",
+              "rendered": null,
               "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    Amanda Brenner
+                  </p>,
+                  <p>
+                    75
+                  </p>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Amanda Brenner",
+                  },
+                  "ref": null,
+                  "rendered": "Amanda Brenner",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": 75,
+                  },
+                  "ref": null,
+                  "rendered": 75,
+                  "type": "p",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    Lola Koala
+                  </p>,
+                  <p>
+                    75
+                  </p>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Lola Koala",
+                  },
+                  "ref": null,
+                  "rendered": "Lola Koala",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": 75,
+                  },
+                  "ref": null,
+                  "rendered": 75,
+                  "type": "p",
+                },
+              ],
+              "type": "div",
+            },
+            null,
+            null,
+            null,
+            null,
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <textarea
+                onChange={[Function]}
+                placeholder="Details"
+                type="text"
+              />,
+              <div
+                className="form-buttons"
+              >
+                <button
+                  className="bill-submit"
+                  disabled={false}
+                  onClick={[Function]}
+                >
+                  Submit
+                </button>
+                <button
+                  onClick={[Function]}
+                >
+                  Reset
+                </button>
+              </div>,
+            ],
+            "className": "details-and-buttons",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "onChange": [Function],
+                "placeholder": "Details",
+                "type": "text",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "textarea",
             },
             Object {
               "instance": null,
               "key": null,
               "nodeType": "host",
               "props": Object {
-                "children": 75,
+                "children": Array [
+                  <button
+                    className="bill-submit"
+                    disabled={false}
+                    onClick={[Function]}
+                  >
+                    Submit
+                  </button>,
+                  <button
+                    onClick={[Function]}
+                  >
+                    Reset
+                  </button>,
+                ],
+                "className": "form-buttons",
               },
               "ref": null,
-              "rendered": 75,
-              "type": "p",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Submit",
+                    "className": "bill-submit",
+                    "disabled": false,
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Submit",
+                  "type": "button",
+                },
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Reset",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Reset",
+                  "type": "button",
+                },
+              ],
+              "type": "div",
             },
           ],
           "type": "div",
-        },
-        null,
-        null,
-        null,
-        null,
-        Object {
-          "instance": null,
-          "key": null,
-          "nodeType": "host",
-          "props": Object {
-            "onChange": [Function],
-            "placeholder": "Details",
-            "type": "text",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "textarea",
-        },
-        Object {
-          "instance": null,
-          "key": null,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Submit",
-            "className": "bill-submit",
-            "disabled": false,
-            "onClick": [Function],
-          },
-          "ref": null,
-          "rendered": "Submit",
-          "type": "button",
-        },
-        Object {
-          "instance": null,
-          "key": null,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Reset",
-            "onClick": [Function],
-          },
-          "ref": null,
-          "rendered": "Reset",
-          "type": "button",
         },
       ],
       "type": "div",

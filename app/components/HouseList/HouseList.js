@@ -15,6 +15,10 @@ class HouseList extends Component {
     };
   }
 
+  isActive = button => {
+    return this.state.currentView === button ? 'active' : '';
+  }
+
   handleSearch = event => {
     const { bills, chores, bulletins } = this.props.usersHouse;
     const { value } = event.target;
@@ -52,25 +56,35 @@ class HouseList extends Component {
     } = this.props;
 
     return (
-      <div>
-        <input onChange={event => this.handleSearch(event)} type='text' placeholder='search'/>
-        <button
-          onClick={() => { this.setState({ currentView: 'bills'}); }}>
-          View Bills
-        </button>
-        <button
-          onClick={() => { this.setState({ currentView: 'bulletins'}); }}>
-          View Bulletins
-        </button>
-        <button
-          onClick={() => { this.setState({ currentView: 'chores'}); }}>
-          View Chores
-        </button>
-        <button
-          onClick={() => { this.setState({ currentView: 'summary'}); }}>
-          View Summary
-        </button>
-        <Link to='/additem'>Add Bills, Chores, or Bulletins</Link>
+      <div className='house-list'>
+        <div className='houselist-nav'>
+          <input onChange={event => this.handleSearch(event)} type='text' placeholder='search'/>
+          <div>
+            <button
+              className={`${this.isActive('bills')} view-bills`}
+              onClick={() => { this.setState({ currentView: 'bills'}); }}>
+              View Bills
+            </button>
+            <button
+              className={`${this.isActive('bulletins')} view-bulletins`}
+              onClick={() => { this.setState({ currentView: 'bulletins'}); }}>
+              View Bulletins
+            </button>
+          </div>
+          <div>
+            <button
+              className={`${this.isActive('chores')} view-chores`}
+              onClick={() => { this.setState({ currentView: 'chores'}); }}>
+              View Chores
+            </button>
+            <button
+              className={`${this.isActive('summary')} view-summary`}
+              onClick={() => { this.setState({ currentView: 'summary'}); }}>
+              View Summary
+            </button>
+          </div>
+          <Link to='/additem'>Add Bills, Chores, or Bulletins</Link>
+        </div>
         {this.state.currentView === 'bills' ?
           <BillsList usersHouse={usersHouse}
             currentUser={currentUser}

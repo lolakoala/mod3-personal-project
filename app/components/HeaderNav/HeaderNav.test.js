@@ -1,22 +1,14 @@
 import React from "react";
 import HeaderNav from './HeaderNav.js';
 import { shallow } from "enzyme";
+import usersHouse from '../../mockData/usersHouse.js';
+import currentUser1 from '../../mockData/currentUser1.js';
 
 describe('HeaderNav', () => {
-  const user = {
-    id: 'abc',
-    name: 'Lola'
-  };
-  const house = {
-    houseKey: 'abc',
-    houseName: 'fake house',
-    houseCode: '6666',
-    users: [user]
-  };
   const mockFn = jest.fn();
   const wrapper = shallow(<HeaderNav
-    currentUser={user}
-    usersHouse={house}
+    currentUser={currentUser1}
+    usersHouse={usersHouse}
     signOut={mockFn}
     leaveHouse={mockFn}/>);
 
@@ -36,15 +28,15 @@ describe('HeaderNav', () => {
     expect(subtitle.length).toEqual(1);
   });
 
-  it('should have seven links', () => {
+  it('should have five links', () => {
     const link = wrapper.find('Link');
 
-    expect(link.length).toEqual(7);
+    expect(link.length).toEqual(5);
   });
 
   it('should have signout and leavehouse div', () => {
-    const signoutDiv = wrapper.find('.signout-div');
-    const leavehouseDiv = wrapper.find('.leave-house-div');
+    const signoutDiv = wrapper.find('.signout');
+    const leavehouseDiv = wrapper.find('.leave-house');
 
     expect(signoutDiv.length).toEqual(1);
     expect(leavehouseDiv.length).toEqual(1);
@@ -53,11 +45,9 @@ describe('HeaderNav', () => {
   it('should render userStuff', () => {
     const userStuff = wrapper.find('.user-stuff');
     const greeting = wrapper.find('.greeting');
-    const buttons = wrapper.find('button');
 
     expect(userStuff.length).toEqual(1);
-    expect(greeting.text()).toEqual('Welcome to fake house,  Lola.');
-    expect(buttons.length).toEqual(2);
+    expect(greeting.text()).toEqual(`Welcome to ${usersHouse.houseName},  ${currentUser1.name}.`);
   });
 
   it('should not render userStuff when no user', () => {
@@ -72,15 +62,11 @@ describe('HeaderNav', () => {
   });
 
   it('should fire actions', () => {
-    const button1 = wrapper.find('button').first();
-    const button2 = wrapper.find('button').last();
-    const signoutDiv = wrapper.find('.signout-div');
-    const leavehouseDiv = wrapper.find('.leave-house-div');
+    const signoutDiv = wrapper.find('.signout');
+    const leavehouseDiv = wrapper.find('.leave-house');
 
-    button1.simulate('click');
-    button2.simulate('click');
     signoutDiv.simulate('click');
     leavehouseDiv.simulate('click');
-    expect(mockFn).toHaveBeenCalledTimes(4);
+    expect(mockFn).toHaveBeenCalledTimes(2);
   });
 });

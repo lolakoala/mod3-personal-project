@@ -11,6 +11,10 @@ class UserList extends Component {
     };
   }
 
+  isActive = button => {
+    return this.state.currentView === button ? 'active' : '';
+  }
+
   render() {
     const {
       usersHouse,
@@ -21,13 +25,14 @@ class UserList extends Component {
     } = this.props;
     const placeRendered = match.url;
     return (
-      <div>
-        <h2>My Lists</h2>
+      <div className='user-list'>
         <button
+          className={this.isActive('bills')}
           onClick={() => { this.setState({ currentView: 'bills'}); }}>
           View Bills
         </button>
         <button
+          className={this.isActive('chores')}
           onClick={() => { this.setState({ currentView: 'chores'}); }}>
           View Chores
         </button>

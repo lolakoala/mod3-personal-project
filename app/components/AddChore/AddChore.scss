@@ -1,0 +1,75 @@
+.add-chore input,
+.add-chore button,
+.add-chore textarea {
+  font-family: 'BenchNine', sans-serif;
+  border-radius: 25px;
+  margin-top: 20px;
+  height: 25px;
+  font-size: 20px;
+  width: 120px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.add-chore input,
+.add-chore textarea {
+  padding-left: 10px;
+  border: 1px solid #D83D59;
+  color: #D83D59;
+  border-radius: 5px;
+}
+
+.add-chore input::placeholder,
+.add-chore textarea::placeholder {
+  color: #D83D59;
+}
+
+.add-chore button {
+  border: none;
+  background-color: #D83D59;
+  color: #F4CCE2;
+}
+
+.add-chore button:hover,
+.add-chore .active {
+  cursor: pointer;
+  border: 2px dashed #D83D59;
+  background-color: #F4CCE2;
+  color: #D83D59;
+}
+
+.add-chore textarea {
+  height: 70px;
+}
+
+.add-chore-inputs,
+.add-chore-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-chore{
+  display: flex;
+  margin-left: 20px;
+}
+
+.add-chore .checkbox {
+  display: flex;
+}
+
+.add-chore.checkbox input {
+  margin: 0px;
+  width: 40px;
+}
+
+.add-chore .checkbox input,
+.add-chore .checkbox label {
+  margin-top: 20px
+}
+
+#selfassign,
+#high-urgency,
+#alreadyDone {
+  width: 40px;
+  padding: 0px;
+}

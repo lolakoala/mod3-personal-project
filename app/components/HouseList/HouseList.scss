@@ -1,0 +1,53 @@
+.house-list {
+  font-family: 'BenchNine', sans-serif;
+  margin: 20px;
+}
+
+.house-list button,
+.house-list a {
+  font-family: 'BenchNine', sans-serif;
+  border: none;
+  background-color: #D83D59;
+  width: 120px;
+  height: 25px;
+  color: #F4CCE2;
+  font-size: 20px;
+  border-radius: 25px;
+  text-align: center;
+  margin: 5px;
+}
+
+.house-list button:hover,
+.house-list a:hover,
+.house-list .active {
+  cursor: pointer;
+  border: 2px dashed #D83D59;
+  background-color: #F4CCE2;
+  color: #D83D59;
+}
+
+.house-list input {
+  font-family: 'BenchNine', sans-serif;
+  border-radius: 25px;
+  margin: 5px;
+  height: 25px;
+  font-size: 20px;
+  color: #D83D59;
+  padding-left: 10px;
+  width: 250px;
+}
+
+.house-list input::placeholder {
+  color: #D83D59;
+}
+
+.house-list a {
+  text-decoration: none;
+  display: inline-block;
+  width: 250px;
+}
+
+.houselist-nav {
+  display: flex;
+  flex-direction: column;
+}
