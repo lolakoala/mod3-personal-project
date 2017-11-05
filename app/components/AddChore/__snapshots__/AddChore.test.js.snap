@@ -108,94 +108,84 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <input
-          className="chore-input"
-          onChange={[Function]}
-          placeholder="Title"
-          type="text"
-        />,
-        <textarea
-          className="chore-input"
-          onChange={[Function]}
-          placeholder="Details"
-          type="text"
-        />,
-        <input
-          id="selfassign"
-          onChange={[Function]}
-          type="checkbox"
-        />,
-        <label
-          htmlFor="selfassign"
+        <div
+          className="add-chore-inputs"
         >
-          Claim for Self
-        </label>,
-        <input
-          id="alreadyDone"
-          onChange={[Function]}
-          type="checkbox"
-        />,
-        <label
-          htmlFor="alreadyDone"
-        >
-          Already Done
-        </label>,
-        <div>
-          <p>
-            Select Urgency:
-          </p>
           <input
-            className="high-urgency"
-            id="high-urgency"
-            name="urgency"
+            className="chore-input"
             onChange={[Function]}
-            type="radio"
-            value="high"
+            placeholder="Title"
+            type="text"
           />
-          <label
-            htmlFor="high-urgency"
-          >
-            High
-          </label>
-          <input
-            className="medium-urgency"
-            id="medium-urgency"
-            name="urgency"
+          <textarea
+            className="chore-input"
             onChange={[Function]}
-            type="radio"
-            value="medium"
+            placeholder="Details"
+            type="text"
           />
-          <label
-            htmlFor="medium-urgency"
-          >
-            Medium
-          </label>
-          <input
-            className="low-urgency"
-            id="low-urgency"
-            name="urgency"
-            onChange={[Function]}
-            type="radio"
-            value="low"
-          />
-          <label
-            htmlFor="low-urgency"
-          >
-            Low
-          </label>
         </div>,
-        <button
-          disabled={false}
-          onClick={[Function]}
+        <div
+          className="add-chore-buttons"
         >
-          Submit
-        </button>,
-        <button
-          onClick={[Function]}
-        >
-          Reset
-        </button>,
+          <div
+            className="checkbox"
+          >
+            <input
+              id="selfassign"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              htmlFor="selfassign"
+            >
+              Claim for Self
+            </label>
+          </div>
+          <div
+            className="checkbox"
+          >
+            <input
+              id="alreadyDone"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              htmlFor="alreadyDone"
+            >
+              Already Done
+            </label>
+          </div>
+          <div
+            className="checkbox"
+          >
+            <input
+              className="high-urgency"
+              id="high-urgency"
+              name="urgency"
+              onChange={[Function]}
+              type="checkbox"
+              value="high"
+            />
+            <label
+              htmlFor="high-urgency"
+            >
+              Urgent
+            </label>
+          </div>
+          <button
+            disabled={false}
+            onClick={[Function]}
+          >
+            Submit
+          </button>
+          <button
+            onClick={[Function]}
+          >
+            Reset
+          </button>
+        </div>,
       ],
+      "className": "add-chore",
     },
     "ref": null,
     "rendered": Array [
@@ -204,128 +194,21 @@ ShallowWrapper {
         "key": null,
         "nodeType": "host",
         "props": Object {
-          "className": "chore-input",
-          "onChange": [Function],
-          "placeholder": "Title",
-          "type": "text",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": null,
-        "nodeType": "host",
-        "props": Object {
-          "className": "chore-input",
-          "onChange": [Function],
-          "placeholder": "Details",
-          "type": "text",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "textarea",
-      },
-      Object {
-        "instance": null,
-        "key": null,
-        "nodeType": "host",
-        "props": Object {
-          "id": "selfassign",
-          "onChange": [Function],
-          "type": "checkbox",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": null,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Claim for Self",
-          "htmlFor": "selfassign",
-        },
-        "ref": null,
-        "rendered": "Claim for Self",
-        "type": "label",
-      },
-      Object {
-        "instance": null,
-        "key": null,
-        "nodeType": "host",
-        "props": Object {
-          "id": "alreadyDone",
-          "onChange": [Function],
-          "type": "checkbox",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": null,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Already Done",
-          "htmlFor": "alreadyDone",
-        },
-        "ref": null,
-        "rendered": "Already Done",
-        "type": "label",
-      },
-      Object {
-        "instance": null,
-        "key": null,
-        "nodeType": "host",
-        "props": Object {
           "children": Array [
-            <p>
-              Select Urgency:
-            </p>,
             <input
-              className="high-urgency"
-              id="high-urgency"
-              name="urgency"
+              className="chore-input"
               onChange={[Function]}
-              type="radio"
-              value="high"
+              placeholder="Title"
+              type="text"
             />,
-            <label
-              htmlFor="high-urgency"
-            >
-              High
-            </label>,
-            <input
-              className="medium-urgency"
-              id="medium-urgency"
-              name="urgency"
+            <textarea
+              className="chore-input"
               onChange={[Function]}
-              type="radio"
-              value="medium"
+              placeholder="Details"
+              type="text"
             />,
-            <label
-              htmlFor="medium-urgency"
-            >
-              Medium
-            </label>,
-            <input
-              className="low-urgency"
-              id="low-urgency"
-              name="urgency"
-              onChange={[Function]}
-              type="radio"
-              value="low"
-            />,
-            <label
-              htmlFor="low-urgency"
-            >
-              Low
-            </label>,
           ],
+          "className": "add-chore-inputs",
         },
         "ref": null,
         "rendered": Array [
@@ -334,23 +217,10 @@ ShallowWrapper {
             "key": null,
             "nodeType": "host",
             "props": Object {
-              "children": "Select Urgency:",
-            },
-            "ref": null,
-            "rendered": "Select Urgency:",
-            "type": "p",
-          },
-          Object {
-            "instance": null,
-            "key": null,
-            "nodeType": "host",
-            "props": Object {
-              "className": "high-urgency",
-              "id": "high-urgency",
-              "name": "urgency",
+              "className": "chore-input",
               "onChange": [Function],
-              "type": "radio",
-              "value": "high",
+              "placeholder": "Title",
+              "type": "text",
             },
             "ref": null,
             "rendered": null,
@@ -361,68 +231,14 @@ ShallowWrapper {
             "key": null,
             "nodeType": "host",
             "props": Object {
-              "children": "High",
-              "htmlFor": "high-urgency",
-            },
-            "ref": null,
-            "rendered": "High",
-            "type": "label",
-          },
-          Object {
-            "instance": null,
-            "key": null,
-            "nodeType": "host",
-            "props": Object {
-              "className": "medium-urgency",
-              "id": "medium-urgency",
-              "name": "urgency",
+              "className": "chore-input",
               "onChange": [Function],
-              "type": "radio",
-              "value": "medium",
+              "placeholder": "Details",
+              "type": "text",
             },
             "ref": null,
             "rendered": null,
-            "type": "input",
-          },
-          Object {
-            "instance": null,
-            "key": null,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Medium",
-              "htmlFor": "medium-urgency",
-            },
-            "ref": null,
-            "rendered": "Medium",
-            "type": "label",
-          },
-          Object {
-            "instance": null,
-            "key": null,
-            "nodeType": "host",
-            "props": Object {
-              "className": "low-urgency",
-              "id": "low-urgency",
-              "name": "urgency",
-              "onChange": [Function],
-              "type": "radio",
-              "value": "low",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "input",
-          },
-          Object {
-            "instance": null,
-            "key": null,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Low",
-              "htmlFor": "low-urgency",
-            },
-            "ref": null,
-            "rendered": "Low",
-            "type": "label",
+            "type": "textarea",
           },
         ],
         "type": "div",
@@ -432,25 +248,248 @@ ShallowWrapper {
         "key": null,
         "nodeType": "host",
         "props": Object {
-          "children": "Submit",
-          "disabled": false,
-          "onClick": [Function],
+          "children": Array [
+            <div
+              className="checkbox"
+            >
+              <input
+                id="selfassign"
+                onChange={[Function]}
+                type="checkbox"
+              />
+              <label
+                htmlFor="selfassign"
+              >
+                Claim for Self
+              </label>
+            </div>,
+            <div
+              className="checkbox"
+            >
+              <input
+                id="alreadyDone"
+                onChange={[Function]}
+                type="checkbox"
+              />
+              <label
+                htmlFor="alreadyDone"
+              >
+                Already Done
+              </label>
+            </div>,
+            <div
+              className="checkbox"
+            >
+              <input
+                className="high-urgency"
+                id="high-urgency"
+                name="urgency"
+                onChange={[Function]}
+                type="checkbox"
+                value="high"
+              />
+              <label
+                htmlFor="high-urgency"
+              >
+                Urgent
+              </label>
+            </div>,
+            <button
+              disabled={false}
+              onClick={[Function]}
+            >
+              Submit
+            </button>,
+            <button
+              onClick={[Function]}
+            >
+              Reset
+            </button>,
+          ],
+          "className": "add-chore-buttons",
         },
         "ref": null,
-        "rendered": "Submit",
-        "type": "button",
-      },
-      Object {
-        "instance": null,
-        "key": null,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Reset",
-          "onClick": [Function],
-        },
-        "ref": null,
-        "rendered": "Reset",
-        "type": "button",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <input
+                  id="selfassign"
+                  onChange={[Function]}
+                  type="checkbox"
+                />,
+                <label
+                  htmlFor="selfassign"
+                >
+                  Claim for Self
+                </label>,
+              ],
+              "className": "checkbox",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "id": "selfassign",
+                  "onChange": [Function],
+                  "type": "checkbox",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Claim for Self",
+                  "htmlFor": "selfassign",
+                },
+                "ref": null,
+                "rendered": "Claim for Self",
+                "type": "label",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <input
+                  id="alreadyDone"
+                  onChange={[Function]}
+                  type="checkbox"
+                />,
+                <label
+                  htmlFor="alreadyDone"
+                >
+                  Already Done
+                </label>,
+              ],
+              "className": "checkbox",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "id": "alreadyDone",
+                  "onChange": [Function],
+                  "type": "checkbox",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Already Done",
+                  "htmlFor": "alreadyDone",
+                },
+                "ref": null,
+                "rendered": "Already Done",
+                "type": "label",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <input
+                  className="high-urgency"
+                  id="high-urgency"
+                  name="urgency"
+                  onChange={[Function]}
+                  type="checkbox"
+                  value="high"
+                />,
+                <label
+                  htmlFor="high-urgency"
+                >
+                  Urgent
+                </label>,
+              ],
+              "className": "checkbox",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "high-urgency",
+                  "id": "high-urgency",
+                  "name": "urgency",
+                  "onChange": [Function],
+                  "type": "checkbox",
+                  "value": "high",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Urgent",
+                  "htmlFor": "high-urgency",
+                },
+                "ref": null,
+                "rendered": "Urgent",
+                "type": "label",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Submit",
+              "disabled": false,
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Submit",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Reset",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Reset",
+            "type": "button",
+          },
+        ],
+        "type": "div",
       },
     ],
     "type": "div",
@@ -462,94 +501,84 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <input
-            className="chore-input"
-            onChange={[Function]}
-            placeholder="Title"
-            type="text"
-          />,
-          <textarea
-            className="chore-input"
-            onChange={[Function]}
-            placeholder="Details"
-            type="text"
-          />,
-          <input
-            id="selfassign"
-            onChange={[Function]}
-            type="checkbox"
-          />,
-          <label
-            htmlFor="selfassign"
+          <div
+            className="add-chore-inputs"
           >
-            Claim for Self
-          </label>,
-          <input
-            id="alreadyDone"
-            onChange={[Function]}
-            type="checkbox"
-          />,
-          <label
-            htmlFor="alreadyDone"
-          >
-            Already Done
-          </label>,
-          <div>
-            <p>
-              Select Urgency:
-            </p>
             <input
-              className="high-urgency"
-              id="high-urgency"
-              name="urgency"
+              className="chore-input"
               onChange={[Function]}
-              type="radio"
-              value="high"
+              placeholder="Title"
+              type="text"
             />
-            <label
-              htmlFor="high-urgency"
-            >
-              High
-            </label>
-            <input
-              className="medium-urgency"
-              id="medium-urgency"
-              name="urgency"
+            <textarea
+              className="chore-input"
               onChange={[Function]}
-              type="radio"
-              value="medium"
+              placeholder="Details"
+              type="text"
             />
-            <label
-              htmlFor="medium-urgency"
-            >
-              Medium
-            </label>
-            <input
-              className="low-urgency"
-              id="low-urgency"
-              name="urgency"
-              onChange={[Function]}
-              type="radio"
-              value="low"
-            />
-            <label
-              htmlFor="low-urgency"
-            >
-              Low
-            </label>
           </div>,
-          <button
-            disabled={false}
-            onClick={[Function]}
+          <div
+            className="add-chore-buttons"
           >
-            Submit
-          </button>,
-          <button
-            onClick={[Function]}
-          >
-            Reset
-          </button>,
+            <div
+              className="checkbox"
+            >
+              <input
+                id="selfassign"
+                onChange={[Function]}
+                type="checkbox"
+              />
+              <label
+                htmlFor="selfassign"
+              >
+                Claim for Self
+              </label>
+            </div>
+            <div
+              className="checkbox"
+            >
+              <input
+                id="alreadyDone"
+                onChange={[Function]}
+                type="checkbox"
+              />
+              <label
+                htmlFor="alreadyDone"
+              >
+                Already Done
+              </label>
+            </div>
+            <div
+              className="checkbox"
+            >
+              <input
+                className="high-urgency"
+                id="high-urgency"
+                name="urgency"
+                onChange={[Function]}
+                type="checkbox"
+                value="high"
+              />
+              <label
+                htmlFor="high-urgency"
+              >
+                Urgent
+              </label>
+            </div>
+            <button
+              disabled={false}
+              onClick={[Function]}
+            >
+              Submit
+            </button>
+            <button
+              onClick={[Function]}
+            >
+              Reset
+            </button>
+          </div>,
         ],
+        "className": "add-chore",
       },
       "ref": null,
       "rendered": Array [
@@ -558,128 +587,21 @@ ShallowWrapper {
           "key": null,
           "nodeType": "host",
           "props": Object {
-            "className": "chore-input",
-            "onChange": [Function],
-            "placeholder": "Title",
-            "type": "text",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": null,
-          "nodeType": "host",
-          "props": Object {
-            "className": "chore-input",
-            "onChange": [Function],
-            "placeholder": "Details",
-            "type": "text",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "textarea",
-        },
-        Object {
-          "instance": null,
-          "key": null,
-          "nodeType": "host",
-          "props": Object {
-            "id": "selfassign",
-            "onChange": [Function],
-            "type": "checkbox",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": null,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Claim for Self",
-            "htmlFor": "selfassign",
-          },
-          "ref": null,
-          "rendered": "Claim for Self",
-          "type": "label",
-        },
-        Object {
-          "instance": null,
-          "key": null,
-          "nodeType": "host",
-          "props": Object {
-            "id": "alreadyDone",
-            "onChange": [Function],
-            "type": "checkbox",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": null,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Already Done",
-            "htmlFor": "alreadyDone",
-          },
-          "ref": null,
-          "rendered": "Already Done",
-          "type": "label",
-        },
-        Object {
-          "instance": null,
-          "key": null,
-          "nodeType": "host",
-          "props": Object {
             "children": Array [
-              <p>
-                Select Urgency:
-              </p>,
               <input
-                className="high-urgency"
-                id="high-urgency"
-                name="urgency"
+                className="chore-input"
                 onChange={[Function]}
-                type="radio"
-                value="high"
+                placeholder="Title"
+                type="text"
               />,
-              <label
-                htmlFor="high-urgency"
-              >
-                High
-              </label>,
-              <input
-                className="medium-urgency"
-                id="medium-urgency"
-                name="urgency"
+              <textarea
+                className="chore-input"
                 onChange={[Function]}
-                type="radio"
-                value="medium"
+                placeholder="Details"
+                type="text"
               />,
-              <label
-                htmlFor="medium-urgency"
-              >
-                Medium
-              </label>,
-              <input
-                className="low-urgency"
-                id="low-urgency"
-                name="urgency"
-                onChange={[Function]}
-                type="radio"
-                value="low"
-              />,
-              <label
-                htmlFor="low-urgency"
-              >
-                Low
-              </label>,
             ],
+            "className": "add-chore-inputs",
           },
           "ref": null,
           "rendered": Array [
@@ -688,23 +610,10 @@ ShallowWrapper {
               "key": null,
               "nodeType": "host",
               "props": Object {
-                "children": "Select Urgency:",
-              },
-              "ref": null,
-              "rendered": "Select Urgency:",
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": null,
-              "nodeType": "host",
-              "props": Object {
-                "className": "high-urgency",
-                "id": "high-urgency",
-                "name": "urgency",
+                "className": "chore-input",
                 "onChange": [Function],
-                "type": "radio",
-                "value": "high",
+                "placeholder": "Title",
+                "type": "text",
               },
               "ref": null,
               "rendered": null,
@@ -715,68 +624,14 @@ ShallowWrapper {
               "key": null,
               "nodeType": "host",
               "props": Object {
-                "children": "High",
-                "htmlFor": "high-urgency",
-              },
-              "ref": null,
-              "rendered": "High",
-              "type": "label",
-            },
-            Object {
-              "instance": null,
-              "key": null,
-              "nodeType": "host",
-              "props": Object {
-                "className": "medium-urgency",
-                "id": "medium-urgency",
-                "name": "urgency",
+                "className": "chore-input",
                 "onChange": [Function],
-                "type": "radio",
-                "value": "medium",
+                "placeholder": "Details",
+                "type": "text",
               },
               "ref": null,
               "rendered": null,
-              "type": "input",
-            },
-            Object {
-              "instance": null,
-              "key": null,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Medium",
-                "htmlFor": "medium-urgency",
-              },
-              "ref": null,
-              "rendered": "Medium",
-              "type": "label",
-            },
-            Object {
-              "instance": null,
-              "key": null,
-              "nodeType": "host",
-              "props": Object {
-                "className": "low-urgency",
-                "id": "low-urgency",
-                "name": "urgency",
-                "onChange": [Function],
-                "type": "radio",
-                "value": "low",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "input",
-            },
-            Object {
-              "instance": null,
-              "key": null,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Low",
-                "htmlFor": "low-urgency",
-              },
-              "ref": null,
-              "rendered": "Low",
-              "type": "label",
+              "type": "textarea",
             },
           ],
           "type": "div",
@@ -786,25 +641,248 @@ ShallowWrapper {
           "key": null,
           "nodeType": "host",
           "props": Object {
-            "children": "Submit",
-            "disabled": false,
-            "onClick": [Function],
+            "children": Array [
+              <div
+                className="checkbox"
+              >
+                <input
+                  id="selfassign"
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+                <label
+                  htmlFor="selfassign"
+                >
+                  Claim for Self
+                </label>
+              </div>,
+              <div
+                className="checkbox"
+              >
+                <input
+                  id="alreadyDone"
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+                <label
+                  htmlFor="alreadyDone"
+                >
+                  Already Done
+                </label>
+              </div>,
+              <div
+                className="checkbox"
+              >
+                <input
+                  className="high-urgency"
+                  id="high-urgency"
+                  name="urgency"
+                  onChange={[Function]}
+                  type="checkbox"
+                  value="high"
+                />
+                <label
+                  htmlFor="high-urgency"
+                >
+                  Urgent
+                </label>
+              </div>,
+              <button
+                disabled={false}
+                onClick={[Function]}
+              >
+                Submit
+              </button>,
+              <button
+                onClick={[Function]}
+              >
+                Reset
+              </button>,
+            ],
+            "className": "add-chore-buttons",
           },
           "ref": null,
-          "rendered": "Submit",
-          "type": "button",
-        },
-        Object {
-          "instance": null,
-          "key": null,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Reset",
-            "onClick": [Function],
-          },
-          "ref": null,
-          "rendered": "Reset",
-          "type": "button",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <input
+                    id="selfassign"
+                    onChange={[Function]}
+                    type="checkbox"
+                  />,
+                  <label
+                    htmlFor="selfassign"
+                  >
+                    Claim for Self
+                  </label>,
+                ],
+                "className": "checkbox",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "id": "selfassign",
+                    "onChange": [Function],
+                    "type": "checkbox",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Claim for Self",
+                    "htmlFor": "selfassign",
+                  },
+                  "ref": null,
+                  "rendered": "Claim for Self",
+                  "type": "label",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <input
+                    id="alreadyDone"
+                    onChange={[Function]}
+                    type="checkbox"
+                  />,
+                  <label
+                    htmlFor="alreadyDone"
+                  >
+                    Already Done
+                  </label>,
+                ],
+                "className": "checkbox",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "id": "alreadyDone",
+                    "onChange": [Function],
+                    "type": "checkbox",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Already Done",
+                    "htmlFor": "alreadyDone",
+                  },
+                  "ref": null,
+                  "rendered": "Already Done",
+                  "type": "label",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <input
+                    className="high-urgency"
+                    id="high-urgency"
+                    name="urgency"
+                    onChange={[Function]}
+                    type="checkbox"
+                    value="high"
+                  />,
+                  <label
+                    htmlFor="high-urgency"
+                  >
+                    Urgent
+                  </label>,
+                ],
+                "className": "checkbox",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "high-urgency",
+                    "id": "high-urgency",
+                    "name": "urgency",
+                    "onChange": [Function],
+                    "type": "checkbox",
+                    "value": "high",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Urgent",
+                    "htmlFor": "high-urgency",
+                  },
+                  "ref": null,
+                  "rendered": "Urgent",
+                  "type": "label",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Submit",
+                "disabled": false,
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Submit",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Reset",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Reset",
+              "type": "button",
+            },
+          ],
+          "type": "div",
         },
       ],
       "type": "div",

@@ -10,6 +10,7 @@ describe('HeaderNav', () => {
     currentUser={currentUser1}
     usersHouse={usersHouse}
     signOut={mockFn}
+    location={{pathname: '/'}}
     leaveHouse={mockFn}/>);
 
   it('should exist', () => {
@@ -31,7 +32,7 @@ describe('HeaderNav', () => {
   it('should have five links', () => {
     const link = wrapper.find('Link');
 
-    expect(link.length).toEqual(5);
+    expect(link.length).toEqual(6);
   });
 
   it('should have signout and leavehouse div', () => {
@@ -55,6 +56,7 @@ describe('HeaderNav', () => {
       currentUser={{}}
       usersHouse={{}}
       signOut={mockFn}
+      location={{pathname: '/'}}
       leaveHouse={mockFn}/>);
     const userStuff = altWrapper.find('.user-stuff');
 

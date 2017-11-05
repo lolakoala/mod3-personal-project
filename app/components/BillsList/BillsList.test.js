@@ -17,36 +17,6 @@ describe('BillsList component', () => {
     expect(wrapper).toBeDefined();
   });
 
-  it('should have a title', () => {
-    const title = wrapper.find('.billslist-title');
-
-    expect(title.text()).toEqual('House Bills');
-  });
-
-  it('should have a title column header', () => {
-    const titleHeader = wrapper.find('.title-header');
-
-    expect(titleHeader.text()).toEqual('Title');
-  });
-
-  it('should have a duedate column header', () => {
-    const duedateHeader = wrapper.find('.duedate-header');
-
-    expect(duedateHeader.text()).toEqual('Due Date');
-  });
-
-  it('should have a total header', () => {
-    const totalHeader = wrapper.find('.total-header');
-
-    expect(totalHeader.text()).toEqual('Total');
-  });
-
-  it('should have a paid header', () => {
-    const paidHeader = wrapper.find('.paid-header');
-
-    expect(paidHeader.text()).toEqual('All Paid');
-  });
-
   it('should have display all bills of the house', () => {
     const bills = wrapper.find('.bill');
 

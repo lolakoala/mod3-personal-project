@@ -18,12 +18,6 @@ describe('Summary component', () => {
     expect(wrapper).toBeDefined();
   });
 
-  it('should have a title', () => {
-    const title = wrapper.find('h3');
-
-    expect(title.text()).toEqual('Bulletins from the Past Week');
-  });
-
   it('should have bulletins', () => {
     const bulletins = wrapper.find('BulletinsList');
 

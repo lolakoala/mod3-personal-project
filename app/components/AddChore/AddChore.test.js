@@ -29,12 +29,12 @@ describe('AddChore component', () => {
     expect(wrapper.state()).toEqual(defaultState);
   });
 
-  it('should have 7 inputs and 2 buttons', () => {
+  it('should have 5 inputs and 2 buttons', () => {
     const inputs = wrapper.find('input');
     const input1 = wrapper.find('textarea');
     const buttons = wrapper.find('button');
 
-    expect(inputs.length + input1.length).toEqual(7);
+    expect(inputs.length + input1.length).toEqual(5);
     expect(buttons.length).toEqual(2);
   });
 

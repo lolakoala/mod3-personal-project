@@ -16,30 +16,6 @@ describe('BulletinsList component', () => {
     expect(wrapper).toBeDefined();
   });
 
-  it('should have headers', () => {
-    const headers = wrapper.find('.bulletin-headers');
-
-    expect(headers.length).toEqual(1);
-  });
-
-  it('should have a title column header', () => {
-    const titleHeader = wrapper.find('.title-header');
-
-    expect(titleHeader.text()).toEqual('Title');
-  });
-
-  it('should have a dateposted column header', () => {
-    const datepostedHeader = wrapper.find('.date-header');
-
-    expect(datepostedHeader.text()).toEqual('Date Posted');
-  });
-
-  it('should have a all read header', () => {
-    const allReadHeader = wrapper.find('.allread-header');
-
-    expect(allReadHeader.text()).toEqual('All Read');
-  });
-
   it('should have display all bulletins of the house', () => {
     const bulletins = wrapper.find('.bulletin');
 

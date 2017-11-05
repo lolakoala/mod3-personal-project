@@ -124,14 +124,104 @@ ShallowWrapper {
             Add Chore
           </button>
           <button
-            className="add-bulletin-button "
+            className="add-bulletin-button active"
             onClick={[Function]}
           >
             Add Bulletin
           </button>
         </div>,
         null,
-        null,
+        <AddBulletin
+          addBulletin={[Function]}
+          currentUser={
+            Object {
+              "house": "Dog9",
+              "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+              "name": "Amanda Brenner",
+            }
+          }
+          getTodaysDate={[Function]}
+          updateItem={[Function]}
+          usersHouse={
+            Object {
+              "bills": Array [
+                Object {
+                  "allUsersTotals": Array [
+                    Object {
+                      "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "paid": false,
+                      "total": 50,
+                    },
+                    Object {
+                      "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                      "paid": false,
+                      "total": 50,
+                    },
+                  ],
+                  "datePosted": "11/01/2017",
+                  "details": "We used a lot of water.",
+                  "duedate": "11/9/17",
+                  "id": "b3019762705779",
+                  "parsedDuedate": 1510210800000,
+                  "postedBy": Object {
+                    "house": "Dog9",
+                    "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                    "name": "Amanda Brenner",
+                  },
+                  "title": "Water Bill",
+                  "total": "100",
+                },
+              ],
+              "bulletins": Array [
+                Object {
+                  "datePosted": "11/01/2017",
+                  "details": "The dogs got out through a hole in the fence yesterday.",
+                  "hasRead": Array [
+                    "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                  ],
+                  "id": 1509567098747,
+                  "postedBy": Object {
+                    "house": "Dog9",
+                    "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                    "name": "Amanda Brenner",
+                  },
+                  "title": "Don't leave dogs out unattended.",
+                },
+              ],
+              "chores": Array [
+                Object {
+                  "assignedTo": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                  "datePosted": "10/31/2017",
+                  "details": "Empty the dishwasher.",
+                  "done": false,
+                  "id": "c1509485241076",
+                  "postedBy": Object {
+                    "house": "Dog9",
+                    "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                    "name": "Amanda Brenner",
+                  },
+                  "title": "Dishes",
+                  "urgency": "low",
+                },
+              ],
+              "houseCode": "woof9",
+              "houseKey": "-KxoIBWy5UYRscFYdWty",
+              "houseName": "Dog9",
+              "users": Array [
+                Object {
+                  "house": "Dog9",
+                  "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                  "name": "Amanda Brenner",
+                },
+                Object {
+                  "house": "Dog9",
+                  "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                  "name": "Lola Koala",
+                },
+              ],
+            }
+          }
+        />,
         null,
       ],
       "className": "additem-with-items",
@@ -157,7 +247,7 @@ ShallowWrapper {
               Add Chore
             </button>,
             <button
-              className="add-bulletin-button "
+              className="add-bulletin-button active"
               onClick={[Function]}
             >
               Add Bulletin
@@ -199,7 +289,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Add Bulletin",
-              "className": "add-bulletin-button ",
+              "className": "add-bulletin-button active",
               "onClick": [Function],
             },
             "ref": null,
@@ -210,7 +300,101 @@ ShallowWrapper {
         "type": "div",
       },
       null,
-      null,
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "class",
+        "props": Object {
+          "addBulletin": [Function],
+          "currentUser": Object {
+            "house": "Dog9",
+            "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+            "name": "Amanda Brenner",
+          },
+          "getTodaysDate": [Function],
+          "updateItem": [Function],
+          "usersHouse": Object {
+            "bills": Array [
+              Object {
+                "allUsersTotals": Array [
+                  Object {
+                    "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                    "paid": false,
+                    "total": 50,
+                  },
+                  Object {
+                    "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                    "paid": false,
+                    "total": 50,
+                  },
+                ],
+                "datePosted": "11/01/2017",
+                "details": "We used a lot of water.",
+                "duedate": "11/9/17",
+                "id": "b3019762705779",
+                "parsedDuedate": 1510210800000,
+                "postedBy": Object {
+                  "house": "Dog9",
+                  "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                  "name": "Amanda Brenner",
+                },
+                "title": "Water Bill",
+                "total": "100",
+              },
+            ],
+            "bulletins": Array [
+              Object {
+                "datePosted": "11/01/2017",
+                "details": "The dogs got out through a hole in the fence yesterday.",
+                "hasRead": Array [
+                  "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                ],
+                "id": 1509567098747,
+                "postedBy": Object {
+                  "house": "Dog9",
+                  "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                  "name": "Amanda Brenner",
+                },
+                "title": "Don't leave dogs out unattended.",
+              },
+            ],
+            "chores": Array [
+              Object {
+                "assignedTo": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                "datePosted": "10/31/2017",
+                "details": "Empty the dishwasher.",
+                "done": false,
+                "id": "c1509485241076",
+                "postedBy": Object {
+                  "house": "Dog9",
+                  "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                  "name": "Amanda Brenner",
+                },
+                "title": "Dishes",
+                "urgency": "low",
+              },
+            ],
+            "houseCode": "woof9",
+            "houseKey": "-KxoIBWy5UYRscFYdWty",
+            "houseName": "Dog9",
+            "users": Array [
+              Object {
+                "house": "Dog9",
+                "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                "name": "Amanda Brenner",
+              },
+              Object {
+                "house": "Dog9",
+                "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                "name": "Lola Koala",
+              },
+            ],
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
       null,
     ],
     "type": "div",
@@ -238,14 +422,104 @@ ShallowWrapper {
               Add Chore
             </button>
             <button
-              className="add-bulletin-button "
+              className="add-bulletin-button active"
               onClick={[Function]}
             >
               Add Bulletin
             </button>
           </div>,
           null,
-          null,
+          <AddBulletin
+            addBulletin={[Function]}
+            currentUser={
+              Object {
+                "house": "Dog9",
+                "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                "name": "Amanda Brenner",
+              }
+            }
+            getTodaysDate={[Function]}
+            updateItem={[Function]}
+            usersHouse={
+              Object {
+                "bills": Array [
+                  Object {
+                    "allUsersTotals": Array [
+                      Object {
+                        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                        "paid": false,
+                        "total": 50,
+                      },
+                      Object {
+                        "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                        "paid": false,
+                        "total": 50,
+                      },
+                    ],
+                    "datePosted": "11/01/2017",
+                    "details": "We used a lot of water.",
+                    "duedate": "11/9/17",
+                    "id": "b3019762705779",
+                    "parsedDuedate": 1510210800000,
+                    "postedBy": Object {
+                      "house": "Dog9",
+                      "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "name": "Amanda Brenner",
+                    },
+                    "title": "Water Bill",
+                    "total": "100",
+                  },
+                ],
+                "bulletins": Array [
+                  Object {
+                    "datePosted": "11/01/2017",
+                    "details": "The dogs got out through a hole in the fence yesterday.",
+                    "hasRead": Array [
+                      "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                    ],
+                    "id": 1509567098747,
+                    "postedBy": Object {
+                      "house": "Dog9",
+                      "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "name": "Amanda Brenner",
+                    },
+                    "title": "Don't leave dogs out unattended.",
+                  },
+                ],
+                "chores": Array [
+                  Object {
+                    "assignedTo": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                    "datePosted": "10/31/2017",
+                    "details": "Empty the dishwasher.",
+                    "done": false,
+                    "id": "c1509485241076",
+                    "postedBy": Object {
+                      "house": "Dog9",
+                      "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "name": "Amanda Brenner",
+                    },
+                    "title": "Dishes",
+                    "urgency": "low",
+                  },
+                ],
+                "houseCode": "woof9",
+                "houseKey": "-KxoIBWy5UYRscFYdWty",
+                "houseName": "Dog9",
+                "users": Array [
+                  Object {
+                    "house": "Dog9",
+                    "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                    "name": "Amanda Brenner",
+                  },
+                  Object {
+                    "house": "Dog9",
+                    "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                    "name": "Lola Koala",
+                  },
+                ],
+              }
+            }
+          />,
           null,
         ],
         "className": "additem-with-items",
@@ -271,7 +545,7 @@ ShallowWrapper {
                 Add Chore
               </button>,
               <button
-                className="add-bulletin-button "
+                className="add-bulletin-button active"
                 onClick={[Function]}
               >
                 Add Bulletin
@@ -313,7 +587,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Add Bulletin",
-                "className": "add-bulletin-button ",
+                "className": "add-bulletin-button active",
                 "onClick": [Function],
               },
               "ref": null,
@@ -324,7 +598,101 @@ ShallowWrapper {
           "type": "div",
         },
         null,
-        null,
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "class",
+          "props": Object {
+            "addBulletin": [Function],
+            "currentUser": Object {
+              "house": "Dog9",
+              "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+              "name": "Amanda Brenner",
+            },
+            "getTodaysDate": [Function],
+            "updateItem": [Function],
+            "usersHouse": Object {
+              "bills": Array [
+                Object {
+                  "allUsersTotals": Array [
+                    Object {
+                      "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                      "paid": false,
+                      "total": 50,
+                    },
+                    Object {
+                      "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                      "paid": false,
+                      "total": 50,
+                    },
+                  ],
+                  "datePosted": "11/01/2017",
+                  "details": "We used a lot of water.",
+                  "duedate": "11/9/17",
+                  "id": "b3019762705779",
+                  "parsedDuedate": 1510210800000,
+                  "postedBy": Object {
+                    "house": "Dog9",
+                    "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                    "name": "Amanda Brenner",
+                  },
+                  "title": "Water Bill",
+                  "total": "100",
+                },
+              ],
+              "bulletins": Array [
+                Object {
+                  "datePosted": "11/01/2017",
+                  "details": "The dogs got out through a hole in the fence yesterday.",
+                  "hasRead": Array [
+                    "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                  ],
+                  "id": 1509567098747,
+                  "postedBy": Object {
+                    "house": "Dog9",
+                    "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                    "name": "Amanda Brenner",
+                  },
+                  "title": "Don't leave dogs out unattended.",
+                },
+              ],
+              "chores": Array [
+                Object {
+                  "assignedTo": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                  "datePosted": "10/31/2017",
+                  "details": "Empty the dishwasher.",
+                  "done": false,
+                  "id": "c1509485241076",
+                  "postedBy": Object {
+                    "house": "Dog9",
+                    "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                    "name": "Amanda Brenner",
+                  },
+                  "title": "Dishes",
+                  "urgency": "low",
+                },
+              ],
+              "houseCode": "woof9",
+              "houseKey": "-KxoIBWy5UYRscFYdWty",
+              "houseName": "Dog9",
+              "users": Array [
+                Object {
+                  "house": "Dog9",
+                  "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                  "name": "Amanda Brenner",
+                },
+                Object {
+                  "house": "Dog9",
+                  "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                  "name": "Lola Koala",
+                },
+              ],
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
         null,
       ],
       "type": "div",

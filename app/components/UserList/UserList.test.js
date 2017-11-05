@@ -20,12 +20,6 @@ describe('UserList component', () => {
     expect(wrapper.state().currentView).toEqual('');
   });
 
-  it('should have a title', () => {
-    const title = wrapper.find('h2');
-
-    expect(title.text()).toEqual('My Lists');
-  });
-
   it('should have two buttons', () => {
     const buttons = wrapper.find('button');
 

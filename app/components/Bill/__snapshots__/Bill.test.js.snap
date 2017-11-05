@@ -1,0 +1,716 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bill component should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Bill
+    currentUser={
+      Object {
+        "house": "Dog9",
+        "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+        "name": "Amanda Brenner",
+      }
+    }
+    markBillPaid={[Function]}
+    match={
+      Object {
+        "params": Object {
+          "id": "b3019762705779",
+        },
+      }
+    }
+    usersHouse={
+      Object {
+        "bills": Array [
+          Object {
+            "allUsersTotals": Array [
+              Object {
+                "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+                "paid": false,
+                "total": 50,
+              },
+              Object {
+                "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+                "paid": false,
+                "total": 50,
+              },
+            ],
+            "datePosted": "11/01/2017",
+            "details": "We used a lot of water.",
+            "duedate": "11/9/17",
+            "id": "b3019762705779",
+            "parsedDuedate": 1510210800000,
+            "postedBy": Object {
+              "house": "Dog9",
+              "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+              "name": "Amanda Brenner",
+            },
+            "title": "Water Bill",
+            "total": "100",
+          },
+        ],
+        "bulletins": Array [
+          Object {
+            "datePosted": "11/01/2017",
+            "details": "The dogs got out through a hole in the fence yesterday.",
+            "hasRead": Array [
+              "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+            ],
+            "id": 1509567098747,
+            "postedBy": Object {
+              "house": "Dog9",
+              "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+              "name": "Amanda Brenner",
+            },
+            "title": "Don't leave dogs out unattended.",
+          },
+        ],
+        "chores": Array [
+          Object {
+            "assignedTo": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+            "datePosted": "10/31/2017",
+            "details": "Empty the dishwasher.",
+            "done": false,
+            "id": "c1509485241076",
+            "postedBy": Object {
+              "house": "Dog9",
+              "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+              "name": "Amanda Brenner",
+            },
+            "title": "Dishes",
+            "urgency": "low",
+          },
+        ],
+        "houseCode": "woof9",
+        "houseKey": "-KxoIBWy5UYRscFYdWty",
+        "houseName": "Dog9",
+        "users": Array [
+          Object {
+            "house": "Dog9",
+            "id": "RVde1m9BhkQBLZlTJNsFlQZXqP43",
+            "name": "Amanda Brenner",
+          },
+          Object {
+            "house": "Dog9",
+            "id": "cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+            "name": "Lola Koala",
+          },
+        ],
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <p
+          className="title"
+        >
+          Bill: Water Bill
+        </p>,
+        <div
+          className="due-total"
+        >
+          <p
+            className="duedate"
+          >
+            Due: 11/9/17
+          </p>
+          <p
+            className="total"
+          >
+            Total: 100
+          </p>
+        </div>,
+        <p
+          className="details"
+        >
+          Details: We used a lot of water.
+        </p>,
+        <p
+          className="split"
+        >
+          House Split...
+        </p>,
+        Array [
+          <div
+            className="user-split"
+          >
+            <p>
+              Amanda Brenner: 50
+            </p>
+            <div
+              className="mark-paid"
+              onClick={[Function]}
+            >
+              <p>
+                Mark as Paid
+              </p>
+            </div>
+          </div>,
+          <div
+            className="user-split"
+          >
+            <p>
+              Lola Koala: 50
+            </p>
+            <div
+              className="mark-paid"
+              onClick={[Function]}
+            >
+              <p>
+                Not Yet Paid
+              </p>
+            </div>
+          </div>,
+        ],
+        <p
+          className="posted-by-on"
+        >
+          Posted by Amanda Brenner on 11/01/2017
+        </p>,
+      ],
+      "id": "bill-page",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Bill: Water Bill",
+          "className": "title",
+        },
+        "ref": null,
+        "rendered": "Bill: Water Bill",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p
+              className="duedate"
+            >
+              Due: 11/9/17
+            </p>,
+            <p
+              className="total"
+            >
+              Total: 100
+            </p>,
+          ],
+          "className": "due-total",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Due: 11/9/17",
+              "className": "duedate",
+            },
+            "ref": null,
+            "rendered": "Due: 11/9/17",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Total: 100",
+              "className": "total",
+            },
+            "ref": null,
+            "rendered": "Total: 100",
+            "type": "p",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Details: We used a lot of water.",
+          "className": "details",
+        },
+        "ref": null,
+        "rendered": "Details: We used a lot of water.",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "House Split...",
+          "className": "split",
+        },
+        "ref": null,
+        "rendered": "House Split...",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": "1510210800000 RVde1m9BhkQBLZlTJNsFlQZXqP43",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p>
+              Amanda Brenner: 50
+            </p>,
+            <div
+              className="mark-paid"
+              onClick={[Function]}
+            >
+              <p>
+                Mark as Paid
+              </p>
+            </div>,
+          ],
+          "className": "user-split",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Amanda Brenner: 50",
+            },
+            "ref": null,
+            "rendered": "Amanda Brenner: 50",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": <p>
+                Mark as Paid
+              </p>,
+              "className": "mark-paid",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Mark as Paid",
+              },
+              "ref": null,
+              "rendered": "Mark as Paid",
+              "type": "p",
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": "1510210800000 cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p>
+              Lola Koala: 50
+            </p>,
+            <div
+              className="mark-paid"
+              onClick={[Function]}
+            >
+              <p>
+                Not Yet Paid
+              </p>
+            </div>,
+          ],
+          "className": "user-split",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Lola Koala: 50",
+            },
+            "ref": null,
+            "rendered": "Lola Koala: 50",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": <p>
+                Not Yet Paid
+              </p>,
+              "className": "mark-paid",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Not Yet Paid",
+              },
+              "ref": null,
+              "rendered": "Not Yet Paid",
+              "type": "p",
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Posted by Amanda Brenner on 11/01/2017",
+          "className": "posted-by-on",
+        },
+        "ref": null,
+        "rendered": "Posted by Amanda Brenner on 11/01/2017",
+        "type": "p",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <p
+            className="title"
+          >
+            Bill: Water Bill
+          </p>,
+          <div
+            className="due-total"
+          >
+            <p
+              className="duedate"
+            >
+              Due: 11/9/17
+            </p>
+            <p
+              className="total"
+            >
+              Total: 100
+            </p>
+          </div>,
+          <p
+            className="details"
+          >
+            Details: We used a lot of water.
+          </p>,
+          <p
+            className="split"
+          >
+            House Split...
+          </p>,
+          Array [
+            <div
+              className="user-split"
+            >
+              <p>
+                Amanda Brenner: 50
+              </p>
+              <div
+                className="mark-paid"
+                onClick={[Function]}
+              >
+                <p>
+                  Mark as Paid
+                </p>
+              </div>
+            </div>,
+            <div
+              className="user-split"
+            >
+              <p>
+                Lola Koala: 50
+              </p>
+              <div
+                className="mark-paid"
+                onClick={[Function]}
+              >
+                <p>
+                  Not Yet Paid
+                </p>
+              </div>
+            </div>,
+          ],
+          <p
+            className="posted-by-on"
+          >
+            Posted by Amanda Brenner on 11/01/2017
+          </p>,
+        ],
+        "id": "bill-page",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Bill: Water Bill",
+            "className": "title",
+          },
+          "ref": null,
+          "rendered": "Bill: Water Bill",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p
+                className="duedate"
+              >
+                Due: 11/9/17
+              </p>,
+              <p
+                className="total"
+              >
+                Total: 100
+              </p>,
+            ],
+            "className": "due-total",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Due: 11/9/17",
+                "className": "duedate",
+              },
+              "ref": null,
+              "rendered": "Due: 11/9/17",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Total: 100",
+                "className": "total",
+              },
+              "ref": null,
+              "rendered": "Total: 100",
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Details: We used a lot of water.",
+            "className": "details",
+          },
+          "ref": null,
+          "rendered": "Details: We used a lot of water.",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "House Split...",
+            "className": "split",
+          },
+          "ref": null,
+          "rendered": "House Split...",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": "1510210800000 RVde1m9BhkQBLZlTJNsFlQZXqP43",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p>
+                Amanda Brenner: 50
+              </p>,
+              <div
+                className="mark-paid"
+                onClick={[Function]}
+              >
+                <p>
+                  Mark as Paid
+                </p>
+              </div>,
+            ],
+            "className": "user-split",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Amanda Brenner: 50",
+              },
+              "ref": null,
+              "rendered": "Amanda Brenner: 50",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": <p>
+                  Mark as Paid
+                </p>,
+                "className": "mark-paid",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Mark as Paid",
+                },
+                "ref": null,
+                "rendered": "Mark as Paid",
+                "type": "p",
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": "1510210800000 cFNdorl5ceRyMr9XGvPFRVEcw7I3",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p>
+                Lola Koala: 50
+              </p>,
+              <div
+                className="mark-paid"
+                onClick={[Function]}
+              >
+                <p>
+                  Not Yet Paid
+                </p>
+              </div>,
+            ],
+            "className": "user-split",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Lola Koala: 50",
+              },
+              "ref": null,
+              "rendered": "Lola Koala: 50",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": <p>
+                  Not Yet Paid
+                </p>,
+                "className": "mark-paid",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Not Yet Paid",
+                },
+                "ref": null,
+                "rendered": "Not Yet Paid",
+                "type": "p",
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Posted by Amanda Brenner on 11/01/2017",
+            "className": "posted-by-on",
+          },
+          "ref": null,
+          "rendered": "Posted by Amanda Brenner on 11/01/2017",
+          "type": "p",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

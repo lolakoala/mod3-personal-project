@@ -17,36 +17,6 @@ describe('ChoresList component', () => {
     expect(wrapper).toBeDefined();
   });
 
-  it('should have a title', () => {
-    const title = wrapper.find('.choreslist-title');
-
-    expect(title.text()).toEqual('House Chores');
-  });
-
-  it('should have a title column header', () => {
-    const titleHeader = wrapper.find('.title-header');
-
-    expect(titleHeader.text()).toEqual('Title');
-  });
-
-  it('should have an urgency column header', () => {
-    const urgencyHeader = wrapper.find('.urgency-header');
-
-    expect(urgencyHeader.text()).toEqual('Urgency');
-  });
-
-  it('should have a claimed header', () => {
-    const claimedHeader = wrapper.find('.claimed-header');
-
-    expect(claimedHeader.text()).toEqual('Claimed by');
-  });
-
-  it('should have a done header', () => {
-    const doneHeader = wrapper.find('.done-header');
-
-    expect(doneHeader.text()).toEqual('Done');
-  });
-
   it('should have display all chores of the house', () => {
     const chores = wrapper.find('.chore');
 
@@ -55,7 +25,7 @@ describe('ChoresList component', () => {
 
   it('should fire action', () => {
     const claimButton = wrapper.find('.claim-button').first();
-    const doneButton = wrapper.find('.done-button').first();
+    const doneButton = wrapper.find('.choredone').first();
 
     claimButton.simulate('click');
     doneButton.simulate('click');

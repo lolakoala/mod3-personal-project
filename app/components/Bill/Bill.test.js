@@ -2,6 +2,7 @@ import React from "react";
 import Bill from './Bill.js';
 import { shallow } from "enzyme";
 import usersHouse from '../../mockData/usersHouse.js';
+import currentUser1 from '../../mockData/currentUser1';
 
 describe('Bill component', () => {
   const mockFn = jest.fn();
@@ -14,6 +15,7 @@ describe('Bill component', () => {
   const wrapper = shallow(<Bill
     usersHouse={usersHouse}
     markBillPaid={mockFn}
+    currentUser={currentUser1}
     match={match}/>);
 
   it('should exist', () => {

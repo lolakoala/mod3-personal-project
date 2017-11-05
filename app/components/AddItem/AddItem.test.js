@@ -31,7 +31,7 @@ describe('AddItem component', () => {
   });
 
   it('should change state and show component when add bill button clicked', () => {
-    const addBill = wrapper.find('.add-bill');
+    const addBill = wrapper.find('.add-bill-button');
 
     addBill.simulate('click');
     expect(wrapper.state().item).toEqual('bill');
@@ -39,7 +39,7 @@ describe('AddItem component', () => {
   });
 
   it('should change state and show component when add chore button clicked', () => {
-    const addChore = wrapper.find('.add-chore');
+    const addChore = wrapper.find('.add-chore-button');
 
     addChore.simulate('click');
     expect(wrapper.state().item).toEqual('chore');
@@ -47,7 +47,7 @@ describe('AddItem component', () => {
   });
 
   it('should change state and show component when add bulletin button clicked', () => {
-    const addBulletin = wrapper.find('.add-bulletin');
+    const addBulletin = wrapper.find('.add-bulletin-button');
 
     addBulletin.simulate('click');
     expect(wrapper.state().item).toEqual('bulletin');

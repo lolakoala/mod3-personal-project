@@ -33,7 +33,7 @@ describe('chore component', () => {
   it('should have an urgency', () => {
     const urgency = wrapper.find('.urgency');
 
-    expect(urgency.text()).toEqual(`Urgency: ${chore.urgency}`);
+    expect(urgency.text()).toEqual(`not urgent`);
   });
 
   it('should have posted info', () => {

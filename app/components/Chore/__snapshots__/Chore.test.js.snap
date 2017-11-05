@@ -120,14 +120,9 @@ ShallowWrapper {
           Chore: Dishes
         </p>,
         <p
-          className="urgency"
+          className="details"
         >
-          Urgency: low
-        </p>,
-        <p
-          className="posted-by-on"
-        >
-          Posted by Amanda Brenner on 10/31/2017
+          Details: Empty the dishwasher.
         </p>,
         <p
           className="claim-chore"
@@ -135,18 +130,30 @@ ShallowWrapper {
         >
           Claimed by Amanda Brenner
         </p>,
-        <p
-          className="details"
+        <div
+          className="urgency-done"
         >
-          Details: Empty the dishwasher.
-        </p>,
+          <p
+            className="urgency"
+          >
+            not urgent
+          </p>
+          <div>
+            <p
+              className="chore-done"
+              onClick={[Function]}
+            >
+              Mark as Done
+            </p>
+          </div>
+        </div>,
         <p
-          className="chore-done"
-          onClick={[Function]}
+          className="posted-by-on"
         >
-          Mark as Done
+          Posted by Amanda Brenner on 10/31/2017
         </p>,
       ],
+      "id": "chore-page",
     },
     "ref": null,
     "rendered": Array [
@@ -167,23 +174,11 @@ ShallowWrapper {
         "key": null,
         "nodeType": "host",
         "props": Object {
-          "children": "Urgency: low",
-          "className": "urgency",
+          "children": "Details: Empty the dishwasher.",
+          "className": "details",
         },
         "ref": null,
-        "rendered": "Urgency: low",
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": null,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Posted by Amanda Brenner on 10/31/2017",
-          "className": "posted-by-on",
-        },
-        "ref": null,
-        "rendered": "Posted by Amanda Brenner on 10/31/2017",
+        "rendered": "Details: Empty the dishwasher.",
         "type": "p",
       },
       Object {
@@ -204,24 +199,78 @@ ShallowWrapper {
         "key": null,
         "nodeType": "host",
         "props": Object {
-          "children": "Details: Empty the dishwasher.",
-          "className": "details",
+          "children": Array [
+            <p
+              className="urgency"
+            >
+              not urgent
+            </p>,
+            <div>
+              <p
+                className="chore-done"
+                onClick={[Function]}
+              >
+                Mark as Done
+              </p>
+            </div>,
+          ],
+          "className": "urgency-done",
         },
         "ref": null,
-        "rendered": "Details: Empty the dishwasher.",
-        "type": "p",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "not urgent",
+              "className": "urgency",
+            },
+            "ref": null,
+            "rendered": "not urgent",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": <p
+                className="chore-done"
+                onClick={[Function]}
+              >
+                Mark as Done
+              </p>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Mark as Done",
+                "className": "chore-done",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Mark as Done",
+              "type": "p",
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
       },
       Object {
         "instance": null,
         "key": null,
         "nodeType": "host",
         "props": Object {
-          "children": "Mark as Done",
-          "className": "chore-done",
-          "onClick": [Function],
+          "children": "Posted by Amanda Brenner on 10/31/2017",
+          "className": "posted-by-on",
         },
         "ref": null,
-        "rendered": "Mark as Done",
+        "rendered": "Posted by Amanda Brenner on 10/31/2017",
         "type": "p",
       },
     ],
@@ -240,14 +289,9 @@ ShallowWrapper {
             Chore: Dishes
           </p>,
           <p
-            className="urgency"
+            className="details"
           >
-            Urgency: low
-          </p>,
-          <p
-            className="posted-by-on"
-          >
-            Posted by Amanda Brenner on 10/31/2017
+            Details: Empty the dishwasher.
           </p>,
           <p
             className="claim-chore"
@@ -255,18 +299,30 @@ ShallowWrapper {
           >
             Claimed by Amanda Brenner
           </p>,
-          <p
-            className="details"
+          <div
+            className="urgency-done"
           >
-            Details: Empty the dishwasher.
-          </p>,
+            <p
+              className="urgency"
+            >
+              not urgent
+            </p>
+            <div>
+              <p
+                className="chore-done"
+                onClick={[Function]}
+              >
+                Mark as Done
+              </p>
+            </div>
+          </div>,
           <p
-            className="chore-done"
-            onClick={[Function]}
+            className="posted-by-on"
           >
-            Mark as Done
+            Posted by Amanda Brenner on 10/31/2017
           </p>,
         ],
+        "id": "chore-page",
       },
       "ref": null,
       "rendered": Array [
@@ -287,23 +343,11 @@ ShallowWrapper {
           "key": null,
           "nodeType": "host",
           "props": Object {
-            "children": "Urgency: low",
-            "className": "urgency",
+            "children": "Details: Empty the dishwasher.",
+            "className": "details",
           },
           "ref": null,
-          "rendered": "Urgency: low",
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": null,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Posted by Amanda Brenner on 10/31/2017",
-            "className": "posted-by-on",
-          },
-          "ref": null,
-          "rendered": "Posted by Amanda Brenner on 10/31/2017",
+          "rendered": "Details: Empty the dishwasher.",
           "type": "p",
         },
         Object {
@@ -324,24 +368,78 @@ ShallowWrapper {
           "key": null,
           "nodeType": "host",
           "props": Object {
-            "children": "Details: Empty the dishwasher.",
-            "className": "details",
+            "children": Array [
+              <p
+                className="urgency"
+              >
+                not urgent
+              </p>,
+              <div>
+                <p
+                  className="chore-done"
+                  onClick={[Function]}
+                >
+                  Mark as Done
+                </p>
+              </div>,
+            ],
+            "className": "urgency-done",
           },
           "ref": null,
-          "rendered": "Details: Empty the dishwasher.",
-          "type": "p",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "not urgent",
+                "className": "urgency",
+              },
+              "ref": null,
+              "rendered": "not urgent",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": <p
+                  className="chore-done"
+                  onClick={[Function]}
+                >
+                  Mark as Done
+                </p>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Mark as Done",
+                  "className": "chore-done",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Mark as Done",
+                "type": "p",
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
         },
         Object {
           "instance": null,
           "key": null,
           "nodeType": "host",
           "props": Object {
-            "children": "Mark as Done",
-            "className": "chore-done",
-            "onClick": [Function],
+            "children": "Posted by Amanda Brenner on 10/31/2017",
+            "className": "posted-by-on",
           },
           "ref": null,
-          "rendered": "Mark as Done",
+          "rendered": "Posted by Amanda Brenner on 10/31/2017",
           "type": "p",
         },
       ],
