@@ -21,16 +21,17 @@ class HouseList extends Component {
 
   handleSearch = event => {
     const { bills, chores, bulletins } = this.props.usersHouse;
-    const { value } = event.target;
+    const val = event.target.value;
+    const value = val.toLowerCase();
     let searchResults = false;
     const billsMatch = bills.filter(bill => {
-      return bill.title.includes(value) || bill.details.includes(value);
+      return bill.title.toLowerCase().includes(value) || bill.details.toLowerCase().includes(value);
     });
     const choresMatch = chores.filter(chore => {
-      return chore.title.includes(value) || chore.details.includes(value);
+      return chore.title.toLowerCase().includes(value) || chore.details.toLowerCase().includes(value);
     });
     const bulletinsMatch = bulletins.filter(bulletin => {
-      return bulletin.title.includes(value) || bulletin.details.includes(value);
+      return bulletin.title.toLowerCase().includes(value) || bulletin.details.toLowerCase().includes(value);
     });
     if (bulletinsMatch.length > 0 || billsMatch.length > 0 || choresMatch.length > 0) {
       searchResults = true;
