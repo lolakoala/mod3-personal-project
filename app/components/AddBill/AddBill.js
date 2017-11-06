@@ -46,7 +46,7 @@ class AddBill extends Component {
 
   updateCustomPSplit = (event, id) => {
     const percentage = parseInt(event.target.value, 10);
-    const total = parseInt(this.state.total, 10) * (percentage / 100);
+    const total = Math.floor(parseInt(this.state.total, 10) * (percentage / 100));
     const userTotalObj = {
       id,
       total,
@@ -55,10 +55,10 @@ class AddBill extends Component {
     const removeUser = this.state.allUsersTotals.filter(user => user.id !== id);
     const newState = [...removeUser, userTotalObj];
     const userTotals = newState.reduce((acc, user) => {
-      return acc += parseInt(user.total, 10);
+      return acc += Math.floor(parseInt(user.total, 10));
     }, 0);
-    const dollarLeft = parseInt(this.state.total, 10) - userTotals;
-    const percentageLeft = (dollarLeft / parseInt(this.state.total, 10)) * 100;
+    const dollarLeft = Math.floor(parseInt(this.state.total, 10)) - Math.floor(userTotals);
+    const percentageLeft = Math.floor((Math.floor(dollarLeft) / Math.floor(parseInt(this.state.total, 10))) * 100);
     this.setState({ allUsersTotals: newState, percentageLeft: percentageLeft });
   }
 

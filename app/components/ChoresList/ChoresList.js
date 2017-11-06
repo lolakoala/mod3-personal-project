@@ -63,7 +63,7 @@ class ChoresList extends Component {
       if (choresToMap.length) {
         return (
           <div className='choreslist'>
-            {placeRendered === '/' ? <h4>Chores I Need To Do</h4> : null}
+            {placeRendered === '/' ? <h4>Chores You Need To Do</h4> : null}
             {placeRendered === 'summary' ? <h4>Chores To Be Done</h4> : null}
             {choresToMap.map(chore => {
               return (<div key={chore.datePosted} className='chore'>

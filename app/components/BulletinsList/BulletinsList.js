@@ -54,7 +54,7 @@ class BulletinsList extends Component {
         return (
           <div className='bulletinslist'>
             {placeRendered === 'summary' ? <h4>Current Bulletins</h4> : null}
-            {placeRendered === '/' ? <h4>Bulletins I Need to Read</h4> : null}
+            {placeRendered === '/' ? <h4>Bulletins You Need to Read</h4> : null}
             {bulletins.map(bulletin => {
               let bulletinClass;
               bulletin.hasRead.includes(currentUser.id) ? bulletinClass = 'read' : bulletinClass = 'not-read';

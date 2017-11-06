@@ -99,8 +99,8 @@ class BillsList extends Component {
       if (billsToMap.length) {
         return (
           <div className='billslist'>
-            {placeRendered === '/' ? <h4>Bills I Owe</h4> : null}
-            {placeRendered === 'summary' ? <h4>Bills Not All PAid Up</h4> : null}
+            {placeRendered === '/' ? <h4>Bills You Owe</h4> : null}
+            {placeRendered === 'summary' ? <h4>Bills Not All Paid Up</h4> : null}
             {placeRendered === '/houselist' ? this.getHouseBills(billsToMap) : null}
             {placeRendered === '/' ? this.getUserBills(billsToMap) : null}
             {placeRendered === '/userlist' ? this.getUserBills(billsToMap) : null}
