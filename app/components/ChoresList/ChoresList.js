@@ -36,7 +36,7 @@ class ChoresList extends Component {
   getError = () => {
     const { placeRendered, usersHouse } = this.props;
     if (placeRendered === '/') {
-      return 'You have chores to do.';
+      return 'You have no chores to do.';
     } else if (placeRendered === '/houselist') {
       return `${usersHouse.houseName} has no chores posted.`;
     } else if (placeRendered === 'summary') {
