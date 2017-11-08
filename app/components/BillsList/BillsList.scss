@@ -56,9 +56,9 @@
   text-align: center;
 }
 
-.bill .mark-paid {
+.bill .paid-false {
   height: 100%;
-  width: 75px;
+  width: 60px;
   background-color: #eb6b3c;
   position: absolute;
   top: 0;
@@ -69,7 +69,12 @@
   padding-left: 10px;
 }
 
-.mark-paid:hover {
+.paid-false,
+.paid-true {
+  margin-left: 5px;
+}
+
+.paid-false:hover {
   cursor: pointer;
   background-color: #F4CCE2;
   color: #eb6b3c;

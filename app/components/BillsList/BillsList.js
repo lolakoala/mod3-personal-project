@@ -87,7 +87,7 @@ class BillsList extends Component {
         <Link to={`bills/${bill.id}`}>{bill.title}</Link>
         <p className='due'>{`Due: ${bill.duedate}`}</p>
         <p className='total'>{`My Total: ${user.total}`}</p>
-        <p className='mark-paid' onClick={() => this.markBillPaid(bill.id, currentUser.id, usersHouse)}>{user.paid ? `I'm paid up.` : 'Mark Paid'}</p>
+        <p className={`paid-${user.paid}`} onClick={() => this.markBillPaid(bill.id, currentUser.id, usersHouse)}>{user.paid ? `I'm paid up.` : 'Mark Paid'}</p>
       </div>);
     });
   }
