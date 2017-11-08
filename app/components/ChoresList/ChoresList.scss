@@ -47,55 +47,38 @@
   color: #D83D59;
 }
 
-.choredone, .claim-button {
+.choredone-false, .claim-button {
   height: 100%;
-   width: 75px;
-   background-color: #eb6b3c;
-   position: absolute;
-   top: 0;
-   right: 0;
-   color: #F4CCE2;
-   display: inline-block;
-   font-size: 15px;
-   padding-left: 10px;
+  width: 75px;
+  background-color: #eb6b3c;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #F4CCE2;
+  display: inline-block;
+  font-size: 15px;
+  padding-left: 10px;
 }
 
-.choredone:hover,
+.choredone-true {
+  height: 100%;
+  width: 75px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  font-size: 15px;
+  padding-left: 10px;
+}
+
+.choredone-false:hover,
 .claim-button:hover {
-    cursor: pointer;
-    background-color: #F4CCE2;
-    color: #eb6b3c;
+  cursor: pointer;
+  background-color: #F4CCE2;
+  color: #eb6b3c;
 }
 
 .claim-button {
   right: 90px;
   width: 50px;
 }
-// .chore .due,
-// .chore .total {
-//   width: 60px;
-//   font-size: 15px;
-//   display: inline-block;
-//   margin: 2px 0px 2px 5px;
-//   text-align: center;
-// }
-//
-// #done-button {
-//   height: 100%;
-//   width: 75px;
-//   background-color: #eb6b3c;
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   color: #F4CCE2;
-//   display: inline-block;
-//   font-size: 15px;
-//   padding-left: 10px;
-// }
-
-// .done-button:hover {
-//   cursor: pointer;
-//   background-color: #F4CCE2;
-//   color: #eb6b3c;
-// }
-//

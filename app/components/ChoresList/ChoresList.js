@@ -72,7 +72,7 @@ class ChoresList extends Component {
                 <p className='claim-button' onClick={() => this.claimChore(currentUser.id, chore, usersHouse)}>
                   {chore.assignedTo.length ? 'Claimed' : 'Claim Chore'}
                 </p>
-                <p className='choredone' onClick={() => this.markChoreDone(chore, usersHouse)}>{chore.done === false ? 'Mark Done' : 'Done'}</p>
+                <p className={`choredone-${chore.done}`} onClick={() => this.markChoreDone(chore, usersHouse)}>{chore.done === false ? 'Mark Done' : 'Done'}</p>
               </div>);
             })}
           </div>
