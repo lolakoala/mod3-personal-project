@@ -30,6 +30,7 @@
   line-height: normal;
   font-size: 50px;
   background-color: rgba(141, 132, 73, 0);
+  border: none;
 }
 
 .logo h1:hover {
@@ -61,7 +62,7 @@
 .user-stuff-nav .leave-house,
 .user-stuff-nav .signout,
 .user-stuff-nav .home {
-  border: none;
+  border: 2px solid #D83D59;  
   font-family: 'BenchNine', sans-serif;
   background-color: #D83D59;
   width: 120px;

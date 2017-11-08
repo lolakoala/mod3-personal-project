@@ -26,6 +26,7 @@ body {
   padding-bottom: 200px;
   color: rgba(141, 132, 73, 2);
   font-family: 'BenchNine', sans-serif;
+  box-sizing: border-box;
 }
 
 .footer {
