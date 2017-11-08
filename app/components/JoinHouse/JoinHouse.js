@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const JoinHouse = ({ handleChange, getHouse, createHouse }) => {
+const JoinHouse = ({ handleChange, getHouse, createHouse, joinHouseDisabled, createHouseDisabled }) => {
   return (
     <div className='join-house'>
       <input type='text'
         placeholder="House Code"
         onChange={ (event) => handleChange(event, 'houseCode' ) }/>
       <button
+        disabled={!joinHouseDisabled}
         onClick={getHouse}>
           Join a House
       </button>
@@ -18,6 +19,7 @@ const JoinHouse = ({ handleChange, getHouse, createHouse }) => {
         placeholder="House Code"
         onChange={ (event) => handleChange(event, 'houseCode' ) }/>
       <button
+        disabled={!createHouseDisabled}
         onClick={createHouse}>
           Add My House
       </button>
@@ -30,5 +32,7 @@ export default JoinHouse;
 JoinHouse.propTypes = {
   handleChange: PropTypes.func,
   getHouse: PropTypes.func,
-  createHouse: PropTypes.func
+  createHouse: PropTypes.func,
+  joinHouseDisabled: PropTypes.string,
+  createHouseDisabled: PropTypes.string
 };

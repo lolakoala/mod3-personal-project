@@ -106,7 +106,9 @@ class Dash extends Component {
     return this.props.usersHouse.houseName ? this.renderDash() :
       <JoinHouse handleChange={this.handleChange}
         getHouse={this.getHouse}
-        createHouse={this.createHouse}/>;
+        createHouse={this.createHouse}
+        joinHouseDisabled={this.state.houseCode}
+        createHouseDisabled={this.state.houseName && this.state.houseCode}/>;
   }
 
   render() {
