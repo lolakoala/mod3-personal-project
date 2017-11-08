@@ -11,7 +11,9 @@ describe('ChoresList component', () => {
     placeRendered={'/houselist'}
     markChoreDone={mockFn}
     claimChore={mockFn}
-    searchValue={''}/>);
+    searchValue={''}
+    joinHouseDisabled={true}
+    createHouseDisabled={true}/>);
 
   it('should exist', () => {
     expect(wrapper).toBeDefined();
@@ -25,7 +27,7 @@ describe('ChoresList component', () => {
 
   it('should fire action', () => {
     const claimButton = wrapper.find('.claim-button').first();
-    const doneButton = wrapper.find('.choredone').first();
+    const doneButton = wrapper.find('.choredone-false').first();
 
     claimButton.simulate('click');
     doneButton.simulate('click');

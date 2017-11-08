@@ -28,6 +28,7 @@ ShallowWrapper {
           type="text"
         />,
         <button
+          disabled={true}
           onClick={[Function]}
         >
           Join a House
@@ -43,6 +44,7 @@ ShallowWrapper {
           type="text"
         />,
         <button
+          disabled={true}
           onClick={[Function]}
         >
           Add My House
@@ -71,6 +73,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Join a House",
+          "disabled": true,
           "onClick": [Function],
         },
         "ref": null,
@@ -109,6 +112,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Add My House",
+          "disabled": true,
           "onClick": [Function],
         },
         "ref": null,
@@ -131,6 +135,7 @@ ShallowWrapper {
             type="text"
           />,
           <button
+            disabled={true}
             onClick={[Function]}
           >
             Join a House
@@ -146,6 +151,7 @@ ShallowWrapper {
             type="text"
           />,
           <button
+            disabled={true}
             onClick={[Function]}
           >
             Add My House
@@ -174,6 +180,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Join a House",
+            "disabled": true,
             "onClick": [Function],
           },
           "ref": null,
@@ -212,6 +219,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Add My House",
+            "disabled": true,
             "onClick": [Function],
           },
           "ref": null,
