@@ -71,7 +71,7 @@ class BillsList extends Component {
       return (<div key={bill.parsedDuedate} className='bill'>
         <Link to={`bills/${bill.id}`}>{bill.title}</Link>
         <p className='due'>{`Due: ${bill.duedate}`}</p>
-        <p className='total'>{`Total: ${bill.total}`}</p>
+        <p className='total'>{`Total: $${Math.round(bill.total * 100)/100}`}</p>
         <p className='mark-paid' onClick={() => this.markBillPaid(bill.id, currentUser.id, usersHouse)}>
           {bill.allUsersTotals.find(user => user.id === currentUser.id).paid ? `I'm paid up.` : 'Mark Paid'}
         </p>
@@ -86,7 +86,7 @@ class BillsList extends Component {
       return (<div key={bill.parsedDuedate} className='bill'>
         <Link to={`bills/${bill.id}`}>{bill.title}</Link>
         <p className='due'>{`Due: ${bill.duedate}`}</p>
-        <p className='total'>{`My Total: ${user.total}`}</p>
+        <p className='total'>{`My Total: $${Math.round(user.total * 100)/100}`}</p>
         <p className={`paid-${user.paid}`} onClick={() => this.markBillPaid(bill.id, currentUser.id, usersHouse)}>{user.paid ? `I'm paid up.` : 'Mark Paid'}</p>
       </div>);
     });

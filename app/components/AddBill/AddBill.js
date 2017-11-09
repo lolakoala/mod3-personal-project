@@ -184,7 +184,7 @@ class AddBill extends Component {
     const equalAll = this.state.allUsersTotals.map(userBill => {
       const userName = usersHouse.users.find(user => user.id === userBill.id).name;
       return <div key={userBill.id}>
-        <p>{userName}</p><p>{userBill.total}</p>
+        <p>{userName}</p><p>{`$${Math.round(userBill.total * 100)/100}`}</p>
       </div>;
     });
     const customPCalc = <div>

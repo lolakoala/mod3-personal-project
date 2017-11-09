@@ -55,6 +55,8 @@
   position: fixed;
   top: 0;
   right: 0;
+  z-index: 100;
+  background-color: #F4CCE2;
 }
 
 .user-stuff-nav .manage-house,
@@ -62,7 +64,7 @@
 .user-stuff-nav .leave-house,
 .user-stuff-nav .signout,
 .user-stuff-nav .home {
-  border: 2px solid #D83D59;  
+  border: 2px solid #D83D59;
   font-family: 'BenchNine', sans-serif;
   background-color: #D83D59;
   width: 120px;
