@@ -1,6 +1,8 @@
 .add-bill {
   margin-left: 20px;
   margin-bottom: 150px;
+  display: flex;
+  flex-direction: column;
 }
 
 .add-bill input,
@@ -68,5 +70,31 @@
   margin-left: 20px;
   font-family: 'BenchNine', sans-serif;
   font-size: 20px;
+}
 
+.add-bill-inputs,
+.form-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.add-bill .split,
+.add-bill .duedate-input,
+.add-bill textarea {
+  width: 260px;
+}
+
+.add-bill .split {
+  font-size: 20px;
+}
+
+.split-info {
+  margin-top: 10px;
+  padding-left: 25px;
+  width: 260px;
+}
+
+.add-bill p {
+  display: inline-block;
+  margin-left: 10px;
 }

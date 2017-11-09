@@ -108,9 +108,11 @@ class AddBill extends Component {
 
   addBill = () => {
     const { title, duedate, total, allUsersTotals, details } = this.state;
+    const array = [...duedate];
+    const betterDate = `${array[5]}${array[6]}/${array[8]}${array[9]}/${array[2]}${array[3]}`;
     const bill = {
       title,
-      duedate,
+      duedate: betterDate,
       total,
       allUsersTotals,
       details,
@@ -203,33 +205,27 @@ class AddBill extends Component {
     </div>;
     return (
       <div className='add-bill'>
-        <div className='inputs-and-splits'>
-          <div className='add-bill-inputs'>
-            <input className='bill-input title-input' type='text' placeholder='Title' onChange={(event) => this.handleChange(event, 'title')}/>
-            <input className='bill-input duedate-input' type='text' placeholder='Due Date' onChange={(event) => this.handleChange(event, 'duedate')}/>
-            <input className='bill-input total-input' type='text' placeholder='Total' onChange={(event) => this.handleChange(event, 'total')}/>
-          </div>
-          <div className='split-buttons'>
-            <button className={`split equal-all-button ${this.isActive('equalAll')}`} onClick={this.splitEqually}>Equal Split with All House Members</button>
-            <button className={`split equal-select-button ${this.isActive('equal')}`} onClick={() => this.updateSplit('equal')}>Equal Split with Select House Members</button>
-            <button className={`split custom-percentage-button ${this.isActive('customP')}`} onClick={() => this.updateSplit('customP')}>Custom Split by Percentage</button>
-            <button className={`split custom-dollar-button ${this.isActive('customD')}`} onClick={() => this.updateSplit('customD')}>Custom Split by Dollar Amount</button>
-          </div>
+        <div className='add-bill-inputs'>
+          <input className='bill-input title-input' type='text' placeholder='Title' onChange={(event) => this.handleChange(event, 'title')}/>
+          <input className='bill-input total-input' type='text' placeholder='Total' onChange={(event) => this.handleChange(event, 'total')}/>
         </div>
+        <input id='duedate-input' className='bill-input duedate-input' type='date' placeholder='Due Date' onChange={(event) => this.handleChange(event, 'duedate')}/>
+        <button className={`split equal-all-button ${this.isActive('equalAll')}`} onClick={this.splitEqually}>Equal Split with All House Members</button>
+        <button className={`split equal-select-button ${this.isActive('equal')}`} onClick={() => this.updateSplit('equal')}>Equal Split with Select House Members</button>
+        <button className={`split custom-percentage-button ${this.isActive('customP')}`} onClick={() => this.updateSplit('customP')}>Custom Split by Percentage</button>
+        <button className={`split custom-dollar-button ${this.isActive('customD')}`} onClick={() => this.updateSplit('customD')}>Custom Split by Dollar Amount</button>
+        <p>{this.state.error.length ? this.state.error : null}</p>
         <div className='split-info'>
-          <p>{this.state.error.length ? this.state.error : null}</p>
           {this.state.split === 'equalAll' ? equalAll : null}
           {this.state.split === 'calculated' ? equalAll : null}
-          {this.state.split === 'equal' ? this.renderWithButton(equalCalc) : null}
-          {this.state.split === 'customP' ? this.renderWithButton(customPCalc) : null}
-          {this.state.split === 'customD' ? customPCalc : null}
         </div>
-        <div className='details-and-buttons'>
-          <textarea type='text' placeholder='Details' onChange={(event) => this.handleChange(event, 'details')}/>
-          <div className='form-buttons'>
-            <button className='bill-submit' onClick={() => this.addBill()} disabled={this.state.buttonDisabled}>Submit</button>
-            <button onClick={this.reset}>Reset</button>
-          </div>
+        {this.state.split === 'equal' ? this.renderWithButton(equalCalc) : null}
+        {this.state.split === 'customP' ? this.renderWithButton(customPCalc) : null}
+        {this.state.split === 'customD' ? customPCalc : null}
+        <textarea type='text' placeholder='Details' onChange={(event) => this.handleChange(event, 'details')}/>
+        <div className='form-buttons'>
+          <button className='bill-submit' onClick={() => this.addBill()} disabled={this.state.buttonDisabled}>Submit</button>
+          <button onClick={this.reset}>Reset</button>
         </div>
       </div>
     );
