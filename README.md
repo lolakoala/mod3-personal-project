@@ -2,7 +2,7 @@
 
 This app was written with React, Redux, and Router on the front end and Firebase on the back end. 
 
-It is not currently deployed. I am in the proccess of re-creating with Node on the back end and either React Native or Angular on the front end.
+It is not currently deployed. I am in the proccess of re-creating with Node on the back end and either React Native or Angular on the front end. I'm currently working on the backend, and you can stay up-to-date with my progress [here](https://github.com/lolakoala/new-tribe-backend).
 
 A user can either create their own house and distribute the house code to their house members, or they can use a house code to join an existing house.
 
